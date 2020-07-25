@@ -1,0 +1,371 @@
+\appendix
+\chapter{量子力学のおさらい}
+
+量子力学では、状態をベクトルで表し、ベクトルに対する演算子をうまく使って時間発展や物理量を表していく。ここでは、量子力学で基本となる表記法であるブラケット記法と、線形演算子、測定の考え方をおさらいしておこう。
+
+\section{状態ベクトルと演算子}
+\subsection{ブラケット表記}
+ある量子状態$x$をケット$\ket{x}$を用いて表す。これは、$n$次元($n$は無限大であることもある)の複素数の縦ベクトルで表されるものとする。すなわち$\ket x$は
+\begin{equation}
+	\ket{x} = \left( \begin{array}{c}
+		c_1\\
+		c_2\\
+		\vdots\\
+		c_n
+	\end{array} \right) = (\begin{array}{cccc}
+		c_1 & c_2 & \hdots & c_n
+	\end{array}  )^T
+	\label{eq:appendix_ket}
+\end{equation}
+と表される。また、ブラ$\bra{x}$は複素共役及び転置をとった
+\begin{equation}
+	\bra{x} = ( \begin{array}{cccc}
+		c_1^* & c_2^* & \hdots & c_n^*
+	\end{array})
+\end{equation}
+を表すものと決めておく。このようにすると、$\ket x$と$\ket y = (\begin{array}{cccc}
+	d_1 & d_2 & \hdots & d_n
+\end{array} )^T$の内積や$\ket x$のノルムを
+\begin{equation}
+	\braket{x|y} = \sum_{k=1}^n c_k^*d_k
+\end{equation}
+
+\begin{equation}
+	\braket{x|x} = \sum_{k=1}^{n}{|c_k|^2}
+\end{equation}
+と表すことができる。
+
+式(\ref{eq:appendix_ket})は、$k$番目の状態を重み付け$c_k$で重ね合わせた状態を表す。これは、$k$番目の状態にある確率が$|c_k|^2$であることを表すものと約束しておく。全確率の和は1であるから、状態ベクトルのノルムは1、すなわち
+\begin{equation}
+	\braket{x|x} = 1
+\end{equation}
+が成り立つものとする。
+
+
+\subsection{正規直交基底}
+$n$次元の複素ベクトル空間における$n$個のケットの集合$\left\{\ket k\right\}, (k = 1, 2, \hdots, n)$のうち、$\braket{m|n} = \delta_{mn}$となるものを正規直交基底という。すなわち、自身との内積（ノルム）は1、異なるケットとの内積は0になる。
+
+最も簡単な正規直交基底としては、以下のものがある。
+\begin{equation}
+	\ket 1 = \left(\begin{array}{c}
+		1 \\ 0 \\ \vdots \\0
+	\end{array} \right), 
+	\ket 2 = \left(\begin{array}{c}
+		0 \\ 1 \\ \vdots \\0
+	\end{array} \right), \hdots, 
+		\ket n = \left(\begin{array}{c}
+		0 \\ 0 \\ \vdots \\1
+	\end{array} \right)
+\end{equation}
+
+\subsection{正規直交基底による基底変換}
+正規直交基底の取り方は何種類もあるが、基底の取り方によって、状態ベクトルは変化する。ある状態ベクトル$\ket \phi$を正規直交基底${\ket k}$の線形結合で表すとき、その重みづけの係数は以下のように内積計算で求めることができる。
+\begin{equation}
+	\ket \phi = \sum_{k = 1}^n c_k\ket k
+	\label{eq:superposition_of_discrete_ket}
+\end{equation}
+である。左から$\ket l$をかければ、
+\begin{equation}
+	c_l = \braket{l|\phi}
+	\label{eq:coefficient_of_superposition}
+\end{equation}
+を得る。
+
+\subsection{線形演算子}
+量子力学では様々な線形演算子を用いる。これは、状態ベクトルに対する行列の掛け算として表すことができる。演算子であることがわかるように$\hat A$のようにハットをつけて表す。ある状態ベクトル$\ket \phi$が$\hat A$によって$\ket \psi$に変換されるとすると、
+\begin{equation}
+	\ket \psi = \hat A \ket \phi
+= \sum_{k = 1}^n c_k \hat A \ket k\\
+\end{equation}
+である。ここで$\ket \psi$を$\ket k$の線形結合で
+\begin{equation}
+	\ket \psi = \sum_{k = 1}^n d_k \ket k
+	\label{eq:linear_operator_calc}
+\end{equation}
+と表そう。重み付け係数$d_k$を求めるには、上の2式に左から$\bra m$をかけてこれらを等しいとすれば、
+\begin{equation}
+	\braket {m|\psi} = \sum_{k = 1}^n c_k \bra m \hat A \ket k = d_m
+\end{equation}
+を得る。ここで$k \to l$の置き換えを行うと、
+\begin{equation}
+  d_m = \sum_{l = 1}^n c_l \bra m \hat A \ket l
+\end{equation}
+を得て、さらに$m \to k$の置き換えを行って式(\ref{eq:linear_operator_calc})に代入すると、次式を得る。
+\begin{equation}
+  \ket \psi = \sum_{k = 1}^n \sum_{l = 1}^n c_l \bra k \hat A \ket l \ket k
+\end{equation}
+これは、状態ベクトル$\ket \psi$, $\ket \phi$が行列表示で次式のように表せることを意味している。
+\begin{equation}
+  \left( \begin{array}{c}
+  	d_1 \\ d_2 \\ \vdots \\ d_n
+  \end{array} \right) = \pmb A 
+  \left( \begin{array}{c}
+  c_1\\c_2\\ \vdots \\c_n
+ \end{array}\right)
+\end{equation}
+ただし、$\pmb A$の行列成分${A_{ij}}$は$A_{ij} = \bra i \hat A \ket j$である。
+
+\subsection{演算子の固有値}
+演算子$\hat A$を$\ket \phi$に作用させたとき、
+\begin{equation}
+  \hat A \ket \phi = a \ket \phi
+  \label{eq:eigenequation}
+\end{equation}
+のように自身の定数倍となる$\ket \phi$を$\hat A$の\textbf{固有ベクトル}といい、その時の定数$a$を固有値という。
+
+\subsection{エルミート演算子}
+演算子のうち、$\hat A^\dagger = \hat A$のように、転置をして複素共役を取る（エルミート共役という）ことで元の形に戻るものをエルミート演算子という。量子力学では、エルミート演算子と、後で述べるユニタリ演算子が重要な役割を果たす。
+
+エルミート演算子には以下の2つの重要な性質がある。
+\begin{enumerate}
+	\item 固有値が実数である。
+	\item 異なる固有値を持つ固有ベクトルは互いに直交する。
+\end{enumerate}
+
+1については以下のように示すことができる。まず、式(\ref{eq:eigenequation})に左から$\bra \phi$をかけると次式を得る。
+\begin{equation}
+  \bra \phi \hat A \ket \phi = a \braket {\phi|\phi}
+  \label{eq:hermite_real_1}
+\end{equation}
+また、式(\ref{eq:eigenequation})の全体のエルミート共役を取ると、
+\begin{equation}
+  \bra \phi \hat A^\dagger = a^*\bra \phi
+\end{equation}
+であり、これに右から$\ket \phi$をかけると
+\begin{equation}
+  \bra \phi \hat A^\dagger \ket \phi = a^* \braket {\phi|\phi}
+  \label{eq:hermite_real_2}
+\end{equation}
+である。エルミート演算子は$\hat A = \hat A^\dagger$を満たすから、式(\ref{eq:hermite_real_1})と式(\ref{eq:hermite_real_2})は等しく、$a = a^*$である。
+
+2は以下のように示すことができる。エルミート演算子が固有値$a_1 , a_2$とそれに対応する固有ベクトル$\ket {\phi_1}, \ket {\phi_2}$を持つとする。
+\begin{equation}
+  \hat A\ket {\phi_1} = a_1\ket{\phi_1}
+\end{equation}
+\begin{equation}
+  \hat A\ket{\phi_2} = a_2\ket{\phi_2}
+\end{equation}
+ここで、式?のエルミート共役を取ると、
+\begin{equation}
+  \bra{\phi_2}\hat A^\dagger = a_2^*\bra{\phi_2}
+\end{equation}
+であるが、$\hat A^\dagger = \hat A$、$a_2^* = a_2$であるから、
+\begin{equation}
+  \bra{\phi_2}\hat A = a_2\bra{\phi_2}
+\end{equation}
+式(\ref{eq:hermite_real_1}), 式(\ref{eq:hermite_real_2})より、次式を得る。
+\begin{equation}
+  \bra{\phi_2}\hat A\ket{\phi_1} = a_1\braket{\phi_1|\phi_2}
+\end{equation}
+\begin{equation}
+  \bra{\phi_2}\hat A\ket{\phi_1} = a_2\braket{\phi_1|\phi_2}
+\end{equation}
+この２式の左辺は等しいから、
+\begin{equation}
+  (a_1 - a_2)\braket{\phi_1|\phi_2} = 0
+\end{equation}
+を得る。したがって、$a_1 \neq a_2$であれば、$\braket{\phi_1|\phi_2}=0$となる。固有値が同じ場合、固有ベクトルは直交しないが、Schmidtの直交化法を用いて、互いに直交化させることができる。このようにして、エルミート演算子の固有ベクトルは互いに直交化させた後に規格化すれば、正規直交基底を作ることができる。
+
+\section{物理量とその期待値}
+
+量子力学では、エルミート演算子を物理量（フォトン数、電場、等々）に対応させる。ある量子状態$\ket\psi$に対して、ある物理量を測定することを考えよう。量子論では、測定は揺らぎを伴う場合が多くある。この場合、物理量の期待値や、その揺らぎの大きさを計算で求めることはできるが、測定値は一意には決まらない。
+
+ある量子状態における物理量の期待値は、以下のように求めることができる。
+まず、状態ベクトル$\ket\psi$を、物理量の演算子$\hat A$の固有ベクトルからなる正規直交基底$\{\ket{\phi_k}\}$で展開する。
+\begin{equation}
+  \ket \psi = \sum_{k=1}^n c_k\ket{\phi_k}
+\end{equation}
+左から$\hat A$をかけると、
+\begin{equation}
+  \hat A\ket{\psi} = \sum_{k=1}^n c_k a_k\ket{\phi_k}
+\end{equation}
+さらに左から$\bra\psi$をかけると、次式を得る。
+\begin{equation}
+  \braket{\psi|\hat A|\psi} = \sum_{k=1}^n c_k^* c_k a_k\braket{\phi_k|\phi_k} = \sum_{k=1}^n a_k|c_k|^2
+\end{equation}
+この右辺は、$k$番目の固有状態に対する物理量$a_k$を、各固有状態の確率$|c_k|^2$で重み付け平均した値になっている。従って、$\braket{\psi|\hat A|\psi}$は物理量の期待値を表す。$\ket \psi$が文脈から明らかな場合は、$\braket{\psi|\hat A|\psi} \equiv \braket{\hat A}$と表す場合もある。
+
+また、測定ごとの揺らぎ（分散）は以下のように求めることができる。測定の平均値を$\braket {\hat A} \equiv \braket{\psi | \hat A | \psi}$とし、また、測定における平均値からのずれを表す演算子を$\Delta \hat A \equiv \hat A - \braket {\hat A}$とする。この時、
+\begin{equation}
+\begin{aligned}
+  \braket{\Delta \hat A^2} &\equiv 
+  \braket{\psi|\Delta \hat A^2|\psi}
+  =\braket{\psi|\hat A^2|\psi} - 2\braket{\psi |\hat A|\psi}\braket {\hat A} + \braket{\hat A}^2\\
+  &= \braket{\psi|\hat A^2|\psi} - \braket{\hat A}^2 
+  \equiv \braket{\hat A^2} - \braket{\hat A}^2
+\end{aligned}
+\end{equation}
+を得る。つまり、2乗の平均値$\braket{\hat A^2}$と平均値$\braket{\hat A}$の2乗の差から分散が求められる。
+
+このように、量子論における測定とは、物理量を表すエルミート演算子の$k$番目の固有状態$\ket {\phi_k}$と$\ket \phi$の内積から重み付け$c_k$を求め、その確率分布$|c_k|^2$を求めることである。
+
+初等的な量子論の教科書を読むと、電子の状態は波動関数$\Psi(x)$で表され、その確率分布は$|\Psi(x)|^2$で与えられる、と書かれている。これは、位置$x$の固有状態が$\delta(x - x_0)$（ただし$x_0$は実数）であることに由来している。
+%運動量の確率分布を求めたければ、運動量固有状態$\phi(p, x) = \frac{1}{\sqrt{2\pi\hbar}}\exp\left({\frac{\hbar}{i}xp}\right)$との内積を取り、その絶対値の自乗を計算すれば良い。
+
+
+
+\subsection{可換性と同時測定}
+2つのエルミート演算子$\hat A, \hat B$が可換、すなわち
+\begin{equation}
+  \hat A \hat B = \hat B \hat A
+\end{equation}
+とすると、次式が成り立つ。
+\begin{equation}
+  \hat A \hat B \ket{\phi_k} = \hat B \hat A \ket{\phi_k} = a_k \hat B \ket{\phi_k}
+\end{equation}
+これは、$\hat B \phi_k$が$\hat A$の固有ベクトルであり、その固有値が$a_k$であることを表している。従って、$\hat B\ket{\phi_k}$は$\ket{\phi_k}$の定数倍であるはずであるから、
+\begin{equation}
+  \hat B \ket{\phi_k} = b_k \ket{\phi_k}
+\end{equation}
+が成り立つ。すなわち、$\hat A$と$\hat B$が可換ならば、この2つの物理量に対する固有状態が存在し、同時測定が可能である。一方、$\hat A$と$\hat B$が可換でないとき、同時測定は可能でない。
+
+%位置演算子$\hat q$と運動量演算子$\hat p$は可換ではない。このため、量子力学では位置と運動量を同時に計測することができない。
+\section{不確定性関係}
+$\hat A$, $\hat B$を、物理量を表すエルミート演算子とする。前節で述べたように、$\hat A$と$\hat B$が交換可能、すなわち$[\hat A, \hat B] = 0$であれば同時固有状態が存在する。一方、$[\hat A, \hat B] \neq 0$であるような物理量を計測する際には、両方の物理量の測定誤差を0にすることはできない。このことを不確定性関係という。式で表せば、
+\begin{equation}
+\begin{aligned}
+  \braket{\hat A} \equiv \braket{\phi|\hat A|\phi}, \Delta \hat A = \hat A - \braket {\hat A}\\
+  \braket{\hat B} \equiv \braket{\phi|\hat B|\phi}, \Delta \hat B = \hat B - \braket {\hat B}
+\end{aligned}
+\end{equation}
+この時、
+\begin{equation}
+  \braket {\Delta \hat A^2}\braket{\Delta \hat B^2} \geq \left| \frac{1}{2} \braket{[\hat A, \hat B]}\right|^2
+  \label{eq:uncertainty}
+\end{equation}
+が成り立つ。
+
+証明は以下の通り\footnote{北野正雄「量子力学の基礎」共立出版、2010年。}。まず、$[\hat A, \hat B]$が反エルミート\footnote{エルミート行列を$i$倍したもの。固有値が全て虚数になる。}であることを示す。
+\begin{equation}
+\begin{aligned}
+	\left([\hat A, \hat B]\right)^\dagger
+&=\left( \hat A \hat B - \hat B \hat A\right)^\dagger = \left(\hat B^\dagger \hat A^\dagger - \hat A^\dagger \hat B^\dagger\right)\\
+&=\left( \hat B\hat A - \hat A\hat B \right) = -[\hat A, \hat B]
+\end{aligned}
+\end{equation}
+したがって、エルミート演算子$\hat C$を用いて、
+$[\hat A, \hat B] = i\hat C$とおくことができる。
+ここで、$\hat D = \Delta \hat A + i\lambda \Delta \hat B$を導入する。ただし$\hat D$はエルミートではない。任意の$\ket \phi$に対して、$\braket{\phi|\hat D^\dagger \hat D|\phi} = \| \hat D \ket \phi\|^2 \geq 0$なので、
+\begin{equation}
+\begin{aligned}
+\braket{\phi|\hat D^\dagger \hat D|\phi} &\equiv  \braket {\hat D^\dagger \hat D} = \braket{(\Delta\hat A - i\lambda \Delta \hat B)(\Delta \hat A + i\lambda \Delta \hat B)} \\
+&= 
+  \braket{\Delta \hat A^2 - \lambda \hat C + \lambda ^2 \Delta \hat B^2} 
+  = \braket{\Delta \hat A^2} - \lambda \braket{\hat C} + \lambda ^2 \braket {\Delta \hat B^2} \geq 0
+\end{aligned}
+\end{equation}
+これが常に満たされるためには、$\lambda$に関する2次方程式の判別式が負である必要がある。すなわち、
+\begin{equation}
+  \braket{\hat C}^2 - 4\braket{\Delta \hat A^2}\braket{\Delta \hat B^2} \leq 0
+\end{equation}
+これを変形していくと、次式を得る。
+\begin{equation}
+    \braket{\Delta \hat A^2}\braket{\Delta \hat B^2} \geq \braket{\hat C}^2 / 4 = \braket{-i[\hat A, \hat B]/2}^2 = -\braket{[\hat A, \hat B]/2}^2
+\end{equation}
+ここで、反エルミート行列の固有値が全て純虚数であることから、$\braket{[\hat A, \hat B]}$も純虚数となることに注意すると、式(\ref{eq:uncertainty})を得る。
+
+
+
+\section{ユニタリ演算子}
+演算子$\hat U$のうち、$\hat U^\dagger \hat U = \pmb 1$を満たすものをユニタリ演算子という。ユニタリ演算子を行列表示すると、それは正規直交基底$\{\ket k\}$の縦ベクトルを並べたものと等価である。すなわち、
+\begin{equation}
+  \hat U = \left( \begin{array}{cccc} \ket 1 & \ket 2 & \hdots & \ket n \end{array} \right)
+\end{equation}
+である（各ケットが縦ベクトルであるので、$\hat U$が正方行列になることに注意）。このように表記すれば、次式が容易に示せる。
+\begin{equation}
+	\hat U ^\dagger \hat U = \left( \begin{array}{c} \bra 1 \\ \bra 2 \\ \vdots \\ \bra n \end{array}\right) 
+ 		\left( \begin{array}{cccc} \ket 1 & \ket 2 & \hdots & \ket n \end{array} \right) = \left(\begin{array}{cccc}
+			1 & 0 & \hdots & 0\\
+			0 & 1 & \hdots & 0\\
+			\vdots & \vdots & \ddots & 0\\ 
+			0 & 0 & 0 & 1
+ 		\end{array}	\right)
+\end{equation}
+ユニタリ演算子は正規直交基底を用いて基底変換をする演算子であることがわかる。
+
+また、ユニタリ演算子の重要な性質として、内積の値を変えないことがあげられる。例えば、$\ket{\phi_k}$が$\hat U$で$\ket{\psi_k}$に変換されるとする。すなわち、
+\begin{equation}
+  \ket{\psi_k} = \hat U \ket{\phi_k}
+\end{equation}
+としよう。この時、次式が成り立つ。
+\begin{equation}
+  \braket {\psi_i|\psi_j} = \braket{\phi_i|\hat U^\dagger \hat U | \phi_j} = \braket{\phi_i|\phi_j}
+\end{equation}
+
+同様に、ユニタリ演算子は自分自身の内積、つまり量子状態の存在確率を変えないという性質を持っている\footnote{光と量子のアナロジーでいうと、エネルギーロスがない時の光の伝播や時間発展はユニタリ行列で表すことができる。量子力学では、$\braket{\phi|\phi}$は$\ket \phi$の存在確率であり、ユニタリ変換では存在確率は変化しない。}
+
+\section{位置、運動量、エネルギーの演算子による表現と交換関係}\label{section:commutation}
+前節で述べたように、状態ベクトルや演算子はユニタリ演算子で基底変換を行うことができ、扱いやすい基底を選んで考えれば良い。ここでは、位置$q$と運動量$p$の交換関係を考えるため、波数$k$、角周波数$\omega$の連続関数$\phi = \exp i(kq - \omega t)$を無限次元の状態ベクトルとして考えてみよう\footnote{このような波動関数は無限空間に広がるものであり、本来はそのノルムが無限大となることから扱いが面倒である。}。ドブロイの関係式$p = \hbar k$、$E = \hbar \omega$より、
+\begin{equation}
+  \phi = \exp \frac i \hbar (pq - Et)
+\end{equation}
+を得る。
+
+これを$q$の関数と捉えてみよう。このことを$q$表示という。$\phi$を$q$で偏微分すれば、
+\begin{equation}
+  \frac{\partial}{\partial q} \phi = \frac{i}{\hbar}p \phi
+\end{equation}
+であるから、
+\begin{equation}
+  	\hat p = -i\hbar \frac{\partial}{\partial q}
+\end{equation}
+とすれば、$q$の関数としての$\phi$から$p$を取り出せることがわかる。一方、$\hat q$はそのまま$\hat q = q$とすれば良い。
+
+次に、$\phi$を$p$の関数と捉えてみよう。このことを$p$表示という。$\phi$を$p$で偏微分すれば、
+\begin{equation}
+  \frac{\partial}{\partial p} = \frac{i}{\hbar}q\phi
+\end{equation}
+であるから、
+\begin{equation}
+  \hat q = -i\hbar \frac{\partial}{\partial p}
+\end{equation}
+とすれば、$p$の関数としての$\phi$から$q$を取り出せることがわかる。
+
+同様に、$\phi$に対してはエネルギー演算子（ハミルトニアン）が$i\hbar \frac d {dt}$と表されることも見て取れる。このように、正弦波の波動関数を考えると、波動関数に演算子を作用させることで位置、運動量、エネルギーの情報が取り出せる様子をイメージしやすい\footnote{このような正弦波の波動関数は全空間に広がったものなので実際には存在しないが、フーリエ変換の考え方により、様々な運動量とエネルギーを持った正弦波状の波動関数の重ね合わせによって色々な波動関数を表すことができる。}。
+
+しかし、連続関数の扱いは場合によっては面倒である。ユニタリ変換の考え方を使うと、扱いやすい基底に基底変換して、演算子もその基底で表してしまえば良い。このように、ユニタリ変換によって基底変換することでどのような基底に対しても演算子を表現できることや、ユニタリ変換によって状態ベクトルの内積が変化しないことなどを踏まえて、状態ベクトルとして$\ket \phi$という記号を用いている。これを$q$表示したければ、$\ket q$との内積をとって$\braket{q|\phi}$とすれば良い。また、$p$表示したければ、$\ket p$との内積をとって$\braket{p|\phi}$とすれば良い。
+
+なお、$q$表示や$p$表示を用いると、位置と運動量の間に成り立つ関係式（交換関係）を導出することが容易である。例えば$q$表示では、任意のケットベクトル$\ket \psi$に対して
+\begin{equation}
+\begin{aligned}
+\left[ \hat q, \hat p \right] \ket \psi &= (\hat q \hat p - \hat p \hat q)\ket \psi = q\left( -i\hbar \frac{\partial}{\partial q} \right)\ket \psi +i\hbar \frac{\partial}{\partial q}q\ket \psi\\
+  &= q\left( -i\hbar \frac{\partial}{\partial q} \right)\ket \psi +i\hbar \ket \psi + qi\hbar\frac{\partial}{\partial q} \ket \psi = i\hbar \ket \psi
+\end{aligned}
+\end{equation}
+であるから、$[\hat q, \hat p] = i\hbar$である。このことから、$\hat q$と$\hat p$は可換でなく、位置と運動量は同時に計測が出来ない。
+
+\subsection{連続量の基底とフーリエ変換}
+
+ある状態ベクトル$\ket \phi$を、位置の基底$\ket q$で展開してみよう。
+その時の展開係数は、式(\ref{eq:coefficient_of_superposition})と同様に$\braket{q|\phi}$である。一方、位置は連続量であるため、式(\ref{eq:superposition_of_discrete_ket})における有限個の和を積分に置き換えることで次式を得る。
+\begin{equation}
+  \ket \phi = \int_{-\infty}^{\infty}\braket{q|\phi}\ket q dq
+\end{equation}
+この様子は、デルタ関数を用いて連続関数を表す様子と対応している。
+\begin{equation}
+  \phi(q) = \int_{-\infty}^{\infty}f(q')\delta(q-q')dq'
+\end{equation}
+
+同様に、$\ket \phi$を運動量の基底$\ket p$で展開してみよう。
+\begin{equation}
+  \ket \phi = \int_{-\infty}^{\infty}\braket{p|\phi}\ket p dp
+\end{equation}
+これの$q$表示を求めて見よう。運動量$p$の基底関数を$q$表示したものを、$g_p(q) = c\exp(ipq/\hbar)$とおく。$c$は規格化のための定数である。ここで、$\braket {p'|p}$を$q$表示で計算すると次式を得る。
+\begin{equation}
+  \int_{-\infty}^\infty g_{p'}^*(q)g_p(q) dq = 2\pi\hbar|c|^2\delta(p - p')
+\end{equation}
+従って、$c = \frac{1}{\sqrt{2\pi\hbar}}$、すなわち$g_p(q) = \frac{1}{\sqrt{2\pi\hbar}}\exp(i\hbar pq)$とすれば正規直交系を作ることができる。
+
+ここで、$p$表示での波動関数を$\tilde \phi(p) \equiv \braket {p|\phi}$と表すと、
+\begin{equation}
+\begin{aligned}
+  \phi(q) &= \int_{-\infty}^\infty g_q(p) \tilde{\phi}(p) dp = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\tilde{\phi}(p)\exp(ipq/\hbar)dp\\
+  \tilde \phi(p) &= \int_{-\infty}^{\infty}g_p^*(q)\phi(q)dq = \frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{\infty}\phi(q) \exp(-ipq/\hbar)dq
+\end{aligned}
+\end{equation}
+となり、$\phi (q)$と$\tilde \phi (p)$がフーリエ変換・逆変換の関係にあることがわかる。
+
+
+
+\printindex
+

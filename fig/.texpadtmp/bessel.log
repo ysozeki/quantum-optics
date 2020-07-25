@@ -1,0 +1,904 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdftex 2015.8.19)  14 SEP 2015 11:06
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex"
+(/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:3: Undefined control sequence.
+l.3   \fontfamily
+                 {Helvetica}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:4: Undefined control sequence.
+l.4   \selectfont
+                 
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:5: Undefined control sequence.
+l.5   \makeatletter
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:6: Undefined control sequence.
+l.6   \providecommand
+                     \color[2][]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:6: Undefined control sequence.
+l.6   \providecommand\color
+                           [2][]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:7: Undefined control sequence.
+l.7     \GenericError
+                     {(gnuplot) \space\space\space\@spaces}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:7: Undefined control sequence.
+l.7 ...GenericError{(gnuplot) \space\space\space\@
+                                                  spaces}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:13: Undefined control sequence.
+l.13     \renewcommand
+                      \color[2][]{}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:13: Undefined control sequence.
+l.13     \renewcommand\color
+                            [2][]{}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:15: Undefined control sequence.
+l.15   \providecommand
+                      \includegraphics[2][]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:15: Undefined control sequence.
+l.15   \providecommand\includegraphics
+                                      [2][]{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:16: Undefined control sequence.
+l.16     \GenericError
+                      {(gnuplot) \space\space\space\@spaces}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:16: Undefined control sequence.
+l.16 ...enericError{(gnuplot) \space\space\space\@
+                                                  spaces}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:20: Undefined control sequence.
+l.20     \renewcommand
+                      \includegraphics[2][]{}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:20: Undefined control sequence.
+l.20     \renewcommand\includegraphics
+                                      [2][]{}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:22: Undefined control sequence.
+l.22   \providecommand
+                      \rotatebox[2]{#2}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:22: Undefined control sequence.
+l.22   \providecommand\rotatebox
+                                [2]{#2}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:22: You can't use `macro parameter character #' in horizontal mode.
+l.22   \providecommand\rotatebox[2]{#
+                                     2}%
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:23: Undefined control sequence.
+l.23   \@
+         ifundefined{ifGPcolor}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:27: Undefined control sequence.
+l.27   \@
+         ifundefined{ifGPblacktext}{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:36: Undefined control sequence.
+l.36   \makeatother
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:37: Undefined control sequence.
+l.37   \ifGPblacktext
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:41: Extra \else.
+l.41   \else
+            
+I'm ignoring this; it doesn't match any \if.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:43: Undefined control sequence.
+l.43     \ifGPcolor
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:58: Extra \else.
+l.58     \else
+              
+I'm ignoring this; it doesn't match any \if.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:74: Extra \fi.
+l.74     \fi
+            
+I'm ignoring this; it doesn't match any \if.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:75: Extra \fi.
+l.75   \fi
+          
+I'm ignoring this; it doesn't match any \if.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:76: Undefined control sequence.
+l.76     \setlength
+                   {\unitlength}{0.0500bp}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:76: Undefined control sequence.
+l.76     \setlength{\unitlength
+                               }{0.0500bp}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:78: Undefined control sequence.
+l.78       \newlength
+                     {\gptboxheight}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:78: Undefined control sequence.
+l.78       \newlength{\gptboxheight
+                                   }%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:79: Undefined control sequence.
+l.79       \newlength
+                     {\gptboxwidth}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:79: Undefined control sequence.
+l.79       \newlength{\gptboxwidth
+                                  }%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:80: Undefined control sequence.
+l.80       \newsavebox
+                      {\gptboxtext}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:80: Undefined control sequence.
+l.80       \newsavebox{\gptboxtext
+                                  }%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:82: Undefined control sequence.
+l.82     \setlength
+                   {\fboxrule}{0.5pt}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:82: Undefined control sequence.
+l.82     \setlength{\fboxrule
+                             }{0.5pt}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:83: Undefined control sequence.
+l.83     \setlength
+                   {\fboxsep}{1pt}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:83: Undefined control sequence.
+l.83     \setlength{\fboxsep
+                            }{1pt}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:84: Undefined control sequence.
+l.84 \begin
+           {picture}(7200.00,5040.00)%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:85: Undefined control sequence.
+l.85     \gplgaddtomacro
+                        \gplbacktext{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:86: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.86       \csname LTb\endcsname
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:87: Undefined control sequence.
+l.87       \put
+               (3600,4409){\makebox(0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:87: Undefined control sequence.
+l.87       \put(3600,4409){\makebox
+                                   (0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:88: Undefined control sequence.
+l.88       \put
+               (360,360){\makebox(0,0)[l]{\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:88: Undefined control sequence.
+l.88       \put(360,360){\makebox
+                                 (0,0)[l]{\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:90: Undefined control sequence.
+l.90     \gplgaddtomacro
+                        \gplfronttext{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:91: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.91       \csname LTb\endcsname
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:92: Undefined control sequence.
+l.92       \put
+               (2282,644){\makebox(0,0){\strut{}$-2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:92: Undefined control sequence.
+l.92       \put(2282,644){\makebox
+                                  (0,0){\strut{}$-2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:93: Undefined control sequence.
+l.93       \put
+               (2941,644){\makebox(0,0){\strut{}$-1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:93: Undefined control sequence.
+l.93       \put(2941,644){\makebox
+                                  (0,0){\strut{}$-1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:94: Undefined control sequence.
+l.94       \put
+               (3600,644){\makebox(0,0){\strut{}$0$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:94: Undefined control sequence.
+l.94       \put(3600,644){\makebox
+                                  (0,0){\strut{}$0$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:95: Undefined control sequence.
+l.95       \put
+               (4259,644){\makebox(0,0){\strut{}$1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:95: Undefined control sequence.
+l.95       \put(4259,644){\makebox
+                                  (0,0){\strut{}$1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:96: Undefined control sequence.
+l.96       \put
+               (4918,644){\makebox(0,0){\strut{}$2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:96: Undefined control sequence.
+l.96       \put(4918,644){\makebox
+                                  (0,0){\strut{}$2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:97: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.97       \csname LTb\endcsname
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:98: Undefined control sequence.
+l.98       \put
+               (3600,104){\makebox(0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:98: Undefined control sequence.
+l.98       \put(3600,104){\makebox
+                                  (0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:99: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.99       \csname LTb\endcsname
+                                %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:100: Undefined control sequence.
+l.100       \put
+                (1930,1202){\makebox(0,0)[r]{\strut{}$-2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:100: Undefined control sequence.
+l.100       \put(1930,1202){\makebox
+                                    (0,0)[r]{\strut{}$-2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:101: Undefined control sequence.
+l.101       \put
+                (1930,1861){\makebox(0,0)[r]{\strut{}$-1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:101: Undefined control sequence.
+l.101       \put(1930,1861){\makebox
+                                    (0,0)[r]{\strut{}$-1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:102: Undefined control sequence.
+l.102       \put
+                (1930,2520){\makebox(0,0)[r]{\strut{}$0$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:102: Undefined control sequence.
+l.102       \put(1930,2520){\makebox
+                                    (0,0)[r]{\strut{}$0$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:103: Undefined control sequence.
+l.103       \put
+                (1930,3179){\makebox(0,0)[r]{\strut{}$1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:103: Undefined control sequence.
+l.103       \put(1930,3179){\makebox
+                                    (0,0)[r]{\strut{}$1$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:104: Undefined control sequence.
+l.104       \put
+                (1930,3838){\makebox(0,0)[r]{\strut{}$2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:104: Undefined control sequence.
+l.104       \put(1930,3838){\makebox
+                                    (0,0)[r]{\strut{}$2$}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:105: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.105       \csname LTb\endcsname
+                                 %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:106: Undefined control sequence.
+l.106       \put
+                (1390,2520){\rotatebox{-270}{\makebox(0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:106: Undefined control sequence.
+l.106       \put(1390,2520){\rotatebox
+                                      {-270}{\makebox(0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:106: Undefined control sequence.
+l.106 ...\put(1390,2520){\rotatebox{-270}{\makebox
+                                                  (0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:107: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.107       \csname LTb\endcsname
+                                 %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:108: Undefined control sequence.
+l.108       \put
+                (5399,1511){\makebox(0,0)[l]{\strut{}0.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:108: Undefined control sequence.
+l.108       \put(5399,1511){\makebox
+                                    (0,0)[l]{\strut{}0.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:109: Undefined control sequence.
+l.109       \put
+                (5399,2015){\makebox(0,0)[l]{\strut{}2.5}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:109: Undefined control sequence.
+l.109       \put(5399,2015){\makebox
+                                    (0,0)[l]{\strut{}2.5}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:110: Undefined control sequence.
+l.110       \put
+                (5399,2519){\makebox(0,0)[l]{\strut{}5.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:110: Undefined control sequence.
+l.110       \put(5399,2519){\makebox
+                                    (0,0)[l]{\strut{}5.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:111: Undefined control sequence.
+l.111       \put
+                (5399,3023){\makebox(0,0)[l]{\strut{}7.5}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:111: Undefined control sequence.
+l.111       \put(5399,3023){\makebox
+                                    (0,0)[l]{\strut{}7.5}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:112: Undefined control sequence.
+l.112       \put
+                (5399,3528){\makebox(0,0)[l]{\strut{}10.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:112: Undefined control sequence.
+l.112       \put(5399,3528){\makebox
+                                    (0,0)[l]{\strut{}10.0}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:113: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.113       \csname LTb\endcsname
+                                 %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:114: Undefined control sequence.
+l.114       \put
+                (6371,2520){\rotatebox{-270}{\makebox(0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:114: Undefined control sequence.
+l.114       \put(6371,2520){\rotatebox
+                                      {-270}{\makebox(0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:114: Undefined control sequence.
+l.114 ...\put(6371,2520){\rotatebox{-270}{\makebox
+                                                  (0,0){\strut{}}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:116: Undefined control sequence.
+l.116     \gplgaddtomacro
+                         \gplbacktext{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:117: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.117       \csname LTb\endcsname
+                                 %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:118: Undefined control sequence.
+l.118       \put
+                (3600,4409){\makebox(0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:118: Undefined control sequence.
+l.118       \put(3600,4409){\makebox
+                                    (0,0){\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:119: Undefined control sequence.
+l.119       \put
+                (360,360){\makebox(0,0)[l]{\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:119: Undefined control sequence.
+l.119       \put(360,360){\makebox
+                                  (0,0)[l]{\strut{}}}%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:121: Undefined control sequence.
+l.121     \gplgaddtomacro
+                         \gplfronttext{%
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:122: Undefined control sequence.
+\LTb ->\color 
+              {black}
+l.122       \csname LTb\endcsname
+                                 %
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:123: Undefined control sequence.
+l.123       \put
+                (2282,644){\makebox(0,0){\strut{}$-2$}}%
+(That makes 100 errors; please try again.)
+/Users/ozeki/Documents/Projects/20151001 光電子工学/fig/bessel.tex:123:  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,234 @@
+\chapter{光の検出}
+
+本章では光の検出法の量子論について述べる。まず、干渉検出に用いるビームスプリッタの量子力学的な取り扱いについて説明する。その後、直接検出、ホモダイン、ヘテロダインについて、検出する物理量を説明する。
+
+\section{ビームスプリッタの量子論}
+
+ビームスプリッタの動作は、第1章で説明したように、2つの光の電場の和と差を出力するというものであった。ビームスプリッタの動作を量子力学的に考えるため、
+%図?のような
+結合導波路を考え、2つの光が少しずつ結合していく様子を考えよう。このとき、伝搬とともに、パラメータ$\theta$が増えていくものとし、伝搬前が$\theta = 0$であるものとする。結合導波路$a$および$b$に入力される光の状態ベクトルがそれぞれ$\ket {\Psi_1}_a, \ket {\Psi_2}_b$であるとしよう。また、結合導波路$a$および$b$の消滅演算子をそれぞれ$\hat a, \hat b$とする。シュレディンガー描像では、伝搬とともに状態ベクトルが変化していく。そのハミルトニアンは、天下りであるが
+\begin{equation}
+  \hat H = i\hbar (\hat a \hat b^\dagger - \hat a^\dagger \hat b)
+\end{equation}
+であることが知られている。このハミルトニアンを用いた時間発展演算子$U(\theta) = \exp\left( \frac{\theta}{i\hbar} \hat H\right)$であり、この$U(\theta)$を状態ベクトルに作用させることで、結合導波路を伝搬した後の状態ベクトルを求めることができる。
+
+一方、ハイゼンベルグ描像では、求めたい物理量を$\hat a, \hat b$で表し、$\hat a, \hat b$が伝搬とともに変化するものと考える。ハイゼンベルグの運動方程式より、
+\begin{equation}
+  \frac{d}{d\theta}\hat a = \frac{i}{\hbar}[\hat H, \hat a] = -\hat b
+\end{equation}
+\begin{equation}
+  \frac{d}{d\theta}\hat b = \frac{i}{\hbar}[\hat H, \hat b] = \hat a
+\end{equation}
+を得る。これらの結合微分方程式を解くと、次式を得る。
+\begin{equation}
+  \left(\begin{array}{c}
+  	\hat a(\theta) \\ \hat b(\theta)
+  \end{array} \right) = \left(
+  \begin{array}{r r}
+  	\cos \theta & -\sin \theta \\
+  	\sin \theta & \cos \theta
+  \end{array}
+  \right)
+  \left(\begin{array}{c}
+  	\hat a(0) \\ \hat b(0)
+  \end{array}\right)
+\end{equation}
+
+ここで、$\theta = \pi/4$とすれば、この行列は$\displaystyle \frac{1}{\sqrt{2}}\left(\begin{array}{r r} 1 & -1\\1 & 1\end{array}\right)$となり、式(\ref{eq:beamsplitter_matrix})の行列と一致する。
+
+このように、ハイゼンベルグ描像では入力ポートの消滅演算子$\hat a, \hat b$をそのまま複素振幅と考え、出力ポートの消滅演算子を$\hat a, \hat b$で表すことで物理量の計算ができる。
+
+\subsubsection{光損失のモデルとしてのビームスプリッタ}
+ビームスプリッタは、2つの異なる空間モードの線形結合を取るデバイスであり、量子光学においては、光検出に限らず様々な意味を持っている。
+
+例えば、光損失は、
+%Fig. ?に示すように
+ビームスプリッタで光が分割され、出力ポート1の光が残り、出力ポート2の光が失われるものと考える。このとき、入力ポート2から出力ポート1へは真空場が入力される。このように考えることで、光損失に伴うSN比の低下を説明できる。
+
+\subsubsection{モード変換のモデルとしてのビームスプリッタ}
+量子光学では、各空間モードに対し、ある時間$T$のタイムスロットにおける離散的な周波数スペクトル成分の複素振幅を考える。スペクトル成分数や、各スペクトル成分の複素振幅は、$T$の取り方に依存する\footnote{一方、物理は$T$の取り方に依存しないはずである。}。この時、複素振幅がどのように変化するかについても、ビームスプリッタと同じように考えることができる。
+
+%(Fig. ?)に示すように、
+時間$T$のタイムスロットの周波数スペクトル成分が並んでいる状況を考えよう。1つ目のタイムスロットと2つ目のタイムスロットのある周波数成分がそれぞれ$\alpha$、$\beta$であるものとする。ここで、この2つのタイムスロットを、長さ$2T$の時間信号と捉えてフーリエ変換し直す状況を考える。すると、その複素振幅は2つの周波数成分に分かれ、低周波側の複素振幅は$(\alpha + \beta) / \sqrt 2$、高周波側の複素振幅は$(\alpha - \beta) / \sqrt 2$となる。この状況は、ビームスプリッタで2つのモードを混合した状況と等価である。
+\subsection{ビームスプリッタによるコヒーレント状態の変化}
+%Fig. ?に示すように、
+複素振幅$\alpha, \beta$をもつ2つのコヒーレント状態の光$\ket \alpha, \ket \beta$をビームスプリッタに入力する状況を考えよう。このとき、入力ポート1, 2の消滅演算子を$\hat a, \hat b$、出力ポート1, 2の消滅演算子を$\hat a', \hat b'$とすると、
+\begin{equation}
+  \hat a' = t\hat a - r \hat b
+\end{equation}
+\begin{equation}
+  \hat b' = r\hat b + t \hat a
+\end{equation}
+と表せる。ただし、$t = \cos \theta, r = \sin \theta $とおいた。出力ポート1の実部の消滅演算子を$\hat a'_1 \equiv (\hat a' + \hat a'^\dagger)/2$とすれば、その期待値$\braket{\hat a'_1}$は次式を計算することで求められる。
+\begin{equation}
+  \braket{\hat a'_1} = {}_b\!\bra{\beta}{}_a\!\bra{\alpha}\hat a'_1\ket{\alpha}_a \ket {\beta}_b
+  \label{eq:expectation_of_amplitude_of_BS_output}
+\end{equation}
+ただし、$\ket \alpha_a$は入力ポート$a$に複素振幅$\alpha$のコヒーレント状態を入力することを表す。$\ket \beta_b$も同様である。この量子状態は直積$\otimes$を用いて$\ket \alpha_a \otimes \ket \beta _ b$と表すが、ここでは簡単のため$\ket \alpha_a \ket \beta _b$という書き方をする。また、$\ket \alpha_a \ket \beta _b$のエルミート共役を${}_b\!\bra{\beta}{}_a\!\bra{\alpha}$と表す。
+
+式(\ref{eq:expectation_of_amplitude_of_BS_output})を計算していくと、
+\begin{equation}
+  \begin{aligned}
+  	\braket{\hat a'_1} &= \frac 1 2 {}_b\!\bra{\beta}{}_a\!\bra{\alpha} t \hat a - r\hat b + t \hat a^\dagger - r \hat b^\dagger\ket \alpha _ a \ket \beta _ b \\
+  	&=  t\frac{\alpha + \alpha^*}{2} - r \frac{\beta + \beta ^*}{2} \\
+  	&= \mathrm {Re} \ (t\alpha - r \beta)
+  \end{aligned}
+\end{equation}
+を得る。また、明らかに、異なるモードの同時測定は可能であるから$\hat a$と$\hat b$は交換可能である。従って、複素振幅の分散は次式のように求められる。
+\begin{equation}
+\begin{aligned}
+  \braket{(\hat a'_1)^2} - \braket{\hat a'_1}^2 &= \frac 1 4 \  {}_b\bra{\beta}{}_a\bra{\alpha} (t \hat a - r\hat b + t \hat a^\dagger - r \hat b^\dagger)^2 \ket \alpha _ a \ket \beta _ b  - \braket{\hat a'_1}^2\\
+  &=\hdots = \frac 1 4 (t^2 + r^2) = \frac 1 4
+  \label{eq:variance_of_amplitude_of_BS_output}
+\end{aligned}
+\end{equation}
+を得る。同様に、$\braket{\hat a'_2} = \mathrm {Im} \ (t\alpha - r\beta)$, $\braket{(\hat a_2)^2} - \braket{\hat a_2}^2 = 1/4$を示すことができ、コヒーレント状態であることが推測できる\footnote{この計算はコヒーレント状態であることの必要条件であり、十分条件ではない。完全な計算については、古澤「量子光学」を参照のこと。}。
+
+コヒーレント状態に損失を与えてもコヒーレント状態ということは、以下のことを意味する。コヒーレント状態は、複素振幅の実部・虚部の両方に1/4の分散を有する状態である。損失を与えると、複素振幅は小さくなるが、分散は小さくならない。このことは、式(\ref{eq:variance_of_amplitude_of_BS_output})において$\ket \beta = \ket 0$として考えることでも見て取れる。入力ポートaからの光の複素振幅の分散は$t^2/4$となり、$t^2$倍だけ小さくなっている。それに加えて、複素振幅の分散に$r^2/4$の分散が混入している。このため、出力ポートAの複素振幅の分散はコヒーレント状態のそれと同じになるのである。
+
+このような、「損失に伴う真空場の混入」が、損失に伴う光の信号対雑音比の低下の原因である。
+
+\section{直接検出の量子論}
+
+直接検出では、
+%Fig. ?に示すように、
+フォトン数に比例した電流が検出器から出力される。光電流を表す演算子は
+\begin{equation}
+  \hat I = \frac{q}{T}\hat n = \frac{q}{T}\hat a^\dagger \hat a
+\end{equation}
+である。ただし、$q$は電荷素量、$T$は着目する時間・周波数モードの時間を$T$である。
+
+なお、ここでは検出器の量子効率を100\%とした。量子効率が$\eta$の場合を考えるには、
+%Fig. ?に示すように、
+光検出器の直前にパワー透過率$\eta$のビームスプリッタを配置し、その出力に光検出器を設置する状況を考えると良い。
+
+\subsubsection{光子数状態のとき}
+光の量子状態$\ket \phi$を$\ket \phi = \ket n$としよう。このとき、電流の期待値は
+\begin{equation}
+  \braket {\hat I} = \bra n \hat I \ket n = \frac{q}{T} \bra n \hat n \ket n = \frac{qn}{T} \ \mathrm{[A]}
+\end{equation}
+である。また、電流の分散は、
+\begin{equation}
+  \braket {\hat I^2} - \braket {\hat I}^2 = \left(\frac{q}{T}\right)^2 \bra n \hat n \hat n \ket n - \left( \frac{qn}{T} \right)^2 = \left( \frac{qn}{T} \right)^2 - \left( \frac{qn}{T} \right)^2 = 0
+\end{equation}
+従って、光子数状態を検出しても、電流の揺らぎは本質的に発生しない。
+
+\subsubsection{コヒーレント状態のとき}
+光の量子状態$\ket \phi$を$\ket \phi = \ket \alpha$としよう。電流の期待値は
+\begin{equation}
+	\braket{\hat I} = \bra \alpha \hat I \ket \alpha = \frac{q}{T}\bra \alpha \hat a^\dagger \hat a \ket \alpha = \frac{q}{T}|\alpha|^2 \ \mathrm{[A]}
+\end{equation}
+であり、また、その分散は
+\begin{equation}
+\begin{aligned}
+  \braket{\hat I^2} - \braket {\hat I}^2 &= \left(\frac{q}{T}\right)^2 \bra \alpha \hat a^\dagger \hat a \hat a^\dagger \hat a \ket \alpha - \left(\frac{q}{T}|\alpha|^2\right)^2\\
+  &= \left(\frac{q}{T}\right)^2 \bra \alpha \hat a^\dagger (\hat a^\dagger \hat a + 1) \hat a \ket \alpha - \left(\frac{q}{T}|\alpha|^2\right)^2\\
+    &= \left(\frac{q}{T}\right)^2 |\alpha|^2\\
+    &= \frac{q}{T}\braket{\hat I} = 2q \bar I B\\
+\end{aligned}
+\end{equation}
+である。ただし、$\bar I \equiv \braket {\hat I}$、$B \equiv 1/2T$とした。このように、コヒーレント状態の光子数の揺らぎとしてショット雑音が求められる。
+
+\section{ホモダイン検出の量子論}
+4.1節で述べたように、ビームスプリッタ入力光の消滅演算子を$\hat a$、$\hat b$とすれば、出力光の消滅演算子は
+\begin{equation}
+  \hat a' = \frac{1}{\sqrt 2}(\hat a - \hat b)
+\end{equation}
+\begin{equation}
+  \hat b' = \frac{1}{\sqrt 2}(\hat a + \hat b)
+\end{equation}
+と表される。出力光を検出した際の光電流は
+\begin{equation}
+  \hat I_1 = \frac{q}{T}\hat a'^\dagger \hat a'
+\end{equation}
+\begin{equation}
+  \hat I_2 = \frac{q}{T}\hat b'^\dagger \hat b'
+\end{equation}
+であるから、バランスド検出器の出力信号は次式で与えられる。
+\begin{equation}
+  \hat I_2 - \hat I_1 = \frac{q}{T}(\hat a^\dagger \hat b + \hat a \hat b^\dagger)
+\end{equation}
+
+信号光の量子状態を$\ket \Psi$、局発光の量子状態を$\ket \beta$とする。このとき、バランスド検出信号の期待値は次式のように計算できる。
+\begin{equation}
+\begin{aligned}
+  {}_b\! \bra \beta {}_a\!\bra{\Psi}\hat I_1 - \hat I_2 \ket \Psi _ a \ket \beta _ b &= \frac{q}{T} {}_b\! \bra \beta {}_a\! \bra {\Psi} \hat a^\dagger \hat b + \hat a \hat b^\dagger \ket \Psi_a \ket \beta _ b\\
+  &= \frac{q}{T}{}_a\!\bra \Psi \hat a^\dagger \beta + \hat a \beta^*\ket \Psi _ a\\
+  &= \frac{2q|\beta|}{T}\left( 
+  {}_a \!\bra \Psi \hat a_1 \ket \Psi_a \cos \phi + {}_a \! \bra \Psi \hat a_2 \ket \Psi_a \sin \phi
+  \right)
+  \end{aligned}
+\end{equation}
+ただし、$\beta = |\beta|e^{i\phi}$とした。このように、ホモダイン検出を用いると、複素振幅の実部・虚部のいずれか、もしくは$\phi$軸への射影を計測することができる。
+
+\section{ヘテロダイン検出の量子論}
+ヘテロダイン検出では、周波数$\omega + \Delta \omega$の信号光を周波数$\omega$の局発光と干渉させることで、周波数$\Delta \omega$の光電流を得る。この際、周波数$\omega - \Delta \omega$にあるイメージ帯の光も、局発光と干渉し、光電流に寄与する。このイメージ帯の寄与によって、ヘテロダイン検出ではホモダイン検出と比較して雑音が増大する。このことを量子論的に調べてみよう。
+
+%Fig. ?に示すように、
+信号光の状態ベクトルを$\ket \Phi _ s$、イメージ帯の状態ベクトルを$\ket 0_i$とし、また、それぞれの消滅演算子を$\hat a_s$、$\hat a_i$とする。また、局発光の状態ベクトルを複素振幅$\beta$のコヒーレント状態$\ket \beta$とし、その消滅演算子を$\hat \beta$とする。計算を簡単にするため、$\beta$を実数としよう。すなわち、次式が成り立つものとする。
+\begin{equation}
+  \bra \beta \hat b \ket \beta = \beta = |\beta|
+\end{equation}
+このとき、バランスド検出器の出力電流の演算子は次式で与えられる。
+\begin{equation}
+  \begin{aligned}
+  	\hat I_1 - \hat I_2 &= \frac{q}{T}\left[
+  	\left\{\hat a_s^\dagger e^{i(\omega + \Delta \omega)t} + \hat a_i^\dagger e^{i(\omega - \Delta \omega)t}\right\}\hat b e^{-i\omega t} + 
+  	\left\{
+  		\hat a_s e^{-i(\omega + \Delta \omega)t} + \hat a_i e^{-i(\omega - \Delta \omega)t}
+  	\right\}\hat b^\dagger e^{i\omega t}
+  	\right]
+  \end{aligned}
+\end{equation}
+
+ここで、局発光がコヒーレント状態であるため、期待値の計算において$\hat I$を$\bra \beta$と$\ket \beta$で挟み込むと、$\hat b \to \beta$, $\hat b^\dagger \to \beta^*$のように変化するので、
+\begin{equation}
+\begin{aligned}
+  	\hat I &= \frac{q}{T}\left\{
+  	\left(\hat a_s^\dagger e^{i\Delta \omega t} + \hat a_i^\dagger e^{-i\Delta \omega t}\right) \beta + 
+  	\left(
+  		\hat a_s e^{-i\Delta \omega t} + \hat a_i e^{i\Delta \omega t}
+  	\right) \beta^*
+  	\right\}\\
+  	&= \frac{q|\beta|}{T}\left\{ (\hat a_s^\dagger + \hat a_i) e^{i\Delta \omega t} + (\hat a_s + \hat a_i^\dagger) e^{-i\Delta \omega t} \right\}\\
+\end{aligned}
+\end{equation}
+を得る。ここで、いつものように信号光とイメージ帯の実部・虚部の消滅演算子を$\hat a_{s1} = (\hat a_s + \hat a_s^\dagger)/2$, $\hat a_{s2} = (\hat a_s - \hat a_s^\dagger)/2i$, $\hat a_{i1} = (\hat a_i + \hat a_i^ \dagger)/2$, $\hat a_{i2} = (\hat a_i - \hat a_i^ \dagger)/2i$と定義すると、次式を得る。
+\begin{equation}
+\begin{aligned}
+  \hat I &= \frac{2q|\beta|}{T}\left\{ (\hat a_{s1} + \hat a_{i1}) \cos \Delta \omega t  + (\hat a_{s2} - \hat a_{i2})\sin \Delta \omega t\right\}\\
+  &\equiv \frac{2q|\beta|}{T}(\hat A \cos \Delta \omega t + \hat B\sin \Delta \omega t)
+\end{aligned}
+\end{equation}
+ただし、$\hat A = \hat a_{s1} + \hat a_{i1}$、$\hat B = \hat a_{s2} - \hat a_{i2}$とおいた。このように、光電流は時間$t$とともに変化し、その$\cos$成分と$\sin$成分から、信号光の複素振幅の実部$\hat A$と虚部$\hat B$を同時に測定することが可能である。一方、ホモダインでは信号光の実部と虚部のいずれかしか測定することができなかった。
+
+このように、ヘテロダイン検出では実部と虚部の両方を計測できるが、その代償として、雑音の混入が避けられない。このことは、量子力学的には以下のように表すことができる。
+まず、$\hat A$と$\hat B$の交換関係を計算すると、
+\begin{equation}
+  \begin{aligned}
+  	\left[\hat A, \hat B\right] &= [\hat a_{s1} + \hat a_{i1}, \hat a_{s2} - \hat a_{i2}] = [\hat a_{s1}, \hat a_{s2}] - [\hat a_{i1}, \hat a_{i2}] = 0
+  \end{aligned}
+\end{equation}
+であることから、$\hat A$と$\hat B$の同時固有状態が存在し、このため、ヘテロダイン検出において信号光の実部と虚部は同時に測定可能である。
+
+しかし、ヘテロダイン検出で計測する$\hat A$は、信号光の実部$\hat a_{s1}$とは異なっている。実際、$\hat A$の期待値と分散を求めてみると、期待値は
+\begin{equation}
+  \braket{\hat A} = {}_i\bra{0}{}_s\bra{\Psi}\hat A\ket\Psi _s\ket 0_i = {}_i\bra{0}{}_s\bra{\Psi}\hat a_{s1} + \hat a_{i1}\ket\Psi _s\ket 0_i = {}_s\bra{\Psi}\hat a_{s1}\ket\Psi _s = \braket{\hat a_{s1}}
+\end{equation}
+となり、信号光の期待値と等しい。一方、分散は
+\begin{equation}
+  \begin{aligned}
+  	\braket{\hat A^2} - \braket{\hat A}^2 &= {}_i\!\bra{0}{}_s\!\bra{\Psi}(\hat a_{s1} + \hat a_{i1})^2 \ket\Psi _s\ket 0_i - \braket{\hat A}^2 \\
+  	&= {}_i\!\bra{0}{}_s\!\bra{\Psi}(\hat a_{s1}^2 + 2\hat a_{s1}\hat a_{i1} + \hat a_{i1}^2 \ket\Psi _s\ket 0_i - \braket{\hat A}^2 \\
+  	&= \braket {\hat a_{s1}^2} + \frac 1 4 - \braket{\hat a_{s1}}^2 \\
+  \end{aligned}
+\end{equation}
+となり、本来の信号光の分散よりも1/4だけ大きな値になる。
+
+%ところで、Fig. ?のような系を用いて、信号光の複素振幅の実部と虚部をホモダインで計測することもできる。Fig. ?では、信号光をビームスプリッタで2分割し、2つの出力光に対し、別々にホモダイン検出を行うことで実部と虚部の計測を行っている。この場合、ビームスプリッタから混入する真空場の混入が避けられない。
+
+このように、実部と虚部の同時測定には余計な不確定性が付加されてしまう。これは量子力学の不確定性原理によるものである。つまり、複素振幅の演算子である$\hat a$がエルミートでないことが、複素振幅の実部と虚部の同時測定ができないことに対応している。一方、複素振幅の実部$\hat a_1 = (\hat a + \hat a^\dagger) / 2$や虚部$\hat a_2 = (\hat a - \hat a^\dagger)/2i$、光子数$\hat n = \hat a^\dagger \hat a$等はエルミートであり、計測する量子状態の不確定性そのものを計測することができる。上で見たように、複素振幅$\hat a$を計測可能な物理量であるエルミートにするためには、別のモード$\hat b$の真空場$\ket 0$と混合する必要があり、それが余計な不確定性の付加の原因である。
+
+
+
+

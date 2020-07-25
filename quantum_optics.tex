@@ -1,0 +1,56 @@
+% Standard A4 size
+\documentclass[a4paper, report]{jsbook}
+
+% Standard A4 size with 10pt font
+%\documentclass[a4paper, 10pt, report]{jsbook}
+
+% A5 size
+%\documentclass[a5paper, landscape, report]{jsbook}
+%\AtBeginDocument{\special{papersize=\the\paperwidth,\the\paperheight}}
+\usepackage[top=15truemm,bottom=15truemm,left=15truemm,right=15truemm]{geometry}
+
+
+\usepackage[dvipdfmx]{graphicx}
+%\usepackage{graphicx}
+
+\usepackage[titletoc,toc,title]{appendix}
+\usepackage{amsmath,amssymb}
+\usepackage{ascmac}
+\usepackage{braket}
+\usepackage{makeidx}
+\makeindex
+\usepackage{textcomp}
+
+\usepackage{comment}
+\makeatletter
+  \renewcommand{\theequation}{\thechapter.\arabic{equation}}
+    \@addtoreset{equation}{chapter}
+  \renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+    \@addtoreset{figure}{chapter}
+  \renewcommand{\thefootnote}{注\thechapter.\arabic{footnote}}
+    \@addtoreset{footnote}{chapter}
+ \makeatother
+  
+\begin{document}
+
+\title{光と物質の量子論（前半）\\}
+\author{東京大学大学院工学系研究科電気系工学専攻\\小関泰之}
+\frontmatter
+\maketitle
+
+%\begin{comment}
+	
+\input{preface}
+\tableofcontents
+\mainmatter
+
+\input{introduction}
+\input{quantum_mechanics}
+\input{quantum_state}
+\input{quantum_measurement}
+\input{optical_amplification}
+\input{appendix}
+%\end{comment}
+
+
+\end{document}

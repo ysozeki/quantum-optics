@@ -1,0 +1,159 @@
+\chapter{光増幅}
+
+本章では光増幅を量子力学的に説明する。光損失は光のSNを低下させるが、光増幅は光のSNを向上させることはできない。これは、光増幅に伴って自然放出雑音が発生するからである。この自然放出雑音の発生に伴い、光のSN比が少なくとも3 dB低下する。つまり、光増幅における雑音指数は必ず3 dB以上となる。ここでは、光増幅の概要を述べたのち、光増幅後の複素振幅・強度およびその揺らぎがどのようになるかを量子力学的に調べ、自然放出光雑音の由来を調べる。
+
+\section{光増幅の目的と実際}
+
+光増幅の目的は、以下のように多岐にわたる。
+\begin{itemize}
+\item 高強度の光を発生する。
+\item 光ファイバ通信等において中継機で光増幅を行うことで、光損失による光のSN低下を防ぐ。
+\item 光検出器の直前で光を増幅して検出することで、光検出器の雑音の影響を相対的に抑制する。
+\end{itemize}
+
+代表的な光増幅デバイスとして、半導体光増幅器、光ファイバ増幅器、光パラメトリック増幅器が挙げられる。
+%これらの模式図をFig. ?に示す。
+半導体光増幅器では、半導体に電流を流し、電子と正孔の反転分布を作ることで、光増幅を行う。光ファイバ増幅器では、ErやYbなどの希土類イオンを光ファイバ中に添加しておき、励起光によってイオンを励起すると、信号光が増幅される。光ファイバ増幅器は導波モードが光ファイバできちんと制御されていることや、イオンによって理想的な反転分布が得られることから、低雑音な光増幅が可能である。光パラメトリック増幅器では、非線形光学を活用して光増幅を行う。
+
+
+\section{光吸収・光増幅の量子論}
+光増幅の原理が誘導放出であることは聞いたことがあるであろう。
+%しばしば、Fig. ?のように、電子系と光の相互作用を模式的に表す。
+電子系が光子を吸収し、それによって電子系が励起されることが吸収である。また、励起された電子が光子を一つ放出するのが自然放出である。励起状態の電子に光子が入射し、入射した光子と同じ周波数の光子を放出するのが誘導放出、と説明される。
+
+しかし、これらの説明には、1つの電子と1つの光子しか現れない。実際には、非常に多数の電子と非常に多数の光子が相互作用することで光吸収や光増幅が生じる。
+
+ここでは多数の電子系の光に対する応答を調和振動子として扱うことで、光吸収・光増幅の様子を記述しよう。
+
+\section{結合導波路による光吸収と光増幅}
+光吸収は、前章で述べた光損失と同様に、光と電子系が結合した状況を考えることで理解が可能である。光と電子系の消滅演算子をそれぞれ$\hat a, \hat b$として、その結合に伴うハミルトニアンが$\hat H = i\hbar (\hat a \hat b^\dagger - \hat a^\dagger \hat b)$とかけることを述べた。
+%実は、このときのハミルトニアンの選び方には任意性がある。たとえばハミルトニアンの符号の正負を入れ替えて、$\hat H_1 = i\hbar (\hat a^\dagger \hat b - \hat a \hat b^\dagger)$としても$\hat a$と$\hat b$の結合を表すことができる。また、$\hat b \to i\hat b$という置き換えを行い、$\hat H_2 = i\hbar (\hat a \hat b^\dagger + \hat a^\dagger \hat b)$としても良い。\textbf{（このことはビームスプリッタのところで述べるべき？）}
+
+%前章で述べたように、2つのモードの結合を表すハミルトニアンの選び方には任意性があるが、ここでは、光と電子系の結合を表すハミルトニアンとして、$\hat H = i\hbar (\hat a \hat b^\dagger + \hat a^\dagger \hat b)$を用いよう。（理由は$\hat a$と$\hat b$の対称性が良いから、というだけ。）Fig. 1に結合導波路の様子を示す。初めは光のみがエネルギーを有しているが、それが電子系に結合することで光と電子の結合状態が生じ、少しずつ光から電子系にエネルギーが移っていく。なお、Fig. ?では、光のエネルギーが全て電子系に移り、その後電子系から光にエネルギーが戻ってくるように描かれているが、実際はそのようなことは生じない。なぜなら、電子系は周囲の様々な系と結合しており、電子系のエネルギーもまた散逸していくからである。いずれにせよ、このような光と電子の結合状態が、光から電子へのさらなる結合を生じさせる。
+
+ここで、$\hat b \to \hat b^\dagger$の置き換えをすると、光増幅が生じる。その理由はあとで述べるとして、このような置き換えを行なったハミルトニアン$\hat H = i\hbar (\hat a \hat b - \hat a^\dagger \hat b^\dagger)$によって、消滅演算子がどのように変化するかを見てみよう。
+
+\begin{equation}
+  \frac{d}{d\theta}\hat a(\theta) = \frac{i}{\hbar}[\hat H, \hat a(\theta)] = -\hat b^\dagger
+\end{equation}
+\begin{equation}
+  \frac{d}{d\theta}\hat b(\theta) = \frac{i}{\hbar}[\hat h, \hat b(\theta)] = -\hat a^\dagger
+\end{equation}
+
+これを解くと、次式を得る。
+
+\begin{equation}
+  \hat a(\theta) = \hat a(0) \cosh \theta - \hat b^\dagger(0)\sinh \theta
+  \label{eq:annihilation_after_amplification}
+\end{equation}
+\begin{equation}
+  \hat b(\theta) = -\hat a^\dagger(0) \sinh \theta + \hat b(0)\cosh \theta
+\end{equation}
+
+$\cosh \theta$は$\theta$の増加とともに指数関数的に増加することから、式(\ref{eq:annihilation_after_amplification})は、光増幅を表していることがわかる。ここで、パワー増幅率を$G = \cosh^2 \theta$とすると、$\sinh^2 \theta = G - 1$である。表記を簡単にするため、$\hat a(\theta) \equiv \hat a'$、$\hat a(0) \equiv \hat a$、$\hat b(0) \equiv \hat b$と表すと、増幅後の光の消滅演算子は次式で与えられる。
+\begin{equation}
+  \hat a' = \sqrt G \hat a - \sqrt {G - 1} \hat b^\dagger
+\end{equation}
+
+
+\subsubsection{生成演算子でマクロな電子系の励起状態が表せる理屈}
+古典的な光と電子が相互作用する状況を考えよう。基底状態の電子に対し、$x$方向の電界$E_x$を加える状況を考えよう。この時、電子に対するポテンシャルは
+%Fig. ?のような
+$V(x) = qE_x x$（ただし$q$は電荷素量）のように位置に対して線形に変化する。その結果、電子は力積を得て、$-x$の方向の運動量を得る。その後、電子が動くことで、電子は光からエネルギーを受け取ることができる。
+%この理由は云々
+
+一方、励起状態に対して同じポテンシャルを与えると、電子は光が作るポテンシャルに逆らって運動するため光にエネルギーを与えることができる。これが光増幅の背後にある物理である。
+
+前章で説明したように、消滅演算子$\hat b$は時間発展とともにその位相が$-\omega t$だけ変化する。一方、生成演算子$\hat b^\dagger$は時間発展に伴う位相回転の符号が異なる。このため、
+%Fig. ?に示すように、
+ある初速度を得た後の位置の変化は$\hat b$と$\hat b^\dagger$では逆方向になる。以上の理由により、光と結合する電子系の演算子を$\hat b$から$\hat b^\dagger$に置き換えることで、励起状態の電子の複素振幅を記述することができるのである。
+
+\subsection{光増幅後の光子数分布}
+
+コヒーレント状態の光$\ket \alpha$を$G$倍に増幅し、増幅後の光子数を直接検出する状況を考える。検出される光子数は、
+\begin{equation}
+\begin{aligned}
+  \braket{\hat n'} &\equiv {}_b\!\bra 0 {}_a\! \bra \alpha \hat a'^\dagger \hat a' \ket \alpha _ a \ket 0_b\\
+  &= \hdots = Gn + G - 1 \\
+  &= n + (G-1)(n + 1)
+\end{aligned}
+\end{equation}
+を得る。ただし$n = |\alpha|^2$である。上式の2行目は、信号光が$G$倍されることで$Gn$個の光子が発生すること、また、信号光とは別に、$G-1$個の光子が発生することを表している。また、3行目は、もともとの信号光の光子数$n$に加えて、$(G - 1)(n + 1)$個の光子が加えられることを表している。このうち、$(G - 1)n$個の光子が加えられるプロセスを誘導放出、$(G - 1)$個の光子が加えられるプロセスを自然放出という。
+
+上式から得られるASEのパワーは、
+\begin{equation}
+  P_0 = \hbar \omega (G - 1) / T = \hbar \omega (G - 1) \Delta f 
+\end{equation}
+であることがわかる。ただし、$\Delta f = 1 / T$は考慮する時間・周波数モードの周波数間隔である\footnote{$\Delta f = 1 / 2T$でないのは、光と電気の周波数帯域の考え方の違いによる。そもそも、サンプリング定理において「時間間隔$T$でサンプリングする際に再現可能な周波数の上限が$1/2T$である」という事実の起源は、周波数$-1/2T \sim 1/2T$までの周波数範囲であれば、サンプリングしてもエイリアシングによるスペクトルの重なりが生じない、という点である。言い換えると、時間間隔$T$でサンプリングする際の周波数スペクトルの幅は$1/T$以内である必要がある。}。
+
+実際に、
+%Fig. ?に示す実験系を用いてASEを測定する状況では、
+測定されるASEのパワーはいくつかの要因によって修正が必要である。例えばASEは縦偏向・横偏光の両方に現れ、光スペクトラムアナライザでは両偏光のASEパワーを計測するので、2倍のファクタがつく。また、反転分布の不完全性などによって、光損失が生じると、その損失を補うために利得が大きくなることから、ASEパワーも増大する。これらの要因を補正するために、自然放出光係数$n_{sp} (>1)$というファクタを用いる。
+\begin{equation}
+  P_\mathrm{ASE} = 2n_{sp}\hbar \omega (G-1) \Delta f
+\end{equation}
+
+このようにして、1章の式(\ref{eq:ASE_power})が得られる。
+
+また、光子数の分散は次式で与えられる。
+\begin{equation}
+  \braket{(\hat a'^\dagger \hat a')^2} - \braket{\hat a'^\dagger \hat a'}^2 = \hdots = Gn + G-1 + 2Gn(G - 1) + (G - 1)^2 \sim 2G^2n
+  \label{eq:variance_of_photon_number_after_amplification}
+\end{equation}
+$(Gn + G - 1)$はショット雑音を、$2Gn(G - 1)$はシグナル-ASEビート雑音を、$(G - 1)^2$はASE-ASEビート雑音を表す。これらのうち、最も支配的なのはシグナル-ASEビート雑音であり、$G\gg1$の時、$2G^2n$で表される。
+
+増幅前のショット雑音が$n$であることを考えると、$G$倍に増幅された後の分散は$G^2n$になっても良さそうであるが、式(\ref{eq:variance_of_photon_number_after_amplification})ではさらに2倍の雑音が付加されている。このことから、光増幅によって、直接検出における信号対雑音比は3 dB低下することがわかる。
+
+\subsection{光増幅後の振幅分布}
+コヒーレント状態$\ket \alpha$を$G$倍に増幅し、増幅後の複素振幅の実部$\braket{\hat a_1'}$を測定することを考えよう。すると、次式を得る。
+\begin{equation}
+  \braket{\hat a_1'} \equiv {}_b\bra 0 {}_a \bra \alpha \hat a_1'\ket \alpha_a\ket 0_b = \sqrt G \mathrm {Re} \ \alpha
+\end{equation}
+ただし、
+\begin{equation}
+  \hat a _1' = \frac{1}{2}(\hat a' + \hat a'^\dagger) = \sqrt G \frac{\hat a + \hat a^\dagger}{2} - \sqrt{G-1} \frac{\hat b + \hat b^\dagger}{2}
+\end{equation}
+を用いた。また、複素振幅の分散は
+\begin{equation}
+  \braket{\hat a_1'^2} - \braket{\hat a_1'}^2 = \frac G 4 + \frac{G-1}{4} = \frac{1}{4} + \frac{G-1}{4} + \frac{G-1}{4} \sim \frac G 2
+  \label{eq:variance_of_complex_amplitude_after_amplification}
+\end{equation}
+で与えられる。ただし、
+\begin{equation}
+\begin{aligned}
+	(\hat a_1')^2 &= \frac G 4 (\hat a \hat a + \hat a \hat a^\dagger + \hat a^\dagger \hat a + \hat a^\dagger \hat a^\dagger) - \frac{\sqrt G \sqrt{G - 1}} 2 (\hat a + \hat a^\dagger)(\hat b + \hat b^\dagger) \\
+	&+ \frac{G - 1}{4} (\hat b \hat b + \hat b \hat b^\dagger + \hat b^\dagger \hat b + \hat b^\dagger \hat b^\dagger) \\
+	&= \frac G 4 (\hat a \hat a + 2\hat a^\dagger \hat a + 1 + \hat a^\dagger \hat a^\dagger) - \frac{\sqrt G \sqrt{G - 1}} 2 (\hat a + \hat a^\dagger)(\hat b + \hat b^\dagger) \\
+	&+ \frac{G - 1}{4} (\hat b \hat b + 2\hat b^\dagger \hat b + 1 + \hat b^\dagger \hat b^\dagger) 
+\end{aligned}
+\end{equation}
+を用いた。式(\ref{eq:variance_of_complex_amplitude_after_amplification})の右辺第一項の$1 / 4$は真空場の複素振幅の分散であり、そこに$\hat a$と$\hat b$由来の分散がつけ加わることがわかる。また、増幅後の複素振幅の分散$G / 2$は、増幅前の分散（真空場）の約$2G$倍である。増幅前後の信号対雑音比の変化は雑音指数(noise figure, NF)と呼ばれ、
+\begin{equation}
+\mathrm{NF} = \frac{(\mathrm{Re} \ \alpha)^2}{1/4}/ \frac{(\sqrt G \mathrm{Re} \ \alpha)^2}{G/2} = 2
+\end{equation}
+となる\footnote{ここだけ信号対雑音比の定義がパワーになっていることに注意。}。この値(3 dB)を、量子限界のNFという。
+
+\subsection{光増幅のイメージ}
+光増幅は、光子の集まりとして考えることもできるし、複素振幅として考えることもできる。
+
+まず、光子の集まりとして光増幅を考えてみよう。
+%図?に示すように、
+$n$個の光子が入ってくると、平均値として$(G - 1)n$個の光子が付け加わることで、光子数の平均値は$Gn$個になる。同時に、ASEとして$(G - 1)$個の光子が加わる。これは真空場のエネルギーを$2(G-1)$倍したものである。2倍のファクタは、$\hat a$と$\hat b$の両方の揺らぎに起因するものである。
+
+次に、複素振幅について考えよう。
+%コヒーレント状態を増幅したときの複素振幅のイメージを図?に示す。
+増幅前は複素振幅の実部、虚部ともに1/4の分散を有しているが、$G$倍に増幅されると、振幅は$\sqrt G$倍になり、分散は$2G$倍になる。このように、増幅によってSN比は3 dB低下する。
+
+増幅された光は、真空場より大きな揺らぎを有している。このような光が減衰すると、信号も揺らぎも小さくなる。このことは、コヒーレント状態が減衰しても揺らぎが変化しないこととは対照的である。したがって、光増幅を行うことで、光減衰に伴う信号対雑音比の低下を防ぐことができる。
+
+%図?のように、
+光を増幅したのちに、ビームスプリッタで光を分割し、2つのホモダイン検出系を用いて、複素振幅の実部と虚部を同時に計測することを考えよう。増幅された光はBSで分割してもSN比が低下しない。したがって、複素振幅の実部と虚部の測定が可能だが、NFが3 dBであることから、信号対雑音比が3 dB低下する。このように、光増幅におけるNFの最小値が3 dBであることは、複素振幅の実部と虚部の同時測定に伴う揺らぎの増大、ととらえることもできる。
+
+%\subsection{位相感応増幅}
+
+%執筆中。
+
+
+
+
+
