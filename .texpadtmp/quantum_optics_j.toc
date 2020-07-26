@@ -1,0 +1,79 @@
+\contentsline {chapter}{Introduction}{i}
+\contentsline {chapter}{\numberline {第1章}Noise in optical measurements}{1}
+\contentsline {section}{\numberline {1.1}Various methods of optical measurement}{1}
+\contentsline {subsection}{\numberline {1.1.1}直接検出}{2}
+\contentsline {subsection}{\numberline {1.1.2}干渉検出}{2}
+\contentsline {section}{\numberline {1.2}光計測における雑音}{3}
+\contentsline {subsection}{\numberline {1.2.1}ショット雑音}{3}
+\contentsline {subsection}{\numberline {1.2.2}熱雑音}{4}
+\contentsline {subsubsection}{熱雑音とショット雑音の大きさの比較}{4}
+\contentsline {subsection}{\numberline {1.2.3}干渉検出におけるショット雑音}{5}
+\contentsline {subsection}{\numberline {1.2.4}光前置増幅における増幅器雑音}{6}
+\contentsline {subsection}{\numberline {1.2.5}光計測におけるその他の雑音}{6}
+\contentsline {subsubsection}{過剰雑音}{6}
+\contentsline {subsubsection}{1/f雑音}{6}
+\contentsline {section}{\numberline {1.3}量子光学の必要性}{7}
+\contentsline {section}{\numberline {1.4}まとめ}{7}
+\contentsline {chapter}{\numberline {第2章}調和振動子の量子力学}{8}
+\contentsline {section}{\numberline {2.1}調和振動子}{8}
+\contentsline {section}{\numberline {2.2}シュレディンガー方程式とハイゼンベルグの運動方程式}{9}
+\contentsline {subsection}{\numberline {2.2.1}シュレディンガー方程式と時間発展演算子}{9}
+\contentsline {subsection}{\numberline {2.2.2}シュレディンガー描像とハイゼンベルグ描像}{10}
+\contentsline {section}{\numberline {2.3}調和振動子のシュレディンガー方程式とその解}{10}
+\contentsline {subsection}{\numberline {2.3.1}調和振動子のハミルトニアンと生成・消滅演算子}{10}
+\contentsline {subsubsection}{非エルミート性}{11}
+\contentsline {subsubsection}{交換関係}{11}
+\contentsline {subsubsection}{生成・消滅演算子によるハミルトニアンの表現}{11}
+\contentsline {subsection}{\numberline {2.3.2}消滅演算子の実部および虚部の演算子}{12}
+\contentsline {subsection}{\numberline {2.3.3}生成・消滅演算子の時間発展}{12}
+\contentsline {subsection}{\numberline {2.3.4}調和振動子の解}{12}
+\contentsline {subsection}{\numberline {2.3.5}調和振動子のエネルギー固有状態}{14}
+\contentsline {subsection}{\numberline {2.3.6}重ね合わせ状態}{14}
+\contentsline {section}{\numberline {2.4}まとめ}{15}
+\contentsline {chapter}{\numberline {第3章}光の量子状態}{17}
+\contentsline {section}{\numberline {3.1}量子光学の手続き}{17}
+\contentsline {section}{\numberline {3.2}光子数状態}{18}
+\contentsline {section}{\numberline {3.3}コヒーレント状態}{19}
+\contentsline {subsection}{\numberline {3.3.1}消滅演算子の固有状態}{19}
+\contentsline {subsection}{\numberline {3.3.2}光子数の分布}{20}
+\contentsline {subsection}{\numberline {3.3.3}複素振幅の期待値と分散}{20}
+\contentsline {subsection}{\numberline {3.3.4}変位演算子によるコヒーレント状態の生成}{21}
+\contentsline {subsection}{\numberline {3.3.5}ショット雑音と真空場}{22}
+\contentsline {subsection}{\numberline {3.3.6}コヒーレント状態と光損失}{22}
+\contentsline {subsection}{\numberline {3.3.7}コヒーレント状態の非直交性}{22}
+\contentsline {section}{\numberline {3.4}スクイズド状態}{22}
+\contentsline {subsection}{\numberline {3.4.1}スクイズド状態}{23}
+\contentsline {subsection}{\numberline {3.4.2}スクイーズされた真空}{24}
+\contentsline {section}{\numberline {3.5}まとめ}{24}
+\contentsline {chapter}{\numberline {第4章}光の検出}{25}
+\contentsline {section}{\numberline {4.1}ビームスプリッタの量子論}{25}
+\contentsline {subsubsection}{光損失のモデルとしてのビームスプリッタ}{25}
+\contentsline {subsubsection}{モード変換のモデルとしてのビームスプリッタ}{26}
+\contentsline {subsection}{\numberline {4.1.1}ビームスプリッタによるコヒーレント状態の変化}{26}
+\contentsline {section}{\numberline {4.2}直接検出の量子論}{27}
+\contentsline {subsubsection}{光子数状態のとき}{27}
+\contentsline {subsubsection}{コヒーレント状態のとき}{27}
+\contentsline {section}{\numberline {4.3}ホモダイン検出の量子論}{27}
+\contentsline {section}{\numberline {4.4}ヘテロダイン検出の量子論}{28}
+\contentsline {chapter}{\numberline {第5章}光増幅}{30}
+\contentsline {section}{\numberline {5.1}光増幅の目的と実際}{30}
+\contentsline {section}{\numberline {5.2}光吸収・光増幅の量子論}{30}
+\contentsline {section}{\numberline {5.3}結合導波路による光吸収と光増幅}{30}
+\contentsline {subsubsection}{生成演算子でマクロな電子系の励起状態が表せる理屈}{31}
+\contentsline {subsection}{\numberline {5.3.1}光増幅後の光子数分布}{31}
+\contentsline {subsection}{\numberline {5.3.2}光増幅後の振幅分布}{32}
+\contentsline {subsection}{\numberline {5.3.3}光増幅のイメージ}{32}
+\contentsline {chapter}{\numberline {付録A}量子力学のおさらい}{34}
+\contentsline {section}{\numberline {A.1}状態ベクトルと演算子}{34}
+\contentsline {subsection}{\numberline {A.1.1}ブラケット表記}{34}
+\contentsline {subsection}{\numberline {A.1.2}正規直交基底}{34}
+\contentsline {subsection}{\numberline {A.1.3}正規直交基底による基底変換}{35}
+\contentsline {subsection}{\numberline {A.1.4}線形演算子}{35}
+\contentsline {subsection}{\numberline {A.1.5}演算子の固有値}{35}
+\contentsline {subsection}{\numberline {A.1.6}エルミート演算子}{36}
+\contentsline {section}{\numberline {A.2}物理量とその期待値}{36}
+\contentsline {subsection}{\numberline {A.2.1}可換性と同時測定}{37}
+\contentsline {section}{\numberline {A.3}不確定性関係}{37}
+\contentsline {section}{\numberline {A.4}ユニタリ演算子}{38}
+\contentsline {section}{\numberline {A.5}位置、運動量、エネルギーの演算子による表現と交換関係}{38}
+\contentsline {subsection}{\numberline {A.5.1}連続量の基底とフーリエ変換}{39}
