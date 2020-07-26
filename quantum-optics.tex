@@ -49,30 +49,35 @@ Here, before introducing various noise sources, we introduce direct detection, i
 
 
 \subsection{Direct detection}
-In direct detection, photocurrent $I$ is proportional to the optical power $P$ as 
+In direct detection, a light wave is directly injected to a photodetector to measure the photocurrent $I$, which is proportional to the optical power $P$ as follows:
 \begin{equation}
-	I = \frac{\eta e P}{\hbar \omega},
+	I = \frac{\eta q P}{\hbar \omega},
 	\nonumber
 \end{equation}
-where $\hbar \omega$ is the photon energy, and $e = 1.602 \times 10^{-19} \ \mathrm{[C]}$ is the elementary charge. $P / \hbar \omega$ is the number of photons incident on the photodetector per unit time. $\eta$ is the quantum efficiency, which is the ratio of the number of photoelectrons and the number of photons.
+where $\hbar \omega$ is the photon energy, and $q = 1.602 \times 10^{-19} \ \mathrm{C}$ is the elementary charge. $P / \hbar \omega$ is the number of photons incident on the photodetector per unit time. $\eta$ is the quantum efficiency, which is the ratio of the number of photoelectrons and the number of photons.
 \footnote{For electrical engineers, it is worth remembering that the photon energy at the optical communication wavelength 1.55 \ \textmu m is approximately 0.8 eV. Since $\hbar \omega / e$ is the photon energy in the unit of eV and typical photodiodes have a quantum efficiency of 90\%, typical conversion efficiency is $I/P \sim 1.1 \mathrm{A/W}$ (see catalogues of InGaAs photodiodes).}
 
 \subsection{Homodyne and heterodyne detection}
 
+Figure \ref{fig:photodetection}(b) shows a schematic of \textbf{balanced detector}, which is often used for homodyne and heterodyne. The light to be measured (signal) is combined with a local oscillator (LO) light by a beamsplitter (BS). Then, two light waves output from the BS are injected to photodetectors, and the difference of their photocurrents is taken. Denoting the optical frequencies of LO and signal light as $\omega$ and $\omega + \Delta \omega$, this method is called homodyne when $\Delta \omega = 0$ and heterodyne when $\Delta \omega \neq 0$.\footnote{These terms originate from frequency mixing in electrical circuits.}
+
+The output signal of the balanced detector can be formulated as follows. We denote the complex amplitudes of signal and LO as $\alpha$ and $\beta$ such that $|\alpha|^2$ and $|\beta|^2$ corresponds to the number of photons in the time duration of $\tau$.\footnote{That is, the optical power of signal light is $|\alpha|^2\hbar \omega/\tau$.} We assume that $\Delta \omega \ll \omega$ such that the photon energy difference between signal and LO is negligible.\footnote{Without this assumption, the linear combination of the electric field between signal and LO requires quantum mechanical treatment.} Then the analytic signals of signal light and LO light are given by
+\footnote{When a complex sinusoidal wave $S(t)=\mathrm{Re} \ S_0 e^{-i\omega t}$ is given, $S_0$ is called complex amplitude, while $S_0 e^{-i\omega t}$ is called analytic signal, which is composed only of positive frequency components. By taking the real part of the analytic signal, we can obtain a real signal.}
 \begin{equation}
 \begin{aligned}
-	a(t) &= \alpha e^{-i(\omega + \Delta \omega)t}\\
-  	b(t) &= \beta e^{-i\omega t}
+	a(t) &= \alpha e^{-i(\omega + \Delta \omega)t},\\
+  	b(t) &= \beta e^{-i\omega t}.
 \end{aligned}\label{eq:complex_amplitude}
 \end{equation}
-
+We assume that signal light and LO light are injected to the port 1 and the port 2 of BS, and that the coupling ratio of BS is 50\%. The output light waves at the port 3 and the port 4 are given by
 \begin{equation}
 \begin{aligned}
-  a' &= \frac{1}{\sqrt 2}(a - b)\\
-  b' &= \frac{1}{\sqrt 2}(a + b)
+  a' &= \frac{1}{\sqrt 2}(a - b),\\
+  b' &= \frac{1}{\sqrt 2}(a + b),
 \end{aligned}\label{eq:BS_complex_amplitude}
 \end{equation}
-
+respectively,\footnote{In the right hand side of the first equation in Eq. (\ref{eq:BS_complex_amplitude}), the sign of $b$ is minus. This corresponds to the assumption of fixed end reflection from port 2 to port 4. The definition can be different: What's important is that Eq. (\ref{eq:BS_complex_amplitude}) is a unitary transformation, which corresponding to the assumption that BS has no optical loss.}
+or equivalently,
 \begin{equation}
   \left( \begin{array}{c}
   	a' \\ b'
@@ -84,61 +89,92 @@ where $\hbar \omega$ is the photon energy, and $e = 1.602 \times 10^{-19} \ \mat
 	\right)
 	\left( \begin{array}{c}
 		a \\ b
-	\end{array} \right)
+	\end{array} \right).
 	\label{eq:beamsplitter_matrix}
 \end{equation}
-
+The photocurrents $I_1$, $I_2$ of the two photodiodes are respectively given by
 \begin{equation}
 \begin{aligned}
-  I_1 &= \frac q \tau |a'|^2 = \frac{q}{\tau}\left|\frac{1}{\sqrt 2} (a - b)\right|^2\\
-  I_2 &= \frac q \tau |b'|^2 = \frac{q}{\tau}\left|\frac{1}{\sqrt 2} (a + b)\right|^2
+  I_1 &= \frac q \tau |a'|^2 = \frac{q}{\tau}\left|\frac{1}{\sqrt 2} (a - b)\right|^2,\\
+  I_2 &= \frac q \tau |b'|^2 = \frac{q}{\tau}\left|\frac{1}{\sqrt 2} (a + b)\right|^2.
 \end{aligned}
 \end{equation}
-
+The output of the balanced detector is
 \begin{equation}
 \begin{aligned}
-  I_2 - I_1 &= \frac{q}{\tau}(ab^* + a^* b)\\
-  &= 2qB(\alpha \beta^* e^{-i\Delta\omega t} + \alpha^* \beta e^{i\Delta\omega t})\\
-  &= 4qB|\beta|\left\{\mathrm{Re} \  (\alpha e^{-i\phi}) \cos \Delta \omega t + \mathrm{Im} \ (\alpha e^{-i\phi}) \sin \Delta \omega t\right\}
+  I_2 - I_1 &= \frac{q}{\tau}(ab^* + a^* b) = \frac{2q}{\tau}\mathrm{Re}[ab^*] 
+  = 4qB\mathrm{Re}[\alpha \beta^* e^{-i\Delta\omega t}]\\
+  &= 4qB|\beta|\left\{\mathrm{Re} \left[  \alpha e^{-i\phi}\right] \cos \Delta \omega t  + \mathrm{Im} \left[ \alpha e^{-i\phi}\right] \sin \Delta \omega t\right\},
 \end{aligned}\label{eq:output_of_balanced_detector}
 \end{equation}
+where $B = 1/2\tau$ is the Nyquist frequency, and $\beta = |\beta|e^{i\phi}$.
+Equation \ref{eq:output_of_balanced_detector} shows the following points: 
+\begin{itemize}
+	\item When $\Delta \omega = 0$ (i.e., homodyne), $I_2 - I_1 = 4qB|\beta| \mathrm{Re} \ (\alpha e^{-i\phi})$. Therefore, homodyne gives the projection of $\alpha$ onto the axis at a phase of $\beta$. 
+	\item When $\Delta \omega \neq 0$ (i.e., heterodyne), the output signal is a sinusoidal wave at $\Delta \omega$, whose complex amplitude is proportional to $\alpha$.
+\end{itemize}
 
-Here $B = 1/2\tau$ is the Nyquist frequency, and $\beta = |\beta|e^{i\phi}$.
 
 
 \section{Noise sources}
+In this section, we summarize various noise sources such as shot noise, thermal noise, and preamplification noise. You will see that by avoiding the effect of thermal noise, the signal-to-noise ratio becomes on the order of the number of photons. 
+
 \subsection{Shot noise}
+Shot noise refers to the noise due to the fluctuation in the number of photons. We assume that photons arrive in a stochastic and independent manner. The probability distribution $\mathrm{Pr}(X = k)$ of the number of photons $X$ obeys the Poisson distribution given by
 \begin{equation}
-	p(k) = \frac{\lambda^k e^{-\lambda}}{k!}
+	\mathrm{Pr}(X=k) = \frac{\lambda^k e^{-\lambda}}{k!},
 \end{equation}
-
+where $\lambda$ is the average value. We can easily show that 
 \begin{equation}
-\begin{aligned}
-	V[p(k)] &= \sum_k{(k-\lambda)^2}p(k)\\
-	&= \sum_k{k^2 p(k) - 2\lambda k p(k) + \lambda^2 p(k)} = \sum_k{k^2 p(k) - \lambda^2} \\
-	&=\sum_k{k\lambda p(k-1) - \lambda^2} = \lambda\sum_k{\left\{ (k-1)p(k-1) + p(k-1)\right\}}-\lambda^2 \\
-	&= \lambda(\lambda + 1) - \lambda^2 = \lambda
-\end{aligned}
+	\sum_{k=0}^\infty \mathrm{Pr}(X=k) = 1,
 \end{equation}
-
+and the expectation value and the variance are given by
+\begin{equation}
+	E[X] = \sum_{k=0}^\infty kp(k) = \lambda,
+\end{equation}
+\begin{equation}
+  	V[X] = \sum_{k=0}^\infty (k-\lambda)^2p(k) = \lambda,
+\end{equation}
+and therefore the standard deviation of the number of photons is $\sqrt \lambda$. Consequently, the root-mean-square (RMS) noise due to the fluctuation of the number of photons is given by
 \begin{equation}
 	\begin{aligned}
-		I_{\mathrm{shot}} = q\sqrt{\lambda}/\tau = q\sqrt{\frac{I\tau}{q}}/\tau = \sqrt{\frac{qI}{\tau}}
+		I_{\mathrm{shot}} = q\sqrt{\lambda}/\tau = q\sqrt{\frac{I\tau}{q}}/\tau = \sqrt{\frac{qI}{\tau}},
 	\end{aligned}
 \end{equation}
+or equivalently,
 \begin{equation}
 	\begin{aligned}
-		I_\mathrm{shot}=\sqrt{2qIB}
+		I_\mathrm{shot}=\sqrt{2qIB}.
 	\end{aligned}
 \end{equation}
-
+By defining the signal-to-noise ratio (SNR) as the energy ratio between signal and noise, we obtain the shot-noise-limited SNR as
 \begin{equation}
-  \mathrm{SNR} = I^2 / I_\mathrm{shot}^2 = I/2qB = 2qB|\alpha |^2/2qB = |\alpha|^2
+  \mathrm{SNR} = I^2 / I_\mathrm{shot}^2 = I/2qB = 2qB|\alpha |^2/2qB = |\alpha|^2,
 \end{equation}
 where $I=q|\alpha|^2/\tau = 2qB|\alpha|^2$. Since $|\alpha|^2$ corresponds to the number of photons, we can see that the shot-noise limited SNR is equal to the number of photons.
 
-
 \subsection{Thermal noise}
+Thermal noise appears as voltage noise or current noise of a resistor $R$, which is used for converting a photocurrent $I$ to a voltage $RI$ as shown Fig. \ref{fig:photodetector}(a). The RMS voltage of the thermal noise is given by
+\begin{equation}
+	v_\mathrm{th} = \sqrt{4k_\mathrm{B}TRB}
+	\label{eq:Johnson_noise}
+\end{equation}
+%を持つ雑音が発生することが知られている。ただし、$k_B$はボルツマン定数、$T$は抵抗の絶対温度、$B$は回路の帯域である。この雑音を\textbf{ジョンソン雑音}\index{じょんそんざつおん@ジョンソン雑音}、もしくは単に熱雑音という。熱雑音は光計測における信号対雑音比の低下要因となるため、熱雑音が光の雑音よりも小さく抑えられるように注意深く測定系を設計する必要がある。
+\begin{figure}
+  \centering
+  \includegraphics[width=7cm]{fig/1-2_PD_circuit.eps} 
+  \caption{(a) Typical photodetection circuit, where a photodiode is inversely biased. The photocurrent $I$ flows to a load resistor $R$ and measure the voltage $RI$. (b) A circuit with two resistors, which is used to consider the Johnson noise.}
+  \label{fig:photodetector}
+\end{figure}
+
+%ジョンソン雑音の式（式(\ref{eq:Johnson_noise})）を導出するために、図1.2(b)に示す回路を考えよう。抵抗1 ($R_1$)ともう一つの抵抗2 ($R_2$)を接続し、インピーダンスマッチングするように$R_1 = R_2 = R$とする。抵抗1の熱雑音が作る起電力を$v_{th}$とすると、回路一周の抵抗が$2R$であることから、起電力によって流れる電流は$v_{th}/2R$である。この時、この熱雑音が抵抗2に与えるパワーは$v_{th}^2/2R$となる。同様に、抵抗2から抵抗1にも同じパワーが与えられることで、抵抗1と抵抗2が熱平衡状態を保っている\footnote{抵抗1と抵抗2の温度が違う場合は、電気を介して熱の移動が生じる。}。
+
+%熱雑音を時間間隔$\tau$でサンプリングする\footnote{この表現はちょっとラフである。もう少し丁寧に表現すると、以下のようになる：熱雑音由来の電圧雑音に対して$-1/2\tau < f < 1/2\tau$までの周波数制限をかけたと仮定しよう。このとき、時間領域で時間間隔$\tau$ごとに離散的にサンプリングすることで電圧波形の情報を得ることができる。これらひとつひとつのサンプリング点が、雑音波形の自由度に対応し、それらにボルツマンエネルギー$k_B T$が分配される。}と、$B = 1/2\tau$までの情報を捉えることができる。各サンプリング間隔において起電力が行う仕事は$v^2_{th}\tau/2R$であり、これら全ての自由度に対してボルツマンエネルギー$k_BT$が分配されることから、次式が成り立つ。
+\begin{equation}
+v_\mathrm{th}^2\tau/2R = v_\mathrm{th}^2 / 4RB = k_\mathrm{B}T
+\end{equation}
+%この式から式(\ref{eq:Johnson_noise})を得る。
+%\footnote{1モードあたり$k_BT/2$ではなく$k_BT$のエネルギーを持つのは、振動子が位置と運動量の2つの自由度を持つため。}
 
 
 \subsection{Optical amplifier noise}
@@ -220,18 +256,7 @@ where $I=q|\alpha|^2/\tau = 2qB|\alpha|^2$. Since $|\alpha|^2$ corresponds to th
 \end{aligned}
 \end{equation}
 
-There is a theory which states that if ever anyone discovers exactly what the Universe is for and why it is here, it will instantly disappear and be replaced by something even more bizarre and inexplicable.
-There is another theory which states that this has already happened.
-
-\begin{figure}[h!]
-\centering
-\includegraphics[scale=1.7]{universe}
-\caption{The Universe}
-\label{fig:universe}
-\end{figure}
-
-%\section{Conclusion}
-``I always thought something was fundamentally wrong with the universe'' \citep{adams1995hitchhiker}
+This is a simple calculation \cite{adams1995hitchhiker}.
 
 \bibliographystyle{plain}
 \bibliography{references}
