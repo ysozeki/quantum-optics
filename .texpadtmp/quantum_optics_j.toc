@@ -1,7 +1,7 @@
 \contentsline {chapter}{Introduction}{i}
 \contentsline {chapter}{\numberline {第1章}Noise in optical measurements}{1}
 \contentsline {section}{\numberline {1.1}Various methods of optical measurement}{1}
-\contentsline {subsection}{\numberline {1.1.1}直接検出}{2}
+\contentsline {subsection}{\numberline {1.1.1}直接検出}{1}
 \contentsline {subsection}{\numberline {1.1.2}干渉検出}{2}
 \contentsline {section}{\numberline {1.2}光計測における雑音}{3}
 \contentsline {subsection}{\numberline {1.2.1}ショット雑音}{3}

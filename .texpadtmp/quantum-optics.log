@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  26 JUL 2020 21:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  26 JUL 2020 22:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -621,28 +621,33 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
  [4] (./introduction_e.tex
 Chapter 1.
-) [1
+[1
 
 
-] [2]
+]
+Overfull \hbox (39.19527pt too wide) in paragraph at lines 15--30
+ [] 
+ []
+
+) [2]
 Chapter 2.
-Package epstopdf Info: Source file: <fig/1-1_photodetection.eps>
+Package epstopdf Info: Source file: <fig/2-1_photodetection.eps>
 (epstopdf)                    date: 2020-07-25 16:19:32
 (epstopdf)                    size: 283488 bytes
-(epstopdf)             Output file: <fig/1-1_photodetection-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-07-25 17:49:25
+(epstopdf)             Output file: <fig/2-1_photodetection-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-07-26 21:40:20
 (epstopdf)                    size: 32375 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/1-1_photodetection-eps-converted-to.pdf fig/1-1_photodetection.eps>
+(epstopdf)             Command: <repstopdf --outfile=fig/2-1_photodetection-eps-converted-to.pdf fig/2-1_photodetection.eps>
 (epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
-<fig/1-1_photodetection-eps-converted-to.pdf, id=28, 338.26375pt x 251.94125pt>
-File: fig/1-1_photodetection-eps-converted-to.pdf Graphic file (type pdf)
- <use fig/1-1_photodetection-eps-converted-to.pdf>
-Package pdftex.def Info: fig/1-1_photodetection-eps-converted-to.pdf used on input line 45.
+<fig/2-1_photodetection-eps-converted-to.pdf, id=31, 338.26375pt x 251.94125pt>
+File: fig/2-1_photodetection-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/2-1_photodetection-eps-converted-to.pdf>
+Package pdftex.def Info: fig/2-1_photodetection-eps-converted-to.pdf used on input line 45.
 (pdftex.def)             Requested size: 256.0748pt x 190.73154pt.
  [3
 
-] [4 <./fig/1-1_photodetection-eps-converted-to.pdf>] [5] [6
+] [4 <./fig/2-1_photodetection-eps-converted-to.pdf>] [5] [6
 
 ]
 Chapter 3.
@@ -655,7 +660,7 @@ Chapter 4.
 ]
 Chapter 5.
 
-Overfull \hbox (13.11293pt too wide) in paragraph at lines 169--169
+Overfull \hbox (13.11293pt too wide) in paragraph at lines 171--171
 []\OT1/cmr/bx/n/14.4 Mode de-com-po-si-tion of elec-tro-mag-netic waves 
  []
 
@@ -675,10 +680,10 @@ Chapter 8.
 
 ]
 Appendix A.
-<universe.jpg, id=125, 102.3825pt x 73.9563pt>
+<universe.jpg, id=130, 102.3825pt x 73.9563pt>
 File: universe.jpg Graphic file (type jpg)
  <use universe.jpg>
-Package pdftex.def Info: universe.jpg used on input line 226.
+Package pdftex.def Info: universe.jpg used on input line 228.
 (pdftex.def)             Requested size: 174.0495pt x 125.72514pt.
 
 
@@ -688,18 +693,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 ] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux) ) 
 Here is how much of TeX's memory you used:
- 3698 strings out of 493054
- 49170 string characters out of 6134759
- 111417 words of memory out of 5000000
- 7130 multiletter control sequences out of 15000+600000
- 9331 words of font info for 36 fonts, out of 8000000 for 9000
+ 3721 strings out of 493054
+ 49405 string characters out of 6134759
+ 111427 words of memory out of 5000000
+ 7145 multiletter control sequences out of 15000+600000
+ 12768 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,8n,26p,926b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.pdf (25 pages, 233702 bytes).
+ 38i,10n,26p,926b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb>
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.pdf (25 pages, 289918 bytes).
 PDF statistics:
- 185 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
+ 206 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

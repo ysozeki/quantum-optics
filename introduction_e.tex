@@ -3,6 +3,30 @@ Quantum optics deals with quantum nature of light, where light is regarded as an
 
 Optical measurement always involves the detection of light. It is categorized into direct detection and homodyne/heterodyne detection. Direct detection gives the intensity of light, and homodyne/heterodyne detection which gives the amplitude of light. Furthermore, optical amplification is often utilized before photodetection to mitigate the effect of detector noise. In every case, the signal-to-noise ratio is ultimately limited by quantum noise, and becomes the same order as the number of photons. This limit cannot be surpassed by classical (i.e., non-quantum) methods, while various methods to surpass the limit is developed by using quantum optics.
 
-This lecture note aims at dealing with quantum noise of light. Chapter 2 summarizes the noise in optical measurements. Chapter 3 introduces quantum harmonic oscillators, which is an analogue of light in quantum optics. Chapter 4 describes the evolution of quantum states. Chapter 5 explains the quantization of light. Chapter 6 introduces representative quantum states. Chapter 7 describes two main interactions in quantum optics: mode mixing and parametric amplifications. Chapter 8 explains quantum optical treatment of optical measurements.
+This lecture note aims at dealing with quantum noise of light. Chapter 2 summarizes the noise in optical measurements. Chapter 3 introduces quantum harmonic oscillators, which is an analogue of light in quantum optics. Chapter 4 describes the evolution of quantum states. Chapter 5 explains the quantization of light. Chapter 6 introduces representative quantum states. Chapter 7 describes two main interactions in quantum optics: mode mixing and parametric amplifications. Chapter 8 explains quantum optical treatment of optical measurements. Appendix contains basic quantum mechanics, Wigner function, and so on. Variables and operators are summarized in Table \ref{table:variables}.
 
-This lecture memo was first prepared in Japanese in 2017, in which I referred to Prof. Kazuro Kikuchi's lecture note. Then I rearranged the contents in English in 2020. In particular, I tried to provide an intuitive picture of quantum optics by extensively using wavefunctions. I often hear that quantum optics is abstract; we can somehow calculate various properties of light using bra-ket and operators, while the physics behind them are quite unclear. Instead, typical quantum-optical calculation using operators can be understood as the rotation and distortion of wavefunctions. I hope that this lecture memo provide such intuitive pictures along with the calculation procedures.  I appreciate many comments and feedback from students in my research group and in the lecture. Any feedback is appreciated at \texttt{https://github.com/ysozeki/quantum-optics}.
+
+
+This lecture note was first prepared in Japanese in 2017, in which I referred to Prof. Kazuro Kikuchi's lecture note. Then I rearranged the contents in English in 2020. In particular, I tried to provide an intuitive picture of quantum optics by extensively using wavefunctions. I often hear that quantum optics is abstract; we can somehow calculate various properties of light using bra-ket and operators, while the physics behind them are quite unclear. Instead, typical quantum-optical calculation using operators can be understood as the rotation and distortion of wavefunctions. I hope that this lecture memo provide such intuitive pictures along with the calculation procedures.  I appreciate many comments and feedback from students in my research group and in the lecture. Any feedback is appreciated at \texttt{https://github.com/ysozeki/quantum-optics}.
+
+\begin{table}
+\caption{List of variables and operators}	
+\begin{center}
+\begin{tabular}{c l}
+\hline
+	Variable or operator & Explanation \\
+	\hline \hline
+	$\hat x$ & Normalized position, real part of complex amplitude\\
+	$\hat p$ & Normalized momentum, imaginary part of complex amplitude\\
+	$\hat a$ & Complex amplitude\\
+	$\hat a ^\dagger \hat a = \hat n$ & Number of photons\\
+	$e$ & Elementary charge\\
+	$\hbar$ & Planck constant divided by $2\pi$\\
+	$P$ & Optical power (energy per unit time)\\
+	$I$ & Current (charge per unit time)\\
+\hline
+\end{tabular}
+\label{table:variables}
+\end{center}
+\end{table}
+

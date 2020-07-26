@@ -14,7 +14,7 @@
 \usepackage{authblk}
 
 \begin{document}
-\title{Lecture Memo \\ Quantum Mechanics of Light and Matters}
+\title{Lecture Note \\ Quantum Mechanics of Light and Matters}
 \author{Yasuyuki Ozeki}
 \affil{Department of Electrical Engineering and Information Systems \\ The University of Tokyo}
 \date{July 25, 2020}
@@ -23,8 +23,8 @@
 \tableofcontents
 \mainmatter
 
-\input{introduction_e.tex}
 
+\input{introduction_e.tex}
 
 \chapter{Noise in optical measurement}
 This chapter introduces various detection methods of light and explains noise appearing in each method. Some explanations are phenomenological but they will be explained by quantum optics in later chapters.
@@ -42,18 +42,20 @@ Here, before introducing various noise sources, we introduce direct detection, i
 
 \begin{figure}
   \centering
-  \includegraphics[width=9cm]{fig/1-1_photodetection.eps}
+  \includegraphics[width=9cm]{fig/2-1_photodetection.eps}
   \caption{Various photodetection methods. (a) Direct detection. (b) Interferometric detection. (c) Optical preamplification with an optical amplifier.}
   \label{fig:photodetection}
 \end{figure}
 
 
 \subsection{Direct detection}
-Therefore 
+In direct detection, photocurrent $I$ is proportional to the optical power $P$ as 
 \begin{equation}
-	I = \frac{\eta q P}{\hbar \omega}
+	I = \frac{\eta e P}{\hbar \omega},
 	\nonumber
 \end{equation}
+where $\hbar \omega$ is the photon energy, and $e = 1.602 \times 10^{-19} \ \mathrm{[C]}$ is the elementary charge. $P / \hbar \omega$ is the number of photons incident on the photodetector per unit time. $\eta$ is the quantum efficiency, which is the ratio of the number of photoelectrons and the number of photons.
+\footnote{For electrical engineers, it is worth remembering that the photon energy at the optical communication wavelength 1.55 \ \textmu m is approximately 0.8 eV. Since $\hbar \omega / e$ is the photon energy in the unit of eV and typical photodiodes have a quantum efficiency of 90\%, typical conversion efficiency is $I/P \sim 1.1 \mathrm{A/W}$ (see catalogues of InGaAs photodiodes).}
 
 \subsection{Homodyne and heterodyne detection}
 

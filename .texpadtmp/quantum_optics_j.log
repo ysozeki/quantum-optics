@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  26 JUL 2020 18:43
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  26 JUL 2020 21:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -397,6 +397,33 @@ LaTeX Font Info:    Font shape `JY1/mc/bx/n' in size <10> not available
 (Font)              Font shape `JY1/gt/m/n' tried instead on input line 9.
 LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 (Font)              scaled to size 9.60999pt on input line 9.
+
+LaTeX Warning: File `fig/1-1_photodetection.eps' not found on input line 21.
+
+
+./introduction.tex:21: LaTeX Error: File `fig/1-1_photodetection.eps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...ics[width=9cm]{fig/1-1_photodetection.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./introduction.tex:21: LaTeX Error: Cannot determine size of graphic in fig/1-1_photodetection.eps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 ...ics[width=9cm]{fig/1-1_photodetection.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: fig/1-1_photodetection.eps Graphic file (type eps)
 <fig/1-1_photodetection.eps>
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
