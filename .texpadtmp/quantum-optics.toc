@@ -1,6 +1,6 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {chapter}{\numberline {2}Noise in optical measurements}{3}
-\contentsline {section}{\numberline {2.1}Optical measurements}{3}
+\contentsline {chapter}{\numberline {2}Noise in optical measurement}{3}
+\contentsline {section}{\numberline {2.1}Optical measurement}{3}
 \contentsline {subsection}{\numberline {2.1.1}Direct detection}{4}
 \contentsline {subsection}{\numberline {2.1.2}Homodyne and heterodyne detection}{4}
 \contentsline {section}{\numberline {2.2}Noise sources}{5}
@@ -19,16 +19,16 @@
 \contentsline {subsection}{\numberline {3.2.2}Expectation of variance}{7}
 \contentsline {section}{\numberline {3.3}Multimode quantum states}{7}
 \contentsline {section}{\numberline {3.4}Summary}{7}
-\contentsline {chapter}{\numberline {4}Quantum states and their evolution}{9}
-\contentsline {section}{\numberline {4.1}Evolution of quantum states}{9}
-\contentsline {subsection}{\numberline {4.1.1}Schor\"odinger picture}{9}
-\contentsline {subsection}{\numberline {4.1.2}Heisenberg picture}{9}
-\contentsline {section}{\numberline {4.2}Unitary transformation of quantum states}{9}
-\contentsline {subsection}{\numberline {4.2.1}Time evolution}{9}
-\contentsline {subsection}{\numberline {4.2.2}Displacement}{9}
-\contentsline {subsection}{\numberline {4.2.3}Mode mixing}{9}
-\contentsline {subsection}{\numberline {4.2.4}Single-mode squeezing}{9}
-\contentsline {subsection}{\numberline {4.2.5}Two-mode squeezing}{9}
+\contentsline {chapter}{\numberline {4}Evolution of quantum states}{9}
+\contentsline {section}{\numberline {4.1}Schor\"odinger picture}{9}
+\contentsline {section}{\numberline {4.2}Heisenberg picture}{9}
+\contentsline {section}{\numberline {4.3}Unitary transformation of quantum states}{9}
+\contentsline {subsection}{\numberline {4.3.1}Time evolution}{9}
+\contentsline {subsection}{\numberline {4.3.2}Displacement}{9}
+\contentsline {subsection}{\numberline {4.3.3}Mode mixing}{9}
+\contentsline {subsection}{\numberline {4.3.4}Single-mode squeezing}{9}
+\contentsline {subsection}{\numberline {4.3.5}Two-mode squeezing}{9}
+\contentsline {section}{\numberline {4.4}Summary}{9}
 \contentsline {chapter}{\numberline {5}Quantization of light}{11}
 \contentsline {section}{\numberline {5.1}Mode decomposition of electromagnetic waves}{11}
 \contentsline {subsection}{\numberline {5.1.1}Time-frequency mode}{11}
@@ -44,7 +44,7 @@
 \contentsline {section}{\numberline {6.5}Two-mode squeezed states}{13}
 \contentsline {subsection}{\numberline {6.5.1}EPR state}{13}
 \contentsline {section}{\numberline {6.6}Summary}{13}
-\contentsline {chapter}{\numberline {7}Light-matter interaction}{15}
+\contentsline {chapter}{\numberline {7}Control of quantum states of light}{15}
 \contentsline {section}{\numberline {7.1}Mode mixing}{15}
 \contentsline {subsection}{\numberline {7.1.1}Beamsplitter}{15}
 \contentsline {subsection}{\numberline {7.1.2}Waveplates}{15}
@@ -56,11 +56,13 @@
 \contentsline {subsection}{\numberline {7.2.3}Optical amplification}{15}
 \contentsline {subsection}{\numberline {7.2.4}Raman scattering}{15}
 \contentsline {section}{\numberline {7.3}Summary}{15}
-\contentsline {chapter}{\numberline {8}Measurement of quantum states}{17}
-\contentsline {section}{\numberline {8.1}Photodetection}{17}
+\contentsline {chapter}{\numberline {8}Quantum-optical measurement}{17}
+\contentsline {section}{\numberline {8.1}Direct detection}{17}
 \contentsline {section}{\numberline {8.2}Homodyne detection}{17}
 \contentsline {section}{\numberline {8.3}Heterodyne detection}{17}
-\contentsline {section}{\numberline {8.4}Quantum teleportation}{17}
+\contentsline {section}{\numberline {8.4}Preamplification}{17}
+\contentsline {section}{\numberline {8.5}Quantum teleportation}{17}
+\contentsline {section}{\numberline {8.6}Summary}{17}
 \contentsline {chapter}{\numberline {A}Appendix}{19}
 \contentsline {section}{\numberline {A.1}Bra-ket notation}{19}
 \contentsline {section}{\numberline {A.2}Creation and annihilation operators}{19}

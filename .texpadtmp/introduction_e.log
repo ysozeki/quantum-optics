@@ -1,0 +1,22 @@
+This is pTeX, Version 3.14159265-p3.6 (utf8.euc) (TeX Live 2015) (preloaded format=ptex 2015.10.10)  26 JUL 2020 21:30
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**introduction_e.tex
+(./introduction_e.tex
+./introduction_e.tex:1: Undefined control sequence.
+l.1 \chapter
+            {Introduction}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+)
+! Emergency stop.
+<*> introduction_e.tex
+                      
+*** (job aborted, no legal \end found)
+
+No pages of output.
