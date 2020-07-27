@@ -117,7 +117,7 @@ Equation \ref{eq:output_of_balanced_detector} shows the following points:
 
 
 \section{Noise sources}
-In this section, we summarize various noise sources such as shot noise, thermal noise, and preamplification noise. You will see that by avoiding the effect of thermal noise, the signal-to-noise ratio becomes on the order of the number of photons. 
+In this section, we summarize various noise sources such as shot noise \index{shot noise}, thermal noise \index{thermal noise}, and amplifier noise \index{amplifier noise}. You will see that by avoiding the effect of thermal noise, the signal-to-noise ratio becomes on the order of the number of photons. 
 
 \subsection{Shot noise}
 Shot noise refers to the noise due to the fluctuation in the number of photons. We assume that photons arrive in a stochastic and independent manner. The probability distribution $\mathrm{Pr}(X = k)$ of the number of photons $X$ obeys the Poisson distribution given by
@@ -154,28 +154,25 @@ By defining the signal-to-noise ratio (SNR) as the energy ratio between signal a
 where $I=q|\alpha|^2/\tau = 2qB|\alpha|^2$. Since $|\alpha|^2$ corresponds to the number of photons, we can see that the shot-noise limited SNR is equal to the number of photons.
 
 \subsection{Thermal noise}
-Thermal noise appears as voltage noise or current noise of a resistor $R$, which is used for converting a photocurrent $I$ to a voltage $RI$ as shown Fig. \ref{fig:photodetector}(a). The RMS voltage of the thermal noise is given by
+Thermal noise appears as voltage noise or current noise of a resistor $R$, which is used for converting a photocurrent $I$ to a voltage $RI$ as shown Fig. \ref{fig:photodetector}(a). The RMS voltage of the thermal noise or Johnson noise\index{Johnson noise} is given by
 \begin{equation}
-	v_\mathrm{th} = \sqrt{4k_\mathrm{B}TRB}
+	v_\mathrm{th} = \sqrt{4k_\mathrm{B}TRB},
 	\label{eq:Johnson_noise}
 \end{equation}
-%を持つ雑音が発生することが知られている。ただし、$k_B$はボルツマン定数、$T$は抵抗の絶対温度、$B$は回路の帯域である。この雑音を\textbf{ジョンソン雑音}\index{じょんそんざつおん@ジョンソン雑音}、もしくは単に熱雑音という。熱雑音は光計測における信号対雑音比の低下要因となるため、熱雑音が光の雑音よりも小さく抑えられるように注意深く測定系を設計する必要がある。
+where $k_B$ is the Boltzmann constant, and $T$ is the temperature of the resistor. It is important to suppress the thermal noise by optimizing the circuit design for achieving the shot-noise-limited SNR. 
+
 \begin{figure}
   \centering
-  \includegraphics[width=7cm]{fig/1-2_PD_circuit.eps} 
-  \caption{(a) Typical photodetection circuit, where a photodiode is inversely biased. The photocurrent $I$ flows to a load resistor $R$ and measure the voltage $RI$. (b) A circuit with two resistors, which is used to consider the Johnson noise.}
+  \includegraphics[width=7cm]{fig/2-2_PD_circuit.eps} 
+  \caption{(a) Typical photodetection circuit, where a photodiode is inversely biased. The photocurrent $I$ flows to a load resistor $R$ and measure the voltage $RI$. (b) Two-resistor  circuit, which is used to consider the Johnson noise.}
   \label{fig:photodetector}
 \end{figure}
 
-%ジョンソン雑音の式（式(\ref{eq:Johnson_noise})）を導出するために、図1.2(b)に示す回路を考えよう。抵抗1 ($R_1$)ともう一つの抵抗2 ($R_2$)を接続し、インピーダンスマッチングするように$R_1 = R_2 = R$とする。抵抗1の熱雑音が作る起電力を$v_{th}$とすると、回路一周の抵抗が$2R$であることから、起電力によって流れる電流は$v_{th}/2R$である。この時、この熱雑音が抵抗2に与えるパワーは$v_{th}^2/2R$となる。同様に、抵抗2から抵抗1にも同じパワーが与えられることで、抵抗1と抵抗2が熱平衡状態を保っている\footnote{抵抗1と抵抗2の温度が違う場合は、電気を介して熱の移動が生じる。}。
-
-%熱雑音を時間間隔$\tau$でサンプリングする\footnote{この表現はちょっとラフである。もう少し丁寧に表現すると、以下のようになる：熱雑音由来の電圧雑音に対して$-1/2\tau < f < 1/2\tau$までの周波数制限をかけたと仮定しよう。このとき、時間領域で時間間隔$\tau$ごとに離散的にサンプリングすることで電圧波形の情報を得ることができる。これらひとつひとつのサンプリング点が、雑音波形の自由度に対応し、それらにボルツマンエネルギー$k_B T$が分配される。}と、$B = 1/2\tau$までの情報を捉えることができる。各サンプリング間隔において起電力が行う仕事は$v^2_{th}\tau/2R$であり、これら全ての自由度に対してボルツマンエネルギー$k_BT$が分配されることから、次式が成り立つ。
+To derive Eq. (\ref{eq:Johnson_noise}), we consider a circuit shown in Fig. \ref{fig:photodetector}, where two resistors ($R_1$, $R_2$) are connected with each other, and they are impedance-matched.\cite{nyquist1928} Since $v_\mathrm{th}$ is the electromotive force in one of the resistors and the series resistance is $2R$, it leads to a current of $v_\mathrm{th}/2R$. Therefore, each resistor generates power of $v_\mathrm{th}^2/2R$ and is in the thermal equilibrium.\footnote{If the resistors have different temperature, their temperatures get closer to each other by transferring energy with thermal current.} Here we consider the voltage noise in the frequency range from $-B = -1/2\tau$ to $B = 1/2\tau$. The sampling theorem tells us that the noise waveform can be captured by sampling it with a period of $\tau$. The noise at each sampling point is independent of each other, and its average energy is Boltzmann energy $k_\mathrm BT$.\footnote{The reason why each degree of freedom has an energy of $k_\mathrm B T$ instead of $k_\mathrm B T/2$ is that each degree of freedom corresponds to a thermally excited harmonic oscillator which has two degree of freedom of position and momentum. In the case of ideal gas, each atom has three momentum axis but not fixed at a point, leading to a kinetic energy of $3k_\mathrm B T / 2$.} Therefore,
 \begin{equation}
-v_\mathrm{th}^2\tau/2R = v_\mathrm{th}^2 / 4RB = k_\mathrm{B}T
+v_\mathrm{th}^2\tau/2R = v_\mathrm{th}^2 / 4RB = k_\mathrm{B}T,
 \end{equation}
-%この式から式(\ref{eq:Johnson_noise})を得る。
-%\footnote{1モードあたり$k_BT/2$ではなく$k_BT$のエネルギーを持つのは、振動子が位置と運動量の2つの自由度を持つため。}
-
+which leads to Eq. (\ref{eq:Johnson_noise}).
 
 \subsection{Optical amplifier noise}
 \section{Summary}
@@ -257,6 +254,8 @@ v_\mathrm{th}^2\tau/2R = v_\mathrm{th}^2 / 4RB = k_\mathrm{B}T
 \end{equation}
 
 This is a simple calculation \cite{adams1995hitchhiker}.
+
+\printindex
 
 \bibliographystyle{plain}
 \bibliography{references}
