@@ -1,0 +1,207 @@
+This is TeXk, Version 3.14159265 (TeX Live 2015) (preloaded format=tex 2015.8.19)  28 JUL 2020 07:12
+ file:line:error style messages enabled.
+**Chap2_noise_in_optical_measurement.tex
+(./Chap2_noise_in_optical_measurement.tex
+./Chap2_noise_in_optical_measurement.tex:1: Undefined control sequence.
+l.1 \chapter
+            {Noise in optical measurement}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:4: Undefined control sequence.
+l.4 \section
+            {Optical measurement}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:5: Undefined control sequence.
+l.5 Figure \ref
+               {fig:photodetection}(a) shows the \textbf{direct detection}. ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:5: Undefined control sequence.
+l.5 ...ef{fig:photodetection}(a) shows the \textbf
+                                                  {direct detection}. Photod...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:7: Undefined control sequence.
+l.7 Fig. \ref
+             {fig:photodetection}(b) shows the \textbf{interferometric detec...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:7: Undefined control sequence.
+l.7 ...ef{fig:photodetection}(b) shows the \textbf
+                                                  {interferometric detection...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:7: Undefined control sequence.
+l.7 ... are the same, the method is called \textbf
+                                                  {homodyne}. When they are ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:7: Undefined control sequence.
+l.7 ...are different, the method is called \textbf
+                                                  {heterodyne}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:9: Undefined control sequence.
+l.9 ...before photodetection as shown in Fig. \ref
+                                                  {fig:photodetection}(c). T...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:9: Undefined control sequence.
+l.9 ...:photodetection}(c). This is called \textbf
+                                                  {preamplification}. Althou...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (12.12556pt too wide) in paragraph at lines 9--10
+[]\tenrm Furthermore, an op-ti-cal am-pli-fier is of-ten used be-fore pho-tode-tec-tion as shown in Fig. fig:photodetection(c).|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm F
+.\kern-0.83334
+.\tenrm u
+.\tenrm r
+.etc.
+
+./Chap2_noise_in_optical_measurement.tex:15: Undefined control sequence.
+l.15 \begin
+           {figure}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:17: Undefined control sequence.
+l.17   \includegraphics
+                       [width=9cm]{fig/2-1_photodetection.eps}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:17: Missing number, treated as zero.
+<to be read again> 
+                   [
+l.17   \includegraphics[
+                        width=9cm]{fig/2-1_photodetection.eps}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./Chap2_noise_in_optical_measurement.tex:17: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   [
+l.17   \includegraphics[
+                        width=9cm]{fig/2-1_photodetection.eps}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./Chap2_noise_in_optical_measurement.tex:17: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   _
+l.17   \includegraphics[width=9cm]{fig/2-1_
+                                           photodetection.eps}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./Chap2_noise_in_optical_measurement.tex:17: Extra }, or forgotten $.
+l.17 ...ics[width=9cm]{fig/2-1_photodetection.eps}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+./Chap2_noise_in_optical_measurement.tex:18: Undefined control sequence.
+l.18   \caption
+               {Various photodetection methods. (a) Direct detection. (b) In...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:19: Undefined control sequence.
+l.19   \label
+             {fig:photodetection}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./Chap2_noise_in_optical_measurement.tex:20: Missing $ inserted.
+<inserted text> 
+                $
+<to be read again> 
+                   \end 
+l.20 \end
+         {figure}
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (417.11874pt too wide) in paragraph at lines 15--20
+[]\tenrm figure [width=9cm]fig/2-1$[]\teni hotodetection:eps[][]$ |
+
+\hbox(7.5+2.86108)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\tenrm ^^L (ligature fi)
+.\tenrm g
+.\tenrm u
+.\tenrm r
+.etc.
+
+[1] )
+(\end occurred inside a group at level 1)
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/Chap2_noise_in_optical_measurement.dvi (1 page, 2696 bytes).

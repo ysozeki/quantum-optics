@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  27 JUL 2020 07:45
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  28 JUL 2020 07:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,7 +367,7 @@ LaTeX Font Info:    Font shape `JY1/mc/m/n' will be
 
  [2
 
-] (./introduction.tex
+] (./introduction_j.tex
 第1章
 LaTeX Font Info:    Font shape `JT1/mc/m/n' will be
 (Font)              scaled to size 19.9311pt on input line 1.
@@ -401,7 +401,7 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 LaTeX Warning: File `fig/1-1_photodetection.eps' not found on input line 21.
 
 
-./introduction.tex:21: LaTeX Error: File `fig/1-1_photodetection.eps' not found.
+./introduction_j.tex:21: LaTeX Error: File `fig/1-1_photodetection.eps' not found.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -413,7 +413,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-./introduction.tex:21: LaTeX Error: Cannot determine size of graphic in fig/1-1_photodetection.eps (no BoundingBox).
+./introduction_j.tex:21: LaTeX Error: Cannot determine size of graphic in fig/1-1_photodetection.eps (no BoundingBox).
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -438,8 +438,35 @@ LaTeX Font Info:    Font shape `JY1/gt/m/n' will be
 
 
 ] [2] [3]
+
+LaTeX Warning: File `fig/1-2_PD_circuit.eps' not found on input line 152.
+
+
+./introduction_j.tex:152: LaTeX Error: File `fig/1-2_PD_circuit.eps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152 ...aphics[width=7cm]{fig/1-2_PD_circuit.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./introduction_j.tex:152: LaTeX Error: Cannot determine size of graphic in fig/1-2_PD_circuit.eps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.152 ...aphics[width=7cm]{fig/1-2_PD_circuit.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: fig/1-2_PD_circuit.eps Graphic file (type eps)
- <fig/1-2_PD_circuit.eps> [4] [5] [6]) (./quantum_mechanics.tex [7]
+<fig/1-2_PD_circuit.eps> [4] [5] [6]) (./quantum_mechanics.tex [7]
 第2章
 File: fig/2-1_phase_space.eps Graphic file (type eps)
 <fig/2-1_phase_space.eps> [8
@@ -471,11 +498,11 @@ File: fig/3-2_coherent_state.eps Graphic file (type eps)
 ] [35] [36] [37] [38] [39] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.ind)) [40] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.aux) ) 
 Here is how much of TeX's memory you used:
  3161 strings out of 493742
- 42811 string characters out of 6151251
+ 42817 string characters out of 6151251
  116080 words of memory out of 5000000
  6607 multiletter control sequences out of 15000+600000
  23517 words of font info for 107 fonts, out of 8000000 for 9000
  934 hyphenation exceptions out of 8191
  28i,11n,26p,832b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.dvi (43 pages, 242656 bytes).
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.dvi (43 pages, 242680 bytes).
