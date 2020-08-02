@@ -24,11 +24,291 @@
 \mainmatter
 
 
-\input{Chap1_introduction}
-\input{Chap2_noise_in_optical_measurement}
+%\input{Chap1_introduction}
+%\input{Chap2_noise_in_optical_measurement}
 
 \chapter{Quantum harmonic oscillators}
-\section{Schr\"odinger equation}
+The previous chapter introduced the phenomenological description of shot noise and ASE to calculate SNR in various optical measurements. Quantum optics tells you the physics behind these noise sources and provides ways to manipulate them.
+
+In quantum optics, the physics of harmonic oscillators play a crucial role because electromagnetic field is decomposed into the collection of time-frequency modes, spatial modes, and polarizations, and each mode is assumed as a harmonic oscillator. 
+
+This chapter will introduce the quantum harmonic oscillators. If you are familiar with the basics of quantum mechanics, you can skip this chapter.
+
+\section{Schr\"odinger equation for a harmonic oscillator}
+\subsection{Classical harmonic oscillators}
+
+Let's discuss the motion of a one-dimensional mass-spring system without friction with a mass of $m$ and a spring constant of $k$. The equation of motion is given by
+\begin{equation}
+  m\frac{d^2X}{dt^2}+kX = 0.
+\end{equation}
+The solution is
+\begin{equation}
+  X(t) = \frac 1 2 A \exp (-i\omega t) + c.c. = \mathrm{Re}[A\exp(-i\omega t)]
+ \label{eq:solution_of_classical_harmonic_oscillator}
+\end{equation}
+where $A$ is a complex number, $\omega = \sqrt{k/m}$, and $c.c.$ stands for the complex conjugate. The momentum $P = m (dX/dt)$ is given by
+\begin{equation}
+  P(t) = \frac {-im\omega}{2}A\exp(-i\omega t)+c.c. = m\omega\mathrm {Im}[A\exp(-i\omega t)].
+\end{equation}
+Therefore $X(t)$ and $P(t)$ oscillate with 90deg. phase shift.
+
+The sum of potential energy and kinetic energy is given by
+\begin{equation}
+  E = \frac{1}{2}kX^2 + \frac{m}{2}\left(\frac{dX}{dt} \right)^2 = \frac{1}{2}kX^2 + \frac{P^2}{2m},
+  \label{eq:total_energy}
+\end{equation}
+where we introduced the momentum $P = m(dX/dt)$. Substituting Eq. (\ref{eq:solution_of_classical_harmonic_oscillator}) to Eq. (\ref{eq:total_energy}), we can see that the total energy is kept constant as
+\begin{equation}
+  E= \frac{1}{2}k(\mathrm{Re} [A\exp(-i\omega t)])^2 + \frac{m\omega^2}{2} (\mathrm{Im} [A\exp(-i\omega t)])^2 = \frac{1}{2}k|A|^2.
+\end{equation}
+The above results are quite common in harmonic oscillators: each oscillator has two degrees of freedom, and they oscillate with 90 degree phase shift with each other. To further generalize the result, we introduce normalized position $x$ and normalized momentum $p$ such that the potential energy is given by $\hbar \omega x^2$ and the kinetic energy is given by $\hbar \omega p^2$, i.e., Eq. (\ref{eq:total_energy}) becomes
+\begin{equation}
+  E = \hbar \omega (x^2 + p^2).
+\end{equation}
+Specifically, $x$ and $p$ are given by
+\begin{equation}
+  x = \sqrt \frac{k}{2\hbar\omega} X,
+  \label{eq:normalized_position}
+\end{equation}
+\begin{equation}
+  p = \frac{1}{\sqrt{2m\hbar \omega}}P,
+  \label{eq:normalized_momentum}
+\end{equation}
+respectively. Since $\hbar \omega$ is the energy unit of quantum harmonic oscillators, such normalization drastically simplifies the notation and therefore they are often used. We also introduce normalized complex amplitude
+\begin{equation}
+  a = \sqrt{\frac{k}{2\hbar \omega}}A
+\end{equation}
+so that the time evolution of $x$ and $p$ are given by
+\begin{equation}
+  x(t) = \mathrm{Re}[a \exp(-i\omega t)],
+\end{equation}
+\begin{equation}
+  p(t) = \mathrm{Im}[a \exp(-i\omega t)],
+\end{equation}
+respectively. Also, we can define $a(t) = a\exp(-i\omega t)$, which satisfies
+\begin{equation}
+  a(t) = x(t) + ip(t).
+\end{equation}
+You can see that $x(t)$ and $p(t)$ in the $x$-$p$ plane (phase space) form a circular trajectory at a frequency of $\omega$, as shown in Fig. {\ref{fig:classical_phase_space}}(a). This is a very general property of classical harmonic oscillator. 
+
+In the later chapters, you will see that in quantum harmonic oscillator $x(t)$ and $p(t)$ have certain fluctuation or uncertainty, as conceptually shown in Fig. {\ref{fig:classical_phase_space}}(b). This results in the shot noise and optical amplifier noise.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=9cm]{fig/3-1_phase_space.eps} 
+  \caption{Evolution of position $x(t)$ and momentum $p(t)$ in the phase space. (a) Classical harmonic oscillator. (b) Quantum harmonic oscillator. }
+  \label{fig:classical_phase_space}
+\end{figure}
+
+
+\subsection{Wavefunctions and Schr\"odinger equation}
+To introduce quantum mechanical harmonic oscillators, we start from de Broglie's relation, which assumes a complex wavefunction with a temporal angular frequency $\Omega$ and spatial angular frequency $K$, which are related to the energy and the momentum by
+\begin{equation}
+  E = \hbar \Omega,
+\end{equation}
+\begin{equation}
+  P = \hbar K,
+\end{equation}
+respectively. If we consider an exemplary wavefunction denoted as $\Phi(X, t)= \exp[i(KX-\Omega t)]$, we get 
+\begin{equation}
+ i\hbar\frac{\partial\Phi}{\partial t} = \hbar\Omega \Phi = E\Phi,
+\end{equation}
+\begin{equation}
+-i\hbar \frac {\partial \Phi}{\partial X} = \hbar K\Phi = P\Phi.
+\end{equation}
+Suggested by the above equations, we define the following operators:
+\begin{equation}
+	\hat E \equiv i\hbar \frac{\partial}{\partial t}, 
+ \label{eq:energy_operator}
+\end{equation}
+\begin{equation}
+  \hat P \equiv -i\hbar \frac{\partial}{\partial X},
+  \label{eq:momentum_operator}
+\end{equation}
+which can extract the energy and the momentum, respectively, from the wavefunction.
+
+Substituting (\ref{eq:energy_operator}) and (\ref{eq:momentum_operator}) to Eq. (\ref{eq:total_energy}), we obtain the Schr\"odinger equation for a one-dimensional harmonic oscillator given by
+\begin{equation}
+  i\hbar\frac{\partial \Psi(X,t)}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2 \Psi(X,t)}{\partial X^2} + \frac 1 2 kX^2\Psi(X,t),
+  \label{eq:Schrodinger_eq}
+\end{equation}
+where $\Psi(X, t)$ is the \textbf{wavefunction}\index{wavefunction} of the harmonic oscillator. 
+
+The meaning of wavefunction may be abstract at the moment, but we assume that $\int_{-\infty}^{\infty}|\Psi(X,t)|^2 dX = 1$ and that $|\Psi(X,t)|^2$ corresponds to the probability density of the position of the oscillator being at $X$. Once we assume $\Psi(X,t)$ at a certain time, we can calculate its time evolution by using Eq. (\ref{eq:Schrodinger_eq}) because the left-hand side is the time derivative of $\Psi(X,t)$. In the later sections, we will discuss that the wavefunction contains various information such as momentum and energy. 
+
+Before doing so, let's describe Eq. (\ref{eq:Schrodinger_eq}) with normalized position $x$ and normalized momentum $p$ given by Eqs. (\ref{eq:normalized_position}) and (\ref{eq:normalized_momentum}). From Eqs. (\ref{eq:normalized_position}), (\ref{eq:normalized_momentum}), and (\ref{eq:momentum_operator}), the operator of normalized momentum $\hat p$ can be expressed by $x$ as:
+\begin{equation}
+  \hat p = \frac{\hat P}{\sqrt{2m\hbar \omega}} = \frac{-i\hbar \frac{\partial}{\partial X}}{\sqrt{2m\hbar \omega}}
+  =-i\hbar \frac{\sqrt{\frac{K}{2\hbar\omega}}\frac{\partial}{\partial x}}{\sqrt{2m\hbar \omega}} = -\frac{i}{2}\frac{\partial}{\partial x}.
+\end{equation}
+Therefore, Eq. (\ref{eq:Schrodinger_eq}) can be simplified as
+\begin{equation}
+\begin{aligned}
+  i\hbar \frac{\partial \psi}{\partial t} &= -\frac{\hbar^2}{2m}\frac{k}{2\hbar \omega}\frac{\partial \psi}{\partial x} + \frac 1 2 k \frac{2\hbar \omega}{k}x^2 \psi = \hbar \omega \left( -\frac 1 4 \frac{\partial^2\psi}{\partial x^2} + x^2 \psi\right)\\
+  &= \hbar \omega (\hat x^2 + \hat p^2)\psi,
+  \label{eq:Schrodinger_eq_normalized}
+\end{aligned}
+\end{equation}
+where we introduced the normalized position operator $\hat x = x$. By using an operator $\hat H = \hbar \omega (\hat x^2 + \hat p^2)$ called Hamiltonian, we get
+\begin{equation}
+  i\hbar \frac{\partial}{\partial t}\psi(x,t) = \hat H\psi(x,t).
+\end{equation}
+If $\psi(x,t)$ is known at a certain $t$, we can calculate the time evolution of probability distribution $|\psi(x,t)|^2$.\footnote{Note that we implicitly assume that $\int_{-\infty}^{\infty}|\psi(x,t)|^2dx = 1$. Therefore, $\psi(X, t)$ in Eq. (\ref{eq:Schrodinger_eq}) and $\psi(x,t)$ in Eq. (\ref{eq:Schrodinger_eq_normalized}) should be normalized differently, and hence should have different values at corresponding $X$ and $x$.}
+
+\subsection{Quantum state, bra-ket notation, and operators}
+
+Here we introduce \textbf{quantum state}\index{quantum state}, which is a generalized version of wavefunction. We also introduce the bra-ket notation, which is the most popular way of describing quantum state. 
+
+Before introducing quantum state, we discuss the motivation of using quantum state instead of wavefunction. As we discussed in the previous section, $\psi(x,t)$ contains the information not only on the position but also the momentum and the energy, and its time evolution is calculated by the Schr\"odinger equation. We will see that, wavefunction can be described as a function of momentum, or that of energy. Nevertheless, if we change the expression of the wavefunction, we should change the expression of operators including Hamiltonian, which is quite cumbersome. To avoid such inconvenience, we utilize the idea of linear algebra, where a wavefunction is viewed as a vector, which can be expressed as linear combination of various set of orthonormal basis.
+
+%The Schr\"odinger equation of a normalized harmonic oscillator (Eq. (\ref{eq:Schrodinger_eq_normalized})) tells us that the time derivative of a wavefunction is given by applying the Hamiltonian to the wavefunction. This relationship holds even when the wavefunction is expressed not by position but by momentum or energy because we can express the Hamiltonian in corresponding forms. 
+
+For example, a wavefunction\footnote{The dependence of $\psi(x,t)$ on $t$ is not considered for a while to simplify the discussion.} $\psi(x)$ can be viewed as a vector by expressing
+\begin{equation}
+  \psi(x) = \int_{-\infty}^{\infty}\psi(x_0)\delta(x-x_0)dx_0,
+\end{equation}
+where $\psi(x)$ is expanded as the linear combination of a set of basis that are consisted of the delta function\footnote{The delta function $\delta(x)$ is $\infty$ at $x = 0$ and $0$ elsewhere, and $\int_{-\infty}^{\infty}\delta(x)dx = 1$. $\delta(x)$ can be defined in several ways but one of them is $\delta(x) = \lim_{\varepsilon \to +0} \mathrm{rect}(x/\varepsilon)/\varepsilon$, where  $\mathrm{rect}(x) = 1$ for $-1/2 < x < 1/2$ and 0 for others.}
+ $\delta(x-x_0)$ for various $x_0$. 
+The basis can be transformed by using unitary transformation: If we have a set of orthonormal bases, we can expand some vector with the bases by taking inner product.
+In practice, by taking the inner product of $\psi(x)$ and a basis $\delta(x-x_0)$, we get
+\begin{equation}
+  \int_{-\infty}^{\infty}\delta(x-x_0)\psi(x)dx = \psi(x_0),
+\end{equation}
+and therefore we can recover the wavefunction at $x = x_0$. Another exemplary basis is
+\begin{equation}
+  \phi_p(x) = \frac {1}{\sqrt{\pi}} e^{2ipx},
+\end{equation}
+which satisfies 
+\begin{equation}
+  \hat p \phi_p(x) = -\frac{i}{2}\frac{\partial}{\partial x} \frac{1}{\sqrt\pi}e^{2ipx} = p \phi_p(x),
+\end{equation}
+indicating that $\phi_p(x)$ has a momentum $p$. Furthermore, since
+\begin{equation}
+  \int_{-\infty}^{\infty}\phi_{p_1}^*(x)\phi_{p_2}(x)dx = \delta(p_1 - p_2),
+\end{equation}
+$\phi_p(x)$ is a set of orthonormal basis.\footnote{$\int\phi_{p_1}^*(x)\phi_{p_2}(x)dx = \frac 1 \pi \int e^{-2i(p_1-p_2)x}dx = \lim_{X\to\infty}\frac 1 \pi \int e^{-(x/X)^2}e^{-2i(p_1-p_2)x}dx\\= \lim_{X\to\infty}\frac 1 \pi \int e^{-\frac{(x-iX^2(p_1-p_2))}{X^2}}e^{-X^2(p_1-p_2)^2}dx = \lim_{X\to\infty}\frac X {\sqrt \pi}e^{-X^2(p_1-p_2)^2}$. Because the last term is a Gaussian with a peak value of $X$ and an area of 1, we get $\delta(p_1-p_2)$.}
+Therefore, by taking the inner product with $\phi_p(x)$, we can express the wavefunction as the linear combination of $\phi_p(x)$ for various $p$. In this way, the basis of a wavefunction is interchangeable. 
+
+Quantum state is a complex vector expressed without apparently specifying any basis, and has the same information as wavefunction. Quantum state is described by ket $\ket \psi$. Inner product of two kets $\ket \phi$ and $\ket \psi$ is expressed as $\braket{\phi|\psi}$. If $\ket \phi$ and $\ket \psi$ can be expressed as wavefunctions of $x$ as $\phi(x)$ and $\psi(x)$, respectively, 
+\begin{equation}
+  \braket{\phi|\psi} \equiv \int_{-\infty}^{\infty}\phi^*(x)\psi(x)dx,
+\end{equation}
+which is analogous to the product of a row vector and a column vector. $\bra \phi$ is called `bra', and can be viewed as the transpose and complex conjugate of ket.
+
+The inner product between the same ket and bra gives the norm:
+\begin{equation}
+  \|\ket \phi\| \equiv \braket{\phi|\phi} = \int_{-\infty}^{\infty}\phi^*(x)\phi(x)dx \geq 0.
+\end{equation}
+
+
+
+Not only wavefunctions but also bases can be expressed by ket. For example, $\ket x_0$ gives the delta function centered at $x = x_0$, i.e.,
+\begin{equation}
+  \braket{x|x_0} = \delta(x-x_0).
+\end{equation}
+Since we don't have to reserve $x$ for calculation, we often use $\ket x$. $\ket p$ gives the engenfunction of momentum, i.e.,
+\begin{equation}
+  \braket{x|p} = \phi_p(x) = \frac{1}{\sqrt{\pi}}e^{2ipx}.
+\end{equation}
+
+When we express a quantum state $\ket \psi$ with $x$ basis, we take the inner product with $\ket x$. Therefore,
+\begin{equation}
+  \braket{x|\psi} = \psi(x).
+\end{equation}
+In a similar manner, express $\ket \psi$ with $p$ basis by taking the inner product as
+\begin{equation}
+  \braket{p|\psi} \equiv \tilde \psi(p),
+\end{equation}
+where 
+\begin{equation}
+  \tilde\psi(p) = \int_{-\infty}^{\infty} \braket{p|x}\braket{x|\psi}dx = \frac{1}{\sqrt \pi}\int_{-\infty}^{\infty}\psi(x)e^{-2ipx}dx
+\end{equation}
+
+\subsubsection{Operators}
+Although we have seen some operators, here we introduce some general idea of operators. By applying an operator, we can change the ket to $\hat A \ket \phi$. In the position basis,  the action of operator is expressed by a two-dimensional function $A(x,x')$ as
+\begin{equation}
+  \hat A\phi(x) = \int_{-\infty}^{\infty}A(x,x')\phi(x')dx,
+\end{equation}
+which is analogous to multiplication of a matrix and a vector. For example, the position operator is given by
+\begin{equation}
+  \hat x(x,x') = x\delta(x-x').
+\end{equation}
+The momentum operator is given by
+\begin{equation}
+  \hat p(x,x') = -\frac{i}{2}\frac{\partial}{\partial x}\delta(x-x').
+\end{equation}
+so that 
+\begin{equation}
+\begin{aligned}	
+  \bra x\hat p\ket p &= \int \hat p(x,x')\phi_p(x')dx' \\
+  &= -\frac i 2 \int \frac{\partial}{\partial x}\delta(x-x')\frac{e^{2ipx'}}{\sqrt \pi}dx' \\
+  &= -\frac i 2 2ip\frac{e^{2ipx'}}{\sqrt \pi} = p\phi_p(x).
+\end{aligned}
+\end{equation}
+
+\subsubsection{Hermitian conjugate}
+We introduce the Hermitian conjugate $\hat A^\dagger$ of an operator $\hat A$, which is given by
+\begin{equation}
+  A^\dagger(x,x') = A^*(x',x),
+\end{equation}
+Hermitian conjugate appears various situations. A representative case is the inner product between $\hat A\ket \phi$ and $\ket \psi$, which is given by
+\begin{equation}
+\begin{aligned}
+	  \iint\left[A(x,x')\phi(x')\right]^*\psi(x)dxdx' &= \iint \phi^*(x')A^*(x,x')\psi(x)dxdx' \\
+	  &= \iint \phi^*(x')A^\dagger(x',x)\psi(x)dxdx'\\
+	  &= \bra \phi \hat A^\dagger \ket \psi.
+\end{aligned}
+\end{equation}
+Therefore, the inner product of $\hat A \ket \phi$ and $\ket \psi$ is equal to the inner product of $\ket \phi$ and $\hat A^\dagger \ket \psi$.
+
+Using Hermitian conjugate, we can define two important classes of operators: Hermite operators that satisfy $\hat H^\dagger = \hat H$ and unitary operators that satisfy $\hat U^\dagger \hat U = I$, where $I$ stands for the identity operator.
+
+Hermite operators are important because quantum mechanics expresses observables or physical quantities by Hermite operators. Importantly, Hermite operators have real eigenvalues, which correspond to the observables. Eigenvectors with different eigenvalues are orthogonal to each other. These points are proved as follows. Suppose that a Hermite operator $\hat H$ has an eigenvalue $\lambda$ and an eigenvector $\ket \varphi$, i.e.,
+\begin{equation}
+  \hat H\ket \varphi = \lambda \ket \varphi.
+\end{equation}
+If we multiply $\bra \phi$,
+\begin{equation}
+  \bra \varphi \hat H \ket \varphi = \lambda \braket{\varphi|\varphi}
+\end{equation}
+\begin{equation}
+  \bra \varphi \hat H^\dagger = \lambda^* \bra \varphi
+\end{equation}
+\begin{equation}
+  \bra\varphi \hat H \ket \varphi = \lambda^*\braket{\varphi|\varphi}
+\end{equation}
+Therefore $\lambda^* = \lambda$, i.e., $\lambda$ is real.
+
+\begin{equation}
+  \hat H \ket {\varphi_1} = \lambda_1\ket {\varphi_1}
+\end{equation}
+\begin{equation}
+  \hat H \ket {\varphi_2} = \lambda_2\ket {\varphi_2}
+\end{equation}
+
+and the eigenvalues are used as observables.
+\begin{enumerate}
+	\item Eigenvalues are real.
+	\item Eigenvectors with the same eigenvalue are not always orthogonal to each other, but they can be orthogonal to each other by Gram-Schmidt orthogonalization.
+\end{enumerate}
+
+
+Quantum mechanics often considers commutation relation between $\hat x$ and $\hat p$, which is given by 
+\begin{equation}
+  [\hat x, \hat p] = \hat x\hat p- \hat p \hat x = -\frac{i}{2}\left(x\frac{\partial}{\partial x} -  \frac{\partial}{\partial x}x\right) = -\frac{i}{2}\left(x\frac{\partial}{\partial x} -  x\frac{\partial}{\partial x} - 1\right) = \frac i 2.
+  \label{eq:commutation_x_p}
+\end{equation}
+
+
+
+\begin{equation}
+  aaa
+\end{equation}
+
+
+
+
+
 \subsection{Wavefunction and energy eigenstates}
 \subsection{Fock representation}
 \subsection{Position representation}

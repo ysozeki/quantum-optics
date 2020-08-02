@@ -1,4 +1,4 @@
-This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  28 JUL 2020 07:10
+This is e-pTeX, Version 3.14159265-p3.6-141210-2.6 (utf8.euc) (TeX Live 2015) (preloaded format=platex 2015.10.10)  31 JUL 2020 16:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -468,6 +468,33 @@ If that doesn't work, type  X <return>  to quit.
 File: fig/1-2_PD_circuit.eps Graphic file (type eps)
 <fig/1-2_PD_circuit.eps> [4] [5] [6]) (./quantum_mechanics.tex [7]
 第2章
+
+LaTeX Warning: File `fig/2-1_phase_space.eps' not found on input line 26.
+
+
+./quantum_mechanics.tex:26: LaTeX Error: File `fig/2-1_phase_space.eps' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...aphics[width=9cm]{fig/2-1_phase_space.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+./quantum_mechanics.tex:26: LaTeX Error: Cannot determine size of graphic in fig/2-1_phase_space.eps (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 ...aphics[width=9cm]{fig/2-1_phase_space.eps}
+                                                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 File: fig/2-1_phase_space.eps Graphic file (type eps)
 <fig/2-1_phase_space.eps> [8
 
@@ -505,4 +532,4 @@ Here is how much of TeX's memory you used:
  934 hyphenation exceptions out of 8191
  28i,11n,26p,832b,352s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.dvi (43 pages, 242680 bytes).
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum_optics_j.dvi (43 pages, 242660 bytes).

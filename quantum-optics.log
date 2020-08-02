@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  28 JUL 2020 07:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  1 AUG 2020 15:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -608,113 +608,91 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ] (./quantum-optics.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
+LaTeX Font Info:    Try loading font information for U+msa on input line 2.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+LaTeX Font Info:    Try loading font information for U+msb on input line 2.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [3])
 \tf@toc=\write5
 \openout5 = `quantum-optics.toc'.
 
- [4] (./Chap1_introduction.tex
+ [4]
 Chapter 1.
 [1
 
 
 ]
-Overfull \hbox (44.19528pt too wide) in paragraph at lines 15--34
- [] 
+Package epstopdf Info: Source file: <fig/3-1_phase_space.eps>
+(epstopdf)                    date: 2020-07-29 19:07:19
+(epstopdf)                    size: 111602 bytes
+(epstopdf)             Output file: <fig/3-1_phase_space-eps-converted-to.pdf>
+(epstopdf)                    date: 2020-07-29 19:07:23
+(epstopdf)                    size: 16568 bytes
+(epstopdf)             Command: <repstopdf --outfile=fig/3-1_phase_space-eps-converted-to.pdf fig/3-1_phase_space.eps>
+(epstopdf)             \includegraphics on input line 98.
+Package epstopdf Info: Output file is already uptodate.
+ <fig/3-1_phase_space-eps-converted-to.pdf, id=27, 368.37625pt x 163.61125pt>
+File: fig/3-1_phase_space-eps-converted-to.pdf Graphic file (type pdf)
+ <use fig/3-1_phase_space-eps-converted-to.pdf>
+Package pdftex.def Info: fig/3-1_phase_space-eps-converted-to.pdf used on input line 98.
+(pdftex.def)             Requested size: 256.0748pt x 113.7332pt.
+
+Overfull \hbox (3.80617pt too wide) in paragraph at lines 105--106
+\OT1/cmr/m/n/10 To in-tro-duce quan-tum me-chan-i-cal har-monic os-cil-la-tors, we start from de Broglie's
  []
 
-) (./Chap2_noise_in_optical_measurement.tex [2]
+[2] [3 <./fig/3-1_phase_space-eps-converted-to.pdf>] [4] [5] [6] [7] [8]
 Chapter 2.
-Package epstopdf Info: Source file: <fig/2-1_photodetection.eps>
-(epstopdf)                    date: 2020-07-25 16:19:32
-(epstopdf)                    size: 283488 bytes
-(epstopdf)             Output file: <fig/2-1_photodetection-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-07-26 21:40:20
-(epstopdf)                    size: 32375 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/2-1_photodetection-eps-converted-to.pdf fig/2-1_photodetection.eps>
-(epstopdf)             \includegraphics on input line 17.
-Package epstopdf Info: Output file is already uptodate.
-<fig/2-1_photodetection-eps-converted-to.pdf, id=31, 338.26375pt x 251.94125pt>
-File: fig/2-1_photodetection-eps-converted-to.pdf Graphic file (type pdf)
- <use fig/2-1_photodetection-eps-converted-to.pdf>
-Package pdftex.def Info: fig/2-1_photodetection-eps-converted-to.pdf used on input line 17.
-(pdftex.def)             Requested size: 256.0748pt x 190.73154pt.
- [3
+[9
 
-] [4 <./fig/2-1_photodetection-eps-converted-to.pdf>] [5] [6] [7]
-Package epstopdf Info: Source file: <fig/2-2_PD_circuit.eps>
-(epstopdf)                    date: 2020-07-25 16:19:32
-(epstopdf)                    size: 240526 bytes
-(epstopdf)             Output file: <fig/2-2_PD_circuit-eps-converted-to.pdf>
-(epstopdf)                    date: 2020-07-27 08:57:35
-(epstopdf)                    size: 20365 bytes
-(epstopdf)             Command: <repstopdf --outfile=fig/2-2_PD_circuit-eps-converted-to.pdf fig/2-2_PD_circuit.eps>
-(epstopdf)             \includegraphics on input line 194.
-Package epstopdf Info: Output file is already uptodate.
- <fig/2-2_PD_circuit-eps-converted-to.pdf, id=98, 306.14375pt x 188.705pt>
-File: fig/2-2_PD_circuit-eps-converted-to.pdf Graphic file (type pdf)
- <use fig/2-2_PD_circuit-eps-converted-to.pdf>
-Package pdftex.def Info: fig/2-2_PD_circuit-eps-converted-to.pdf used on input line 194.
-(pdftex.def)             Requested size: 199.16928pt x 122.7662pt.
- [8 <./fig/2-2_PD_circuit-eps-converted-to.pdf>] [9] [10]) [11] [12
+] [10
 
 ]
 Chapter 3.
-[13] [14
 
-]
-Chapter 4.
-[15] [16
-
-]
-Chapter 5.
-
-Overfull \hbox (13.11293pt too wide) in paragraph at lines 54--54
+Overfull \hbox (13.11293pt too wide) in paragraph at lines 334--334
 []\OT1/cmr/bx/n/14.4 Mode de-com-po-si-tion of elec-tro-mag-netic waves 
  []
 
-[17] [18
+[11] [12
+
+]
+Chapter 4.
+[13] [14
+
+]
+Chapter 5.
+[15] [16
 
 ]
 Chapter 6.
-[19] [20
-
-]
-Chapter 7.
-[21] [22
-
-]
-Chapter 8.
-[23] [24
+[17] [18
 
 ]
 Appendix A.
-(./quantum-optics.ind [25] [26
+(./quantum-optics.ind [19] [20
 
 
-]) (./quantum-optics.bbl) [27
+]) (./quantum-optics.bbl) [21
 
 
 ] (./quantum-optics.aux) ) 
 Here is how much of TeX's memory you used:
- 3735 strings out of 493054
- 49271 string characters out of 6134759
- 113497 words of memory out of 5000000
- 7155 multiletter control sequences out of 15000+600000
- 13103 words of font info for 50 fonts, out of 8000000 for 9000
+ 3712 strings out of 493054
+ 48736 string characters out of 6134759
+ 111461 words of memory out of 5000000
+ 7142 multiletter control sequences out of 15000+600000
+ 12263 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,10n,26p,1430b,254s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on quantum-optics.pdf (31 pages, 325557 bytes).
+ 38i,9n,26p,799b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on quantum-optics.pdf (25 pages, 296895 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
+ 210 PDF objects out of 1000 (max. 8388607)
+ 152 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

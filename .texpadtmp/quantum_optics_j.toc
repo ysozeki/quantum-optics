@@ -16,7 +16,7 @@
 \contentsline {section}{\numberline {1.4}まとめ}{7}
 \contentsline {chapter}{\numberline {第2章}調和振動子の量子力学}{8}
 \contentsline {section}{\numberline {2.1}調和振動子}{8}
-\contentsline {section}{\numberline {2.2}シュレディンガー方程式とハイゼンベルグの運動方程式}{9}
+\contentsline {section}{\numberline {2.2}シュレディンガー方程式とハイゼンベルグの運動方程式}{8}
 \contentsline {subsection}{\numberline {2.2.1}シュレディンガー方程式と時間発展演算子}{9}
 \contentsline {subsection}{\numberline {2.2.2}シュレディンガー描像とハイゼンベルグ描像}{10}
 \contentsline {section}{\numberline {2.3}調和振動子のシュレディンガー方程式とその解}{10}
