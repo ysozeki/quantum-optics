@@ -12,6 +12,7 @@
 \usepackage{textcomp}
 \usepackage{comment}
 \usepackage{authblk}
+\usepackage{xcolor}
 
 \begin{document}
 \title{Lecture Note \\ Quantum Mechanics of Light and Matters}
@@ -24,24 +25,24 @@
 \mainmatter
 
 
-%\input{Chap1_introduction}
-%\input{Chap2_noise_in_optical_measurement}
+\input{Chap1_introduction}
+\input{Chap2_noise_in_optical_measurement}
 
-\chapter{Quantum harmonic oscillators}
+\chapter{Quantum-mechanical harmonic oscillators}
 The previous chapter introduced the phenomenological description of shot noise and ASE to calculate SNR in various optical measurements. Quantum optics tells you the physics behind these noise sources and provides ways to manipulate them.
 
-In quantum optics, the physics of harmonic oscillators play a crucial role because electromagnetic field is decomposed into the collection of time-frequency modes, spatial modes, and polarizations, and each mode is assumed as a harmonic oscillator. 
+In quantum optics, the physics of harmonic oscillators play a crucial role because electromagnetic field is decomposed into the collection of time-frequency modes, spatial modes, and polarizations, and each mode is assumed as a quantum-mechanical harmonic oscillator. 
 
-This chapter will introduce the quantum harmonic oscillators. If you are familiar with the basics of quantum mechanics, you can skip this chapter.
+This chapter will introduce the quantum-mechanical harmonic oscillators. If you are familiar with the basics of quantum mechanics, you can skip this chapter.
 
 \section{Schr\"odinger equation for a harmonic oscillator}
 \subsection{Classical harmonic oscillators}
 
-Let's discuss the motion of a one-dimensional mass-spring system without friction with a mass of $m$ and a spring constant of $k$. The equation of motion is given by
+Let's discuss the motion of a one-dimensional mass-spring system without friction with a mass of $m$ and a spring constant of $k$. The equation of motion of the position $X(t)$ of the mass as a function of time is given by
 \begin{equation}
   m\frac{d^2X}{dt^2}+kX = 0.
 \end{equation}
-The solution is
+The solution is given by
 \begin{equation}
   X(t) = \frac 1 2 A \exp (-i\omega t) + c.c. = \mathrm{Re}[A\exp(-i\omega t)]
  \label{eq:solution_of_classical_harmonic_oscillator}
@@ -49,23 +50,25 @@ The solution is
 where $A$ is a complex number, $\omega = \sqrt{k/m}$, and $c.c.$ stands for the complex conjugate. The momentum $P = m (dX/dt)$ is given by
 \begin{equation}
   P(t) = \frac {-im\omega}{2}A\exp(-i\omega t)+c.c. = m\omega\mathrm {Im}[A\exp(-i\omega t)].
+  \label{eq:solution_of_classical_harmonic_oscillator_momentum}
 \end{equation}
-Therefore $X(t)$ and $P(t)$ oscillate with 90deg. phase shift.
+Eq. (\ref{eq:solution_of_classical_harmonic_oscillator}) and Eq. (\ref{eq:solution_of_classical_harmonic_oscillator_momentum}) show that $X(t)$ and $P(t)$ oscillate while keeping a phase difference of 90 degree.
 
 The sum of potential energy and kinetic energy is given by
 \begin{equation}
   E = \frac{1}{2}kX^2 + \frac{m}{2}\left(\frac{dX}{dt} \right)^2 = \frac{1}{2}kX^2 + \frac{P^2}{2m},
   \label{eq:total_energy}
 \end{equation}
-where we introduced the momentum $P = m(dX/dt)$. Substituting Eq. (\ref{eq:solution_of_classical_harmonic_oscillator}) to Eq. (\ref{eq:total_energy}), we can see that the total energy is kept constant as
+where we introduced the momentum $P = m(dX/dt)$. Substituting Eq. (\ref{eq:solution_of_classical_harmonic_oscillator}) to Eq. (\ref{eq:total_energy}), we obtain
 \begin{equation}
   E= \frac{1}{2}k(\mathrm{Re} [A\exp(-i\omega t)])^2 + \frac{m\omega^2}{2} (\mathrm{Im} [A\exp(-i\omega t)])^2 = \frac{1}{2}k|A|^2.
 \end{equation}
-The above results are quite common in harmonic oscillators: each oscillator has two degrees of freedom, and they oscillate with 90 degree phase shift with each other. To further generalize the result, we introduce normalized position $x$ and normalized momentum $p$ such that the potential energy is given by $\hbar \omega x^2$ and the kinetic energy is given by $\hbar \omega p^2$, i.e., Eq. (\ref{eq:total_energy}) becomes
+In this way, we can see that the total energy is kept constant.
+The above results are general in harmonic oscillators: each oscillator has two degrees of freedom, and they oscillate with 90-degree phase difference. To further generalize the result, we introduce the normalized position $x$ and the normalized momentum $p$ such that the potential energy is given by $\hbar \omega x^2$ and the kinetic energy is given by $\hbar \omega p^2$, i.e., Eq. (\ref{eq:total_energy}) becomes
 \begin{equation}
   E = \hbar \omega (x^2 + p^2).
 \end{equation}
-Specifically, $x$ and $p$ are given by
+This is made possible by defining $x$ and $p$ as
 \begin{equation}
   x = \sqrt \frac{k}{2\hbar\omega} X,
   \label{eq:normalized_position}
@@ -74,7 +77,7 @@ Specifically, $x$ and $p$ are given by
   p = \frac{1}{\sqrt{2m\hbar \omega}}P,
   \label{eq:normalized_momentum}
 \end{equation}
-respectively. Since $\hbar \omega$ is the energy unit of quantum harmonic oscillators, such normalization drastically simplifies the notation and therefore they are often used. We also introduce normalized complex amplitude
+respectively. Since $\hbar \omega$ is the energy unit of quantum harmonic oscillators, such normalization can simplify the notation and therefore they are often used. We also introduce the normalized complex amplitude
 \begin{equation}
   a = \sqrt{\frac{k}{2\hbar \omega}}A
 \end{equation}
@@ -88,10 +91,11 @@ so that the time evolution of $x$ and $p$ are given by
 respectively. Also, we can define $a(t) = a\exp(-i\omega t)$, which satisfies
 \begin{equation}
   a(t) = x(t) + ip(t).
+  \label{eq:normalized_complex_amplitude}
 \end{equation}
-You can see that $x(t)$ and $p(t)$ in the $x$-$p$ plane (phase space) form a circular trajectory at a frequency of $\omega$, as shown in Fig. {\ref{fig:classical_phase_space}}(a). This is a very general property of classical harmonic oscillator. 
+You can see that $x(t)$ and $p(t)$ in the $x$-$p$ plane, which is called phase space, form a circular trajectory rotating at a frequency of $\omega$, as shown in Fig. {\ref{fig:classical_phase_space}}(a). This is a very general property of classical harmonic oscillator. 
 
-In the later chapters, you will see that in quantum harmonic oscillator $x(t)$ and $p(t)$ have certain fluctuation or uncertainty, as conceptually shown in Fig. {\ref{fig:classical_phase_space}}(b). This results in the shot noise and optical amplifier noise.
+In the later chapters, you will see that in quantum harmonic oscillator $x(t)$ and $p(t)$ have certain fluctuation or uncertainty, as conceptually illustrated in Fig. {\ref{fig:classical_phase_space}}(b). This results in the shot noise and optical amplifier noise.
 
 \begin{figure}
   \centering
@@ -102,7 +106,7 @@ In the later chapters, you will see that in quantum harmonic oscillator $x(t)$ a
 
 
 \subsection{Wavefunctions and Schr\"odinger equation}
-To introduce quantum mechanical harmonic oscillators, we start from de Broglie's relation, which assumes a complex wavefunction with a temporal angular frequency $\Omega$ and spatial angular frequency $K$, which are related to the energy and the momentum by
+To introduce quantum-mechanical harmonic oscillators, we start from de Broglie's relation, which assumes a complex wavefunction with a temporal angular frequency $\Omega$ and spatial angular frequency $K$, which are related to the energy and the momentum by
 \begin{equation}
   E = \hbar \Omega,
 \end{equation}
@@ -136,7 +140,7 @@ where $\Psi(X, t)$ is the \textbf{wavefunction}\index{wavefunction} of the harmo
 
 The meaning of wavefunction may be abstract at the moment, but we assume that $\int_{-\infty}^{\infty}|\Psi(X,t)|^2 dX = 1$ and that $|\Psi(X,t)|^2$ corresponds to the probability density of the position of the oscillator being at $X$. Once we assume $\Psi(X,t)$ at a certain time, we can calculate its time evolution by using Eq. (\ref{eq:Schrodinger_eq}) because the left-hand side is the time derivative of $\Psi(X,t)$. In the later sections, we will discuss that the wavefunction contains various information such as momentum and energy. 
 
-Before doing so, let's describe Eq. (\ref{eq:Schrodinger_eq}) with normalized position $x$ and normalized momentum $p$ given by Eqs. (\ref{eq:normalized_position}) and (\ref{eq:normalized_momentum}). From Eqs. (\ref{eq:normalized_position}), (\ref{eq:normalized_momentum}), and (\ref{eq:momentum_operator}), the operator of normalized momentum $\hat p$ can be expressed by $x$ as:
+Before doing so, let's describe Eq. (\ref{eq:Schrodinger_eq}) with the normalized position $x$ and the normalized momentum $p$ given by Eqs. (\ref{eq:normalized_position}) and (\ref{eq:normalized_momentum}). From Eqs. (\ref{eq:normalized_position}), (\ref{eq:normalized_momentum}), and (\ref{eq:momentum_operator}), the operator of normalized momentum $\hat p$ can be expressed by $x$ as:
 \begin{equation}
   \hat p = \frac{\hat P}{\sqrt{2m\hbar \omega}} = \frac{-i\hbar \frac{\partial}{\partial X}}{\sqrt{2m\hbar \omega}}
   =-i\hbar \frac{\sqrt{\frac{K}{2\hbar\omega}}\frac{\partial}{\partial x}}{\sqrt{2m\hbar \omega}} = -\frac{i}{2}\frac{\partial}{\partial x}.
@@ -153,26 +157,29 @@ where we introduced the normalized position operator $\hat x = x$. By using an o
 \begin{equation}
   i\hbar \frac{\partial}{\partial t}\psi(x,t) = \hat H\psi(x,t).
 \end{equation}
-If $\psi(x,t)$ is known at a certain $t$, we can calculate the time evolution of probability distribution $|\psi(x,t)|^2$.\footnote{Note that we implicitly assume that $\int_{-\infty}^{\infty}|\psi(x,t)|^2dx = 1$. Therefore, $\psi(X, t)$ in Eq. (\ref{eq:Schrodinger_eq}) and $\psi(x,t)$ in Eq. (\ref{eq:Schrodinger_eq_normalized}) should be normalized differently, and hence should have different values at corresponding $X$ and $x$.}
+If $\psi(x,t)$ is known at a certain $t$, we can calculate the time evolution of probability distribution $|\psi(x,t)|^2$.\footnote{Note that we implicitly assume that $\int_{-\infty}^{\infty}|\psi(x,t)|^2dx = 1$. Therefore, $\Psi(X, t)$ in Eq. (\ref{eq:Schrodinger_eq}) and $\psi(x,t)$ in Eq. (\ref{eq:Schrodinger_eq_normalized}) should be normalized differently, and hence should have different values at corresponding $X$ and $x$.}
 
-\subsection{Quantum state, bra-ket notation, and operators}
+\subsection{Quantum state and bra-ket notation}
 
-Here we introduce \textbf{quantum state}\index{quantum state}, which is a generalized version of wavefunction. We also introduce the bra-ket notation, which is the most popular way of describing quantum state. 
+Here we introduce \textbf{quantum state}\index{quantum state}, which is a generalized version of wavefunction. We also introduce the \textbf{bra-ket notation}\index{bra-ket notation}, which is the most popular way of describing quantum state. 
 
-Before introducing quantum state, we discuss the motivation of using quantum state instead of wavefunction. As we discussed in the previous section, $\psi(x,t)$ contains the information not only on the position but also the momentum and the energy, and its time evolution is calculated by the Schr\"odinger equation. We will see that, wavefunction can be described as a function of momentum, or that of energy. Nevertheless, if we change the expression of the wavefunction, we should change the expression of operators including Hamiltonian, which is quite cumbersome. To avoid such inconvenience, we utilize the idea of linear algebra, where a wavefunction is viewed as a vector, which can be expressed as linear combination of various set of orthonormal basis.
+Before introducing quantum state, we discuss the motivation for using quantum state instead of wavefunction. As we discussed in the previous section, $\psi(x,t)$ contains the information not only on the position but also the momentum and the energy, and its time evolution is calculated by the Schr\"odinger equation. We will see that, wavefunction can be described as a function of momentum, or that of energy. Nevertheless, if we change the expression of the wavefunction, we should change the expression of operators including position, momentum, Hamiltonian etc., which is quite inconvenient. To avoid such inconvenience, we utilize the idea of linear algebra, where a wavefunction is viewed as a vector, which can be expressed as linear combination of various set of orthonormal basis.
 
 %The Schr\"odinger equation of a normalized harmonic oscillator (Eq. (\ref{eq:Schrodinger_eq_normalized})) tells us that the time derivative of a wavefunction is given by applying the Hamiltonian to the wavefunction. This relationship holds even when the wavefunction is expressed not by position but by momentum or energy because we can express the Hamiltonian in corresponding forms. 
 
 For example, a wavefunction\footnote{The dependence of $\psi(x,t)$ on $t$ is not considered for a while to simplify the discussion.} $\psi(x)$ can be viewed as a vector by expressing
 \begin{equation}
   \psi(x) = \int_{-\infty}^{\infty}\psi(x_0)\delta(x-x_0)dx_0,
+  \label{eq:delta_function_1}
 \end{equation}
 where $\psi(x)$ is expanded as the linear combination of a set of basis that are consisted of the delta function\footnote{The delta function $\delta(x)$ is $\infty$ at $x = 0$ and $0$ elsewhere, and $\int_{-\infty}^{\infty}\delta(x)dx = 1$. $\delta(x)$ can be defined in several ways but one of them is $\delta(x) = \lim_{\varepsilon \to +0} \mathrm{rect}(x/\varepsilon)/\varepsilon$, where  $\mathrm{rect}(x) = 1$ for $-1/2 < x < 1/2$ and 0 for others.}
  $\delta(x-x_0)$ for various $x_0$. 
+
 The basis can be transformed by using unitary transformation: If we have a set of orthonormal bases, we can expand some vector with the bases by taking inner product.
-In practice, by taking the inner product of $\psi(x)$ and a basis $\delta(x-x_0)$, we get
+In practice, by taking the inner product of $\psi(x)$ and a basis $\delta(x-x_0)$, we get $\psi(x_0)$ because
 \begin{equation}
   \int_{-\infty}^{\infty}\delta(x-x_0)\psi(x)dx = \psi(x_0),
+  \label{eq:delta_function_2}
 \end{equation}
 and therefore we can recover the wavefunction at $x = x_0$. Another exemplary basis is
 \begin{equation}
@@ -195,41 +202,43 @@ Quantum state is a complex vector expressed without apparently specifying any ba
 \end{equation}
 which is analogous to the product of a row vector and a column vector. $\bra \phi$ is called `bra', and can be viewed as the transpose and complex conjugate of ket.
 
-The inner product between the same ket and bra gives the norm:
+The inner product of the same ket and bra gives the squared norm:
 \begin{equation}
-  \|\ket \phi\| \equiv \braket{\phi|\phi} = \int_{-\infty}^{\infty}\phi^*(x)\phi(x)dx \geq 0.
+  \|\ket \phi\|^2 \equiv \braket{\phi|\phi} = \int_{-\infty}^{\infty}\phi^*(x)\phi(x)dx \geq 0,
 \end{equation}
+which quantum mechanics requests to be normalized to 1.
 
-
-
-Not only wavefunctions but also bases can be expressed by ket. For example, $\ket x_0$ gives the delta function centered at $x = x_0$, i.e.,
+Not only wavefunctions but also bases can be expressed by ket. For example, $\ket {x_0}$ gives the delta function centered at $x = x_0$, i.e.,
 \begin{equation}
   \braket{x|x_0} = \delta(x-x_0).
 \end{equation}
-Since we don't have to reserve $x$ for calculation, we often use $\ket x$. $\ket p$ gives the engenfunction of momentum, i.e.,
+Although we used $x_0$ in Eq. (\ref{eq:delta_function_1}) and Eq. (\ref{eq:delta_function_2}) to reserve $x$ for integral calculation, it is no longer necessary in the bra-ket notation. Therefore we can denote $\ket x$ as the delta function centered at $x$. 
+
+$\ket p$ gives the engenfunction of momentum, i.e.,
 \begin{equation}
   \braket{x|p} = \phi_p(x) = \frac{1}{\sqrt{\pi}}e^{2ipx}.
 \end{equation}
 
-When we express a quantum state $\ket \psi$ with $x$ basis, we take the inner product with $\ket x$. Therefore,
+Based on the above discussions, we can see that the wavefunction is an expression of a quantum state $\ket \psi$ with $x$ basis, which can be obtained by taking the inner product with $\ket x$. Therefore,
 \begin{equation}
   \braket{x|\psi} = \psi(x).
 \end{equation}
-In a similar manner, express $\ket \psi$ with $p$ basis by taking the inner product as
+In a similar manner, we can express $\ket \psi$ with $p$ basis by taking the inner product as
 \begin{equation}
   \braket{p|\psi} \equiv \tilde \psi(p),
 \end{equation}
-where 
+where $\braket{p|\phi}$ can be calculated in the position basis as
 \begin{equation}
-  \tilde\psi(p) = \int_{-\infty}^{\infty} \braket{p|x}\braket{x|\psi}dx = \frac{1}{\sqrt \pi}\int_{-\infty}^{\infty}\psi(x)e^{-2ipx}dx
+  \tilde\psi(p) = \int_{-\infty}^{\infty} \braket{p|x}\braket{x|\psi}dx = \frac{1}{\sqrt \pi}\int_{-\infty}^{\infty}\psi(x)e^{-2ipx}dx,
 \end{equation}
+which is the wavefunction expressed as a function of $p$. You can see that $\tilde \psi(p)$ is the Fourier transform of $\psi(x)$.
 
-\subsubsection{Operators}
-Although we have seen some operators, here we introduce some general idea of operators. By applying an operator, we can change the ket to $\hat A \ket \phi$. In the position basis,  the action of operator is expressed by a two-dimensional function $A(x,x')$ as
+\subsection{Operators}
+Although we have already seen some operators, here we introduce some general idea of operators. By applying an operator $\hat A$, we can change the ket to $\hat A \ket \phi$. In the position basis,  the action of operator is expressed by a two-dimensional complex function $A(x,x')$ as
 \begin{equation}
   \hat A\phi(x) = \int_{-\infty}^{\infty}A(x,x')\phi(x')dx,
 \end{equation}
-which is analogous to multiplication of a matrix and a vector. For example, the position operator is given by
+which is analogous to multiplication of a matrix and a vector.\footnote{Defining $n \times n$ matrix $\mathbf A = (A_{ij})$ and a $n$-dimensional vector $\phi = (c_1, c_2,\cdots, n_n )^T$, the $i$-th component of $\mathbf A \phi$ is given by $\sum_{k=1}^{n}A_{ik}c_k$.} For example, the position operator is given by
 \begin{equation}
   \hat x(x,x') = x\delta(x-x').
 \end{equation}
@@ -245,13 +254,14 @@ so that
   &= -\frac i 2 2ip\frac{e^{2ipx'}}{\sqrt \pi} = p\phi_p(x).
 \end{aligned}
 \end{equation}
+\textcolor{red}{more description is needed here.}
 
 \subsubsection{Hermitian conjugate}
 We introduce the Hermitian conjugate $\hat A^\dagger$ of an operator $\hat A$, which is given by
 \begin{equation}
   A^\dagger(x,x') = A^*(x',x),
 \end{equation}
-Hermitian conjugate appears various situations. A representative case is the inner product between $\hat A\ket \phi$ and $\ket \psi$, which is given by
+Hermitian conjugate appears in various situations. A representative case is the inner product between $\hat A\ket \phi$ and $\ket \psi$, which is given by
 \begin{equation}
 \begin{aligned}
 	  \iint\left[A(x,x')\phi(x')\right]^*\psi(x)dxdx' &= \iint \phi^*(x')A^*(x,x')\psi(x)dxdx' \\
@@ -261,61 +271,393 @@ Hermitian conjugate appears various situations. A representative case is the inn
 \end{equation}
 Therefore, the inner product of $\hat A \ket \phi$ and $\ket \psi$ is equal to the inner product of $\ket \phi$ and $\hat A^\dagger \ket \psi$.
 
-Using Hermitian conjugate, we can define two important classes of operators: Hermite operators that satisfy $\hat H^\dagger = \hat H$ and unitary operators that satisfy $\hat U^\dagger \hat U = I$, where $I$ stands for the identity operator.
+Using Hermitian conjugate, we can define two important classes of operators: \textbf{unitary operator}\index{unitary operator} $\hat U$ that satisfy $\hat U^\dagger \hat U = \hat 1$, where $\hat 1$ stands for the identity operator, and \textbf{Hermitian operator}\index{Hermitian operator} $\hat A$ that satisfy $\hat A^\dagger = \hat A$. Their properties are discussed below.
 
-Hermite operators are important because quantum mechanics expresses observables or physical quantities by Hermite operators. Importantly, Hermite operators have real eigenvalues, which correspond to the observables. Eigenvectors with different eigenvalues are orthogonal to each other. These points are proved as follows. Suppose that a Hermite operator $\hat H$ has an eigenvalue $\lambda$ and an eigenvector $\ket \varphi$, i.e.,
+\subsubsection{Unitary operators}
+A unitary operator $\hat U$ is composed of a set of orthonormal basis. As mentioned before, a unitary operator satisfies $\hat U^\dagger\hat U = \hat 1$. This leads to 
 \begin{equation}
-  \hat H\ket \varphi = \lambda \ket \varphi.
+  \hat U^\dagger\hat U \hat U^\dagger = \hat U^\dagger,
 \end{equation}
-If we multiply $\bra \phi$,
+from which we obtain $\hat U \hat U^\dagger = \hat 1$. In $x$ basis, the $\hat U^\dagger \hat U = \hat 1$ is expressed as
 \begin{equation}
-  \bra \varphi \hat H \ket \varphi = \lambda \braket{\varphi|\varphi}
+  \int \hat U^\dagger(x,x'') U(x'',x')dx'' = \int \hat U^*(x'',x) U(x'',x')dx = \delta(x - x'),
 \end{equation}
-\begin{equation}
-  \bra \varphi \hat H^\dagger = \lambda^* \bra \varphi
-\end{equation}
-\begin{equation}
-  \bra\varphi \hat H \ket \varphi = \lambda^*\braket{\varphi|\varphi}
-\end{equation}
-Therefore $\lambda^* = \lambda$, i.e., $\lambda$ is real.
+where you can see that the norm of $U(x, x')$ at a certain $x'$ is 1, while the inner product of $U(x, x')$ and $U(x, x'')$ becomes zero when $x' \neq x''$.
 
+An important property of unitary operators is that it does not change the inner product or norm. This point is understood by calculating the inner product of $\hat U\ket{\varphi_1}$ and $\hat U\ket{\varphi_2}$ as
 \begin{equation}
-  \hat H \ket {\varphi_1} = \lambda_1\ket {\varphi_1}
-\end{equation}
-\begin{equation}
-  \hat H \ket {\varphi_2} = \lambda_2\ket {\varphi_2}
+  \bra{\varphi_1}\hat U^\dagger\hat U\ket{\varphi_2} = \braket{\varphi_1|\varphi_2}.
 \end{equation}
 
-and the eigenvalues are used as observables.
+
+\subsubsection{Helmitian operators}
+Hermitian operators (or self-adjoint operators) are important in quantum mechanics because physical quantities called observables are expressed by Hermitian operators. It is easy to show that $\hat x$ and $\hat p$ are Hermitian operators. \textcolor{red}{More explanation is needed.}
+
+Hermitian operators have the following important properties: 
 \begin{enumerate}
 	\item Eigenvalues are real.
-	\item Eigenvectors with the same eigenvalue are not always orthogonal to each other, but they can be orthogonal to each other by Gram-Schmidt orthogonalization.
+	\item Eigenvectors with different eigenvalues are orthogonal to each other. 
 \end{enumerate}
 
+These points are proved as follows. As for the first point, suppose that a Hermitian operator $\hat A$ has an eigenvalue $\lambda$ and an eigenvector $\ket \varphi$, i.e.,
+\begin{equation}
+  \hat A\ket \varphi = \lambda \ket \varphi.
+  \label{eq:Helmite_operator_real_eigenvalue_explanation1}
+\end{equation}
+By multiplying $\bra \phi$, we get
+\begin{equation}
+  \bra \varphi \hat A \ket \varphi = \lambda \braket{\varphi|\varphi}.
+\end{equation}
+By taking Hermitian conjugate of Eq. (\ref{eq:Helmite_operator_real_eigenvalue_explanation1}), we get
+\begin{equation}
+  \bra \varphi \hat A^\dagger = \lambda^* \bra \varphi.
+\end{equation}
+By multiplying $\ket \phi$ and using $\hat A^\dagger = \hat A$, we get
+\begin{equation}
+  \bra\varphi \hat A \ket \varphi = \lambda^*\braket{\varphi|\varphi}.
+  \label{eq:Helmite_operator_real_eigenvalue_explanation2}
+\end{equation}
+From Eq. (\ref{eq:Helmite_operator_real_eigenvalue_explanation1}) and Eq. (\ref{eq:Helmite_operator_real_eigenvalue_explanation2}), we can see that $\lambda^* = \lambda$, i.e., $\lambda$ is real. 
 
-Quantum mechanics often considers commutation relation between $\hat x$ and $\hat p$, which is given by 
+As for the second point, we assume 
+\begin{equation}
+  \hat A \ket {\varphi_1} = \lambda_1\ket {\varphi_1},
+  \label{eq:Helmite_operator_real_eigenvalue_explanation3}
+\end{equation}
+\begin{equation}
+  \hat A \ket {\varphi_2} = \lambda_2\ket {\varphi_2}.
+    \label{eq:Helmite_operator_real_eigenvalue_explanation4}
+\end{equation}
+The Hermitian conjugate of Eq. (\ref{eq:Helmite_operator_real_eigenvalue_explanation4})
+gives
+\begin{equation}
+  \bra{\varphi_2}\hat A^\dagger = \lambda_2^*\bra{\varphi_2}.
+\end{equation}
+Since $\hat A^\dagger = \hat A$ and $\lambda_2$ is real,
+\begin{equation}
+  \bra{\varphi_2}\hat A = \lambda_2\bra{\varphi_2}.
+    \label{eq:Helmite_operator_real_eigenvalue_explanation5}
+\end{equation}
+From Eq. (\ref{eq:Helmite_operator_real_eigenvalue_explanation3}) and (\ref{eq:Helmite_operator_real_eigenvalue_explanation5}), we obtain
+\begin{equation}
+  \bra{\varphi_2}\hat A\ket{\varphi_1} = \lambda_1\braket{\varphi_1|\varphi_2},
+\end{equation}
+\begin{equation}
+  \bra{\varphi_2}\hat A\ket{\varphi_1} = \lambda_2\braket{\varphi_1|\varphi_2},
+\end{equation}
+Therefore,
+\begin{equation}
+(\lambda_1 - \lambda_2)\braket{\varphi_1|\varphi_2} = 0.
+\end{equation}
+If $\lambda_1 \neq \lambda_2$, $\braket{\varphi_1|\varphi_2}=0$, i.e., $\ket {\varphi_1}$ and $\ket{\varphi_2}$ are orthogonal. When $\lambda_1=\lambda_2$, $\ket {\varphi_1}$ and $\ket{\varphi_2}$ are not always orthogonal, but they can be orthogonalized by Gramm-Schmidt orthogonalization. In this way, the eigenvectors of a Hermitian operator can form an orthonormal set of basis.
+
+Therefore, we can diagonalize a Hermitian operator $\hat A$ as
+\begin{equation}
+  \hat A = \hat U\hat D\hat U^\dagger,
+\end{equation}
+where $\hat D$ is a diagonal operator which gives
+\begin{equation}
+  D(x,x') = d(x)\delta(x-x').
+\end{equation}
+Using this, we can calculate $e^{i\hat A}$ as 
+\begin{equation}
+\begin{aligned}
+  e^{i\hat A} &= \sum_{n=0}^{\infty}\frac{\left(i\hat A\right)^n}{n!} 
+  = \sum_{n=0}^{\infty}\frac{\left(i\hat U\hat D\hat U^\dagger\right)^n}{n!} = \hat U\sum_{n=0}^{\infty}\frac {(i\hat D)^n} {n!}\hat U^\dagger\\
+  &= \hat U e^{i\hat D}U^\dagger.
+\end{aligned}
+\end{equation}
+Therefore, we can show that $e^{i\hat A}$ is unitary as follows:
+\begin{equation}
+\left(e^{i\hat A}\right)^\dagger e^{i\hat A} = \hat U e^{-i\hat D}\hat U^\dagger \hat U e^{i\hat D}\hat U^\dagger = \hat U \hat U^\dagger = \hat 1.
+\end{equation}
+
+\subsubsection{Creation and annihilation operators}
+We introduce an operator defined as
+\begin{equation}
+  \hat a = \hat x + i\hat p,
+\end{equation}
+which is called annihilation operator.
+Its Hermitian conjugate is 
+\begin{equation}
+  \hat a^\dagger = \hat x - i\hat p,
+\end{equation}
+which is called creation operator.
+Creation and annihilation operators play various important roles in quantum optics. They are not Hermitian nor unitary. As we will see, annilation operator $\hat a$ can be regarded as the quantum version of the complex amplitude $a$, which was introduced in Eq. (\ref{eq:normalized_complex_amplitude}).
+
+\subsubsection{Commutation relation}
+Quantum mechanics often considers commutation relation between arbitrary operators $\hat A$ and $\hat B$, which is defined as $[\hat A, \hat B]\equiv \hat A\hat B - \hat B \hat A$. For $\hat x$ and $\hat p$, the commutation relation is given by 
 \begin{equation}
   [\hat x, \hat p] = \hat x\hat p- \hat p \hat x = -\frac{i}{2}\left(x\frac{\partial}{\partial x} -  \frac{\partial}{\partial x}x\right) = -\frac{i}{2}\left(x\frac{\partial}{\partial x} -  x\frac{\partial}{\partial x} - 1\right) = \frac i 2.
   \label{eq:commutation_x_p}
 \end{equation}
 
-
-
+We can also see the commutation relation between $\hat a$ and $\hat a^\dagger$ as
 \begin{equation}
-  aaa
+  [\hat a, \hat a^\dagger] = [\hat x + i\hat p, \hat x - i\hat p] = [\hat x,\hat x] + [\hat p, \hat p] + i[\hat p, \hat x] - i[\hat x, \hat p] = 1
+\end{equation}
+These relations will be used in various calculations.
+
+\subsection{Energy eigenstates}
+
+In Eq. (\ref{eq:Schrodinger_eq_normalized}), we saw the Schr\"odinger equation of a harmonic oscillator, which describes the time evolution of a wavefunction, which is a function of $x$. We can describe the same equation for a quantum state $\ket \psi$ as follows:
+\begin{equation}
+i\hbar\frac{\partial}{\partial t}\ket {\psi(t)} = \hat H \ket {\psi(t)}.
+\label{eq:Schrodinger_eq_for_quantum_state}
+\end{equation}
+Here we aim at expressing quantum state as a function of energy. To this end, we look for the solution of Eq. (\ref{eq:Schrodinger_eq_normalized}) that corresponds to a specific energy, i.e., the eigenfunction of the Hamiltonian $\hat H$.
+
+First, we denote $\hat H = \hbar \omega (\hat x^2 + \hat p^2)$ with $\hat a$ and $\hat a^\dagger$ as follows.
+\begin{equation}
+\begin{aligned}
+  \hat H &= \hbar \omega \left[\left(\frac {\hat a + \hat a^\dagger}{2}\right)^2 + \left(\frac {\hat a - \hat a^\dagger}{2i}\right)^2\right]\\
+  &= \frac{\hbar \omega }{2}(\hat a\hat a^\dagger + \hat a^\dagger \hat a) = \hbar \omega \left(\hat a^\dagger \hat a + \frac 1 2\right) \equiv \hbar\omega \left(\hat n + \frac 1 2\right).
+\end{aligned}
+\end{equation}
+Here we used the commutation relation in Eq. (\ref{eq:commutation_x_p}) and introduced $\hat n = \hat a^\dagger \hat a$. We denote an eigenstate of $\hat n$ with eigenvalue of $n$ as $\ket n$. We assume that $\ket n$ is normalized, i.e., $\braket{n|n} = 1$. Since $\hat n$ is Hermitian,\footnote{$\hat n^\dagger = (\hat a^\dagger \hat a)^\dagger = \hat a^\dagger \hat a = \hat n$.} we know that $n$ is real. Then we show that $n\geq0$.
+\begin{equation}
+  n = n \braket {n|n} = \braket{n|\hat n|n} = \braket {n|\hat a^\dagger \hat a|n} = \|\hat a\ket n\|^2\geq0.
+  \label{eq:n_nonnegative}
+\end{equation}
+We can also show that $n$ is an integer. To do so, let's show that $\hat a\ket n$ is also an eigenstate of $\hat n$.
+\begin{equation}
+\begin{aligned}
+  \hat n \hat a \ket n &= \hat a^\dagger \hat a \hat a \ket n = (\hat a\hat a^\dagger - 1)\hat a \ket n = \hat a \hat a^\dagger \hat a \ket n - \hat a \ket n \\ &= \hat a \hat n \ket n - \hat a \ket n = (n - 1)\hat a \ket n.
+\end{aligned}
+\end{equation}
+This means that $\hat a \ket n$ is an eigenstate of $\hat n$ and its eigenvalue is $n-1$. Therefore we can assume $\hat a\ket n \propto \ket {n-1}$, or 
+\begin{equation}
+  \hat a\ket n = L_n\ket{n-1}.
+\end{equation}
+The squared norm of LHS is given by
+\begin{equation}
+  \| \hat a \ket n\|^2 = \bra n \hat a^\dagger \hat a \ket n = n\braket{n|n} = n,
+\end{equation}
+while that of RHS is $|L_n|^2$. Thus we obtain $|L_n| = \sqrt n e^{i\theta}$, where $\theta$ is a real arbitrary number, which defines the phase difference between $\ket n$ and $\ket {n-1}$. To simplify the notation, it is common to assume $\theta = 0$. Consequently, we obtain
+\begin{equation}
+  \hat a\ket n = \sqrt n \ket n.
+  \label{eq:action_of_annilation_operator}
+\end{equation}
+Next, we show that $\hat a^\dagger\ket n$ is also an eigenstate of $\hat n$ as follows: 
+\begin{equation}
+  \hat n \hat a^\dagger \ket n = \hat a^\dagger \hat a \hat a^\dagger \ket n = \hat a^\dagger (\hat a^\dagger \hat a + 1)\ket n = \hat a^\dagger \hat n\ket n + \hat a^\dagger \ket n = (n + 1)\hat a^\dagger \ket n.
+\end{equation}
+This means that $\hat a^\dagger \ket n$ is an eigenstate of $\hat n$ and its eigenvalue is $n+1$. Therefore we can assume $\hat a^\dagger\ket n \propto \ket {n+1}$, or 
+\begin{equation}
+  \hat a^\dagger\ket n = K_n\ket{n-1}.
+\end{equation}
+The squared norm of LHS is given by
+\begin{equation}
+  \| \hat a^\dagger \ket n\|^2 = \bra n \hat a \hat a^\dagger \ket n = \bra n (\hat a^\dagger \hat a + 1) \ket n = (n+1)\braket{n|n} = n+1,
+\end{equation}
+while that of RHS is $|K_n|^2$. Thus we obtain $|K_n| = \sqrt {n+1} e^{i\theta'}$, where $\theta'$ is a real arbitrary number. Nevertheless, it is common to assume $\theta' = 0$. Consequently, we obtain
+\begin{equation}
+  \hat a^\dagger\ket n = \sqrt {n+1} \ket n.
+  \label{eq:action_of_creation_operator}
+\end{equation}
+Using Eq. (\ref{eq:action_of_annilation_operator}) and Eq. (\ref{eq:action_of_creation_operator}), we can show that $n$ is an integer; If $n$ is not integer, we can obtain $\ket{n-1}$, $\ket{n-2}$, $\cdots$ by repetitively using Eq. (\ref{eq:action_of_annilation_operator}), and $n$ can be negative. This is contradictory to Eq. (\ref{eq:n_nonnegative}). When $n$ is integer, we get $\ket{n - 1}$, $\ket{n - 2}$, $\cdots$, and we cannot go below 0 because $\hat a \ket 0 = 0$, which is consistent with Eq. (\ref{eq:n_nonnegative}).
+
+Based on the above discussion, we can express $\ket n$ as
+\begin{equation}
+  \ket n = \frac{\left(\hat a^\dagger\right)^n}{\sqrt{n!}}\ket 0.
+\end{equation}
+$\ket n$ is an eigenstate of the Hamiltonian of the harmonic oscillator $\hat H$ because
+\begin{equation}
+  \hat H \ket n = \hbar \omega \left(\hat n + \frac 1 2 \right)\ket n =  \hbar \omega \left(n + \frac 1 2 \right)\ket n.
+\end{equation}
+Therefore $E_n = \hbar \omega (n + 1/2)$ is the eigenvalue of $\hat H$ for $\ket n$.
+
+Any quantum state can be expressed as the linear combination of $\ket n$ as
+\begin{equation}
+  \ket \psi = \sum_{n=0}^{\infty}c_n\ket n,
+  \label{eq:Fock_representation}
+\end{equation}
+where $c_n$ is complex. To normalize $\ket \psi$, we assume
+\begin{equation}
+  \braket{\psi|\psi} = \sum_{m=0}^{\infty}\sum_{n=0}^{\infty}c_m^*c_n\braket{m|n}=\sum_{n = 0}^{\infty}|c_n|^2 = 1,
+\end{equation}
+where we used $\braket{m|n} = 0$ for $m\neq n$. 
+
+This leads to
+\begin{equation}
+  \hat H \ket \psi = \hbar \omega \left(\hat n + \frac 1 2 \right)\ket \psi = \sum_{n=0}^{\infty} c_n \hbar \omega \left(n + \frac{1}{2}\right)\ket n.
+\end{equation}
+
+If $\ket \psi = \ket n$, the Schr\"odinger equation in Eq. (\ref{eq:Schrodinger_eq_for_quantum_state}) becomes 
+\begin{equation}
+  i\hbar \frac{\partial}{\partial t}\ket{\psi(t)}= \hbar \omega (n + 1/2)\ket {\psi(t)},
+\end{equation}
+which leads to
+\begin{equation}
+  \ket{\psi(t)} = e^{-i(n + 1/2)\omega t}\ket n.
+\end{equation}
+For a general quantum state given by Eq. (\ref{eq:Fock_representation}), the solution of the Schr\"odinger equation is given by
+\begin{equation}
+  \ket{\psi(t)} = \sum_{n=0}^{\infty}c_n e^{-i(n+1/2)\omega t}\ket n.
+\end{equation}
+In this way, the quantum state can be described as a superposition of $\ket n$ for various $n$ with complex-valued weight $c_n$. Since $\ket n$ is an eigenstate of the Hamiltonian of a harmonic oscillator and its energy eigenvalue is $E_n$, we call $\ket n$ as \textbf{energy eigenstate}\index{energy eigenstate}. We can see that any quantum state can be expressed by specifying the complex-valued weight $c_n$ as a function of engenenergy $E_n$. This point can be clearer by defining 
+\begin{equation}
+  \ket{E} = \sum_{n=0}^{\infty}\delta(E-E_n)\ket n,
+\end{equation}
+which gives
+\begin{equation}
+  \psi(E) \equiv \braket{E|\psi} = c_n\delta(E-E_n) = c_n\delta(E-\hbar \omega (n + 1/2)).
+\end{equation}
+Here, $\psi(E)$ can be regarded as a wavefunction as a function of $E$.
+
+We will see that the probability for the quantum state to have an energy of $E_n$ is given by $|c_n|^2$. This is analogous to wavefunction where complex value $\psi(x)$ is specified as a function of $x$ to express a quantum state, and the probability for the quantum state being at $x$ is given by $|\psi(x)|^2$.
+
+We can exchange the expression by taking inner product. Since $\braket {n|\psi} = c_n$, we get
+\begin{equation}
+  \ket \psi = \sum_{n=0}^{\infty}c_n\ket n = \sum_{n=0}^{\infty}\ket n \braket{n|\psi}.
+\end{equation}
+Similarly, we can express the quantum state by the linear combination of $\ket x$ or $\ket p$, and their weight is given by the inner product $\braket {x|\psi}$ or $\braket{p|\psi}$. Therefore,
+\begin{equation}
+  \ket \psi = \int_{-\infty}^{\infty}\ket x \braket{x|\psi}dx = \int_{-\infty}^{\infty}\ket p \braket {p|\psi}dp.
 \end{equation}
 
 
+\textcolor{red}{Let's insert a figure to explain $\braket {E|\psi}$, $\braket {x|\psi}$, and $\braket{p|\psi}$}
+
+\subsubsection{Position representation of energy eigenstates}
+
+
+\begin{comment}
+
+\section{物理量とその期待値}
+
+量子力学では、エルミート演算子を物理量（フォトン数、電場、等々）に対応させる。ある量子状態$\ket\psi$に対して、ある物理量を測定することを考えよう。量子論では、測定は揺らぎを伴う場合が多くある。この場合、物理量の期待値や、その揺らぎの大きさを計算で求めることはできるが、測定値は一意には決まらない。
+
+ある量子状態における物理量の期待値は、以下のように求めることができる。
+まず、状態ベクトル$\ket\psi$を、物理量の演算子$\hat A$の固有ベクトルからなる正規直交基底$\{\ket{\phi_k}\}$で展開する。
+\begin{equation}
+  \ket \psi = \sum_{k=1}^n c_k\ket{\phi_k}
+\end{equation}
+左から$\hat A$をかけると、
+\begin{equation}
+  \hat A\ket{\psi} = \sum_{k=1}^n c_k a_k\ket{\phi_k}
+\end{equation}
+さらに左から$\bra\psi$をかけると、次式を得る。
+\begin{equation}
+  \braket{\psi|\hat A|\psi} = \sum_{k=1}^n c_k^* c_k a_k\braket{\phi_k|\phi_k} = \sum_{k=1}^n a_k|c_k|^2
+\end{equation}
+この右辺は、$k$番目の固有状態に対する物理量$a_k$を、各固有状態の確率$|c_k|^2$で重み付け平均した値になっている。従って、$\braket{\psi|\hat A|\psi}$は物理量の期待値を表す。$\ket \psi$が文脈から明らかな場合は、$\braket{\psi|\hat A|\psi} \equiv \braket{\hat A}$と表す場合もある。
+
+また、測定ごとの揺らぎ（分散）は以下のように求めることができる。測定の平均値を$\braket {\hat A} \equiv \braket{\psi | \hat A | \psi}$とし、また、測定における平均値からのずれを表す演算子を$\Delta \hat A \equiv \hat A - \braket {\hat A}$とする。この時、
+\begin{equation}
+\begin{aligned}
+  \braket{\Delta \hat A^2} &\equiv 
+  \braket{\psi|\Delta \hat A^2|\psi}
+  =\braket{\psi|\hat A^2|\psi} - 2\braket{\psi |\hat A|\psi}\braket {\hat A} + \braket{\hat A}^2\\
+  &= \braket{\psi|\hat A^2|\psi} - \braket{\hat A}^2 
+  \equiv \braket{\hat A^2} - \braket{\hat A}^2
+\end{aligned}
+\end{equation}
+を得る。つまり、2乗の平均値$\braket{\hat A^2}$と平均値$\braket{\hat A}$の2乗の差から分散が求められる。
+
+このように、量子論における測定とは、物理量を表すエルミート演算子の$k$番目の固有状態$\ket {\phi_k}$と$\ket \phi$の内積から重み付け$c_k$を求め、その確率分布$|c_k|^2$を求めることである。
+
+初等的な量子論の教科書を読むと、電子の状態は波動関数$\Psi(x)$で表され、その確率分布は$|\Psi(x)|^2$で与えられる、と書かれている。これは、位置$x$の固有状態が$\delta(x - x_0)$（ただし$x_0$は実数）であることに由来している。
+
+\subsection{可換性と同時測定}
+2つのエルミート演算子$\hat A, \hat B$が可換、すなわち
+\begin{equation}
+  \hat A \hat B = \hat B \hat A
+\end{equation}
+とすると、次式が成り立つ。
+\begin{equation}
+  \hat A \hat B \ket{\phi_k} = \hat B \hat A \ket{\phi_k} = a_k \hat B \ket{\phi_k}
+\end{equation}
+これは、$\hat B \phi_k$が$\hat A$の固有ベクトルであり、その固有値が$a_k$であることを表している。従って、$\hat B\ket{\phi_k}$は$\ket{\phi_k}$の定数倍であるはずであるから、
+\begin{equation}
+  \hat B \ket{\phi_k} = b_k \ket{\phi_k}
+\end{equation}
+が成り立つ。すなわち、$\hat A$と$\hat B$が可換ならば、この2つの物理量に対する固有状態が存在し、同時測定が可能である。一方、$\hat A$と$\hat B$が可換でないとき、同時測定は可能でない。
+
+%位置演算子$\hat q$と運動量演算子$\hat p$は可換ではない。このため、量子力学では位置と運動量を同時に計測することができない。
+\section{不確定性関係}
+$\hat A$, $\hat B$を、物理量を表すエルミート演算子とする。前節で述べたように、$\hat A$と$\hat B$が交換可能、すなわち$[\hat A, \hat B] = 0$であれば同時固有状態が存在する。一方、$[\hat A, \hat B] \neq 0$であるような物理量を計測する際には、両方の物理量の測定誤差を0にすることはできない。このことを不確定性関係という。式で表せば、
+\begin{equation}
+\begin{aligned}
+  \braket{\hat A} \equiv \braket{\phi|\hat A|\phi}, \Delta \hat A = \hat A - \braket {\hat A}\\
+  \braket{\hat B} \equiv \braket{\phi|\hat B|\phi}, \Delta \hat B = \hat B - \braket {\hat B}
+\end{aligned}
+\end{equation}
+この時、
+\begin{equation}
+  \braket {\Delta \hat A^2}\braket{\Delta \hat B^2} \geq \left| \frac{1}{2} \braket{[\hat A, \hat B]}\right|^2
+  \label{eq:uncertainty}
+\end{equation}
+が成り立つ。
+
+証明は以下の通り\footnote{北野正雄「量子力学の基礎」共立出版、2010年。}。まず、$[\hat A, \hat B]$が反エルミート\footnote{エルミート行列を$i$倍したもの。固有値が全て虚数になる。}であることを示す。
+\begin{equation}
+\begin{aligned}
+	\left([\hat A, \hat B]\right)^\dagger
+&=\left( \hat A \hat B - \hat B \hat A\right)^\dagger = \left(\hat B^\dagger \hat A^\dagger - \hat A^\dagger \hat B^\dagger\right)\\
+&=\left( \hat B\hat A - \hat A\hat B \right) = -[\hat A, \hat B]
+\end{aligned}
+\end{equation}
+したがって、エルミート演算子$\hat C$を用いて、
+$[\hat A, \hat B] = i\hat C$とおくことができる。
+ここで、$\hat D = \Delta \hat A + i\lambda \Delta \hat B$を導入する。ただし$\hat D$はエルミートではない。任意の$\ket \phi$に対して、$\braket{\phi|\hat D^\dagger \hat D|\phi} = \| \hat D \ket \phi\|^2 \geq 0$なので、
+\begin{equation}
+\begin{aligned}
+\braket{\phi|\hat D^\dagger \hat D|\phi} &\equiv  \braket {\hat D^\dagger \hat D} = \braket{(\Delta\hat A - i\lambda \Delta \hat B)(\Delta \hat A + i\lambda \Delta \hat B)} \\
+&= 
+  \braket{\Delta \hat A^2 - \lambda \hat C + \lambda ^2 \Delta \hat B^2} 
+  = \braket{\Delta \hat A^2} - \lambda \braket{\hat C} + \lambda ^2 \braket {\Delta \hat B^2} \geq 0
+\end{aligned}
+\end{equation}
+これが常に満たされるためには、$\lambda$に関する2次方程式の判別式が負である必要がある。すなわち、
+\begin{equation}
+  \braket{\hat C}^2 - 4\braket{\Delta \hat A^2}\braket{\Delta \hat B^2} \leq 0
+\end{equation}
+これを変形していくと、次式を得る。
+\begin{equation}
+    \braket{\Delta \hat A^2}\braket{\Delta \hat B^2} \geq \braket{\hat C}^2 / 4 = \braket{-i[\hat A, \hat B]/2}^2 = -\braket{[\hat A, \hat B]/2}^2
+\end{equation}
+ここで、反エルミート行列の固有値が全て純虚数であることから、$\braket{[\hat A, \hat B]}$も純虚数となることに注意すると、式(\ref{eq:uncertainty})を得る。
 
 
 
-\subsection{Wavefunction and energy eigenstates}
-\subsection{Fock representation}
-\subsection{Position representation}
-\subsection{Momentum representation}
+\section{ユニタリ演算子}
+演算子$\hat U$のうち、$\hat U^\dagger \hat U = \pmb 1$を満たすものをユニタリ演算子という。ユニタリ演算子を行列表示すると、それは正規直交基底$\{\ket k\}$の縦ベクトルを並べたものと等価である。すなわち、
+\begin{equation}
+  \hat U = \left( \begin{array}{cccc} \ket 1 & \ket 2 & \hdots & \ket n \end{array} \right)
+\end{equation}
+である（各ケットが縦ベクトルであるので、$\hat U$が正方行列になることに注意）。このように表記すれば、次式が容易に示せる。
+\begin{equation}
+	\hat U ^\dagger \hat U = \left( \begin{array}{c} \bra 1 \\ \bra 2 \\ \vdots \\ \bra n \end{array}\right) 
+ 		\left( \begin{array}{cccc} \ket 1 & \ket 2 & \hdots & \ket n \end{array} \right) = \left(\begin{array}{cccc}
+			1 & 0 & \hdots & 0\\
+			0 & 1 & \hdots & 0\\
+			\vdots & \vdots & \ddots & 0\\ 
+			0 & 0 & 0 & 1
+ 		\end{array}	\right)
+\end{equation}
+ユニタリ演算子は正規直交基底を用いて基底変換をする演算子であることがわかる。
+
+また、ユニタリ演算子の重要な性質として、内積の値を変えないことがあげられる。例えば、$\ket{\phi_k}$が$\hat U$で$\ket{\psi_k}$に変換されるとする。すなわち、
+\begin{equation}
+  \ket{\psi_k} = \hat U \ket{\phi_k}
+\end{equation}
+としよう。この時、次式が成り立つ。
+\begin{equation}
+  \braket {\psi_i|\psi_j} = \braket{\phi_i|\hat U^\dagger \hat U | \phi_j} = \braket{\phi_i|\phi_j}
+\end{equation}
+
+同様に、ユニタリ演算子は自分自身の内積、つまり量子状態の存在確率を変えないという性質を持っている\footnote{光と量子のアナロジーでいうと、エネルギーロスがない時の光の伝播や時間発展はユニタリ行列で表すことができる。量子力学では、$\braket{\phi|\phi}$は$\ket \phi$の存在確率であり、ユニタリ変換では存在確率は変化しない。}
+
+\end{comment}
+
+
+
+
 \section{Measurement of observables}
 \subsection{Expectation value}
 \subsection{Expectation of variance}
+\subsection{Commutation relation and simultaneous measurement}
 \section{Multimode quantum states}
 \section{Summary}
 
