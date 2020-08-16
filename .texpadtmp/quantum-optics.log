@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2015.10.10)  11 AUG 2020 13:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=latex 2015.10.10)  16 AUG 2020 15:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -541,7 +541,11 @@ Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
 Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
-) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux)
+) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux
+
+LaTeX Warning: Label `fig:classical_phase_space' multiply defined.
+
+)
 \openout1 = `quantum-optics.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -597,65 +601,76 @@ File: fig/2-1_photodetection.eps Graphic file (type eps)
 
 ] [4] [5] [6] [7]
 File: fig/2-2_PD_circuit.eps Graphic file (type eps)
- <fig/2-2_PD_circuit.eps> [8] [9] [10]) [11] [12
+ <fig/2-2_PD_circuit.eps> [8] [9] [10]) (./Chap3_quantum-mechanical_harmonic_oscillator.tex [11] [12
 
 ]
 Chapter 3.
 
-Overfull \hbox (5.30623pt too wide) in paragraph at lines 34--35
+Overfull \hbox (5.30623pt too wide) in paragraph at lines 5--6
 \OT1/cmr/m/n/10 modes, spa-tial modes, and po-lar-iza-tions, and each mode is as-sumed as a quantum-
  []
 
 [13] [14]
 File: fig/3-1_phase_space.eps Graphic file (type eps)
  <fig/3-1_phase_space.eps>
-Overfull \hbox (4.91728pt too wide) in paragraph at lines 109--110
+Overfull \hbox (4.91728pt too wide) in paragraph at lines 80--81
 \OT1/cmr/m/n/10 To in-tro-duce quantum-mechanical har-monic os-cil-la-tors, we start from de Broglie's
  []
 
-[15] [16] [17] [18] [19] [20] [21] [22] [23] [24] Excluding 'comment' comment. [25] [26
+[15] [16] [17] [18] [19] [20] [21] [22] [23] Excluding 'comment' comment. [24] [25]
+File: fig/3-2_Hermite_Gaussian.eps Graphic file (type eps)
+ <fig/3-2_Hermite_Gaussian.eps> [26] Excluding 'comment' comment. [27] [28]
+Overfull \hbox (5.83394pt too wide) in paragraph at lines 708--709
+\OT1/cmr/m/n/10 So far, we have con-sid-ered wave-func-tions and quan-tum states of a one-dimensional
+ []
 
-]
+[29]) [30]
 Chapter 4.
-[27] [28
+[31
+
+] [32
 
 ]
 Chapter 5.
 
-Overfull \hbox (13.11293pt too wide) in paragraph at lines 676--676
+Overfull \hbox (13.11293pt too wide) in paragraph at lines 59--59
 []\OT1/cmr/bx/n/14.4 Mode de-com-po-si-tion of elec-tro-mag-netic waves 
  []
 
-[29] [30
-
-]
-Chapter 6.
-[31] [32
-
-]
-Chapter 7.
 [33] [34
 
 ]
-Chapter 8.
+Chapter 6.
 [35] [36
 
 ]
+Chapter 7.
+[37] [38
+
+]
+Chapter 8.
+[39] [40
+
+]
 Appendix A.
-(/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.ind [37] [38
+(/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.ind [41] [42
 
 
-]) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.bbl) [39
+]) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.bbl) [43
 
 
-] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux) ) 
+] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3286 strings out of 493055
- 41007 string characters out of 6134785
- 104625 words of memory out of 5000000
- 6739 multiletter control sequences out of 15000+600000
+ 3305 strings out of 493055
+ 41520 string characters out of 6134785
+ 105625 words of memory out of 5000000
+ 6754 multiletter control sequences out of 15000+600000
  14343 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,11n,35p,1430b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,12n,35p,1430b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.dvi (45 pages, 116028 bytes).
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.dvi (49 pages, 138208 bytes).
