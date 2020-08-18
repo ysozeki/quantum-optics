@@ -59,10 +59,14 @@ so that the time evolution of $x$ and $p$ are given by
 \begin{equation}
   p(t) = \mathrm{Im}[a \exp(-i\omega t)],
 \end{equation}
-respectively. Also, we can define $a(t) = a\exp(-i\omega t)$, which satisfies
+respectively. Also, we can define 
+\begin{equation}
+  a(t) = a\exp(-i\omega t), 
+  \label{eq:normalized_complex_amplitude}
+\end{equation}
+which satisfies
 \begin{equation}
   a(t) = x(t) + ip(t).
-  \label{eq:normalized_complex_amplitude}
 \end{equation}
 You can see that $x(t)$ and $p(t)$ in the $x$-$p$ plane, which is called phase space, form a circular trajectory rotating at a frequency of $\omega$, as shown in Fig. {\ref{fig:classical_phase_space}}(a). This is a very general property of classical harmonic oscillator. 
 
@@ -339,6 +343,7 @@ Using this, we can calculate $e^{i\hat A}$ as
   e^{i\hat A} &= \sum_{n=0}^{\infty}\frac{\left(i\hat A\right)^n}{n!} 
   = \sum_{n=0}^{\infty}\frac{\left(i\hat U\hat D\hat U^\dagger\right)^n}{n!} = \hat U\sum_{n=0}^{\infty}\frac {(i\hat D)^n} {n!}\hat U^\dagger\\
   &= \hat U e^{i\hat D}U^\dagger.
+  \label{eq:diagonalization_of_exp_Hermitian}
 \end{aligned}
 \end{equation}
 Therefore, we can show that $e^{i\hat A}$ is unitary as follows:
@@ -469,6 +474,7 @@ which leads to
 For a general quantum state given by Eq. (\ref{eq:Fock_representation}), the solution of the Schr\"odinger equation is given by
 \begin{equation}
   \ket{\psi(t)} = \sum_{n=0}^{\infty}c_n e^{-i(n+1/2)\omega t}\ket n.
+  \label{eq:Schrodinger_eq_solution}
 \end{equation}
 In this way, the quantum state can be described as a superposition of $\ket n$ for various $n$ with complex-valued weight $c_n$. Since $\ket n$ is an eigenstate of the Hamiltonian of a harmonic oscillator and its energy eigenvalue is $E_n$, we call $\ket n$ as \textbf{energy eigenstate}\index{energy eigenstate}. We can see that any quantum state can be expressed by specifying the complex-valued weight $c_n$ as a function of engenenergy $E_n$. 
 
@@ -634,8 +640,7 @@ The meaning of RHS can be clearer by describing in $x$-representation:
     \braket{\psi|\hat A | \psi}= \int \phi^*(x)\lambda(x)\phi(x)dx = \int \lambda(x)|\phi(x)|^2 dx
 \end{equation}
 The RHS is the weighted average of $\lambda(x)$ with a weight of $|\phi(x)|^2$.
-
-In this way, when we evaluate some observable, we express $\psi$ as a linear combination of eigenstates of the observable. Then we calculate the weighted sum of eigenvalue. Such calculation is embedded in $\braket{\psi|\hat A|\psi}$.
+In this way, when we evaluate some observable, we express $\psi$ as a linear combination of eigenstates of the observable. In other words, we calculate the projection of the quantum state into the eigenstates of the observable. Then we calculate the weighted sum of eigenvalue. Such calculation is embedded in $\braket{\psi|\hat A|\psi}$.
 
 In the same manner, we can calculate the expectation of the variance as follows:
 \begin{equation}
@@ -712,31 +717,55 @@ The wavefunction of two-mode wavefunction can be denoted as $\psi(x_a, x_b)$, wh
   \psi(x_a, x_b) = \psi_a(x_a)\psi_b(x_b),
   \label{eq:separable_wavefunction}
 \end{equation}
-we regard that $\psi(x_a)$ is \textbf{separable}\index{separable}. If $\psi(x_a, x_b)$ cannot be expressed in such a way, we regards that the two modes are \textbf{entangled}\index{entangled}.
+we regard that $\psi(x_a)$ is \textbf{separable}\index{separable}. If $\psi(x_a, x_b)$ cannot be expressed in such a way, we regards that the two modes are \textbf{entangled}\index{entangled}. Entanglement is one of the most important concept in quantum optics and will be extensively discussed in the later chapters.
 
 In the bra-ket notation, separable quantum state is denoted as
 \begin{equation}
   \ket \psi = \ket {\psi_a}_a \otimes \ket{\psi_b}_b,
 \end{equation}
-where $\otimes$ denotes tensor product. For example, if we assume that $\ket {\psi_a}_a$ and $\ket{\psi_b}_b$ are M- and N-dimensional vectors, respectively, i.e., $\ket {\psi_a} = (c_{a1}, c_{a2}, \cdots, c_{aM})^T$ and $\ket {\psi_b} = (c_{b1}, c_{b2}, \cdots, c_{bN})^T$,
+where $\otimes$ denotes tensor product. For example, let's assume that mode $a$ and mode $b$ can be respectively expressed by the linear combination of energy eigenstates $\ket n$. The description of quantum state of these two modes requires a tensor given by
 \begin{equation}
-  \ket{\psi_a}_a \otimes \ket{\psi_b}_b = \left(
+  \ket{\psi}= \left(
   \begin{array}{cccc}
-  c_{a1}c_{b1} & c_{a1}c_{b2} & \ldots & c_{a1}c_{bN}\\
-  c_{a2}c_{b1} & c_{a2}c_{b2} & \ldots & c_{a2}c_{bN}\\
-  \vdots & \vdots & \ddots & \vdots \\
-  c_{aM}c_{b1} & c_{aM}c_{b2} & \ldots & c_{am}c_{bN}
+  c_{00} & c_{01} & c_{02} & \ldots \\
+  c_{10} & c_{11} & c_{12} & \ldots \\
+  c_{20} & c_{21} & c_{22} & \vdots \\
+  \vdots & \vdots & \cdots & \ddots
   \end{array}
   \right),
-  \label{eq:separable_quantum_state}
 \end{equation}
-which constitutes $M \times N$-dimensional vector space. We can see the similarity in Eq. (\ref{eq:separable_wavefunction}) and Eq. (\ref{eq:separable_quantum_state}).
-
-Even if $\ket \psi$ is not separable, we can expand it by energy eigenstates $\ket n$ in the two modes as
+where 
 \begin{equation}
-  \ket \psi = \sum_{m=0}^{\infty}\sum_{n=0}^{\infty}\ket m_a \otimes \ket n_b (\ _a\bra m  \otimes \ _b\bra n)\ket \psi. 
+  c_{mn} = (\ _a\bra m \otimes \ _b\bra n )\ket \psi = (\braket {\psi | m}_a \otimes \ket n_b)^*.
+\end{equation}
+We can expand it by energy eigenstates $\ket n$ in the two modes as
+\begin{equation}
+  \ket \psi = \sum_{m=0}^{\infty}\sum_{n=0}^{\infty}c_{mn}\ket m_a \otimes \ket n_b. 
 \end{equation}
 That is, any quantum state can be expressed by the linear combination of $\ket m_a \otimes \ket n_b$, and the weight is given by the inner product between $\ket m_a \otimes \ket n_b$ and $\ket \psi$.
+
+
+If we further assume that $\ket \psi$ is separable into the tensor product of vectors given by 
+\begin{equation}
+\begin{aligned}
+\ket {\psi_a} &= (c_{a0}, c_{a1}, c_{a2}, \cdots)^T,\\
+\ket {\psi_b} &= (c_{b0}, c_{b1}, c_{b2}, \cdots)^T,
+\end{aligned}
+\end{equation}
+we get
+\begin{equation}
+  \ket \psi = \ket{\psi_a}_a \otimes \ket{\psi_b}_b = \left(
+  \begin{array}{cccc}
+  c_{a0}c_{b0} & c_{a0}c_{b1} & c_{a0}c_{b2} & \ldots \\
+  c_{a1}c_{b0} & c_{a1}c_{b1} & c_{a1}c_{b2} & \ldots \\
+  c_{a2}c_{b0} & c_{a2}c_{b1} & c_{a2}c_{b2} & \vdots \\
+  \vdots & \vdots & \cdots & \ddots
+  \end{array}
+  \right).
+  \label{eq:separable_quantum_state}
+\end{equation}
+We can see the similarity in Eq. (\ref{eq:separable_wavefunction}) and Eq. (\ref{eq:separable_quantum_state}).
+
 
 The above discussion applies to higher dimensions. For N-dimensional harmonic oscillator, the wavefunction is given by $\psi(x_1, x_2, \cdots, x_N)$. We can discuss the separability in the same way as the above. 
 
@@ -744,7 +773,7 @@ The above discussion applies to higher dimensions. For N-dimensional harmonic os
 We have reviewed the basics of quantum harmonic oscillators including the Schr\"odinger equation, wavefunction, energy eigenstates, operators and measurement. Important concepts are summarized below:
 \begin{itemize}
 	\item Wavefunction $\psi(x)$ is the position representation of quantum state, and $|\psi(x)|^2$ gives the probability density of being at $x$.
-	\item From the Schr\"odinger equation of a harmonic oscillator, we can derive energy eigenstate $\ket n$ with an energy $E_n = \hbar \omega (n + 1/2)$.
-	\item The representation (position, momentum, and energy) of quantum state is interchangeable by taking the inner product with corresponding eigenstates.
+	\item Using the Schr\"odinger equation of a harmonic oscillator, we can derive energy eigenstate $\ket n$ with an energy $E_n = \hbar \omega (n + 1/2)$.
+	\item Various representations of quantum state such as position, momentum, and energy is interchangeable by taking the inner product with corresponding eigenstates.
 	\item Expectation value of observable of a Hermitian operator $\hat A$ is given by $\braket{\psi|A|\psi}$.
 \end{itemize}

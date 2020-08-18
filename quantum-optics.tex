@@ -31,18 +31,170 @@
 
 
 \chapter{Evolution of quantum states}
+In the previous chapter, we saw quantum state of a harmonic oscillator in various representations. In quantum optics, we control the quantum state of light and investigate its properties by the measurement of observables. 
 
+Here we introduce various operators that can be used to describe how we control the quantum state. Furthermore, we see that changing quantum state is equivalent to controlling the operator of observable. In this way, we can control the quantum state or the operator of observable. The former is called Schr\"odinger picture, while the latter is called Heisenberg picture. Schr\"odinger picture gives us intuitive picture of quantum state, while the latter allows us to simplify the calculation of observables. 
 
 
 \section{Schor\"odinger picture}
+In the Schor\"odinger picture, we consider that the quantum state changes according to the Schr\"odinger equation given by
+\begin{equation}
+  i\hbar \frac{d}{dr}\ket {\psi(r)} = \hat H \ket{\psi(r)},
+  \label{eq:Schorodinger_equation_for_evolution}
+\end{equation}
+where $r$ is a real-valued parameter that describes how much the quantum state is changed. In contrast to the Schr\"odinger equation for a harmonic oscillator in Eq. (\ref{eq:Schrodinger_eq_for_quantum_state}), we don't limit the Hamiltonian $\hat H$ to be that of a harmonic oscillator. Instead, by choosing suitable Helmitian operator $\hat H$, we can modify the quantum state in various ways as shown in the following sections.
+
+Eq. (\ref{eq:Schorodinger_equation_for_evolution}) can be solved as follows:
+For an infinitesimal $\Delta r$, 
+\begin{equation}
+  \frac{i\hbar}{\Delta r} (\ket{\psi(\Delta r)} - \ket{\psi(0)}) = \hat H \ket{\psi(0)},
+\end{equation}
+\begin{equation}
+  \ket{\psi(\Delta r)} = \left(1 - \frac{\hat H\Delta r}{i\hbar}\right) \ket{\psi(0)}.
+\end{equation}
+Here, we define $r = N\Delta r$ and take the limit of $N \to \infty$,
+\begin{equation}
+\begin{aligned}
+  \ket{\psi(r)} &= \left(1 - \frac{\hat H\Delta r}{i\hbar}\right)^N \ket{\psi(0)}\\
+  &\to \exp\left(\frac{\hat Hr}{i\hbar}\right)\ket {\psi(0)} \equiv \hat U(r)\ket {\psi(0)}.
+\end{aligned}
+\end{equation}
+Since $\hat U(r) = \exp(\hat Hr/i\hbar)$ changes the quantum state according to the Hamiltonian, it is called \textbf{time-evolution operator}\index{time-evolution operator}. When $\hat H$ is the Hamiltonian of a harmonic oscillator, the time-evolution operator can change the quantum state so that the quantum state can evolve over time. In quantum optics, we use other type of Hamiltonian to change the quantum state. 
+
+As we saw in Eq. (\ref{eq:diagonalization_of_exp_Hermitian}), since $\hat H$ is Hermitian, $\hat H$ can be diagonalized as $\hat H = \hat U_H\hat D\hat U_H^\dagger$. Here, $\hat U_H$ is the unitary operator composed of the eigenvectors of $\hat H$ and $\hat D$ is the diagonal matrix composed of the corresponding eigenvalues. Using them, we get
+\begin{equation}
+  \ket{\psi(r)} = \hat U_H\exp \left( \frac{\hat Dr}{i\hbar} \right)\hat U_H^\dagger \ket{\psi(0)}.
+  \label{eq:diagonalized_evolution_operator}
+\end{equation}
+Eq. (\ref{eq:diagonalized_evolution_operator}) shows that the time-evolution operator applies the phase shift that is proportional to $d$, where $d$ is the eigenvalue of the Hamiltonian, depending on the eigenstate of the Hamiltonian. Since the eigenvalues of Hermitian operator is real, time-evolution operator does not change the norm of the quantum state, and therefore it is unitary.
 
 \section{Heisenberg picture}
+In the Heisenberg picture, instead of changing the quantum state, we change the operator of observable. This is possible because of the following reason: As we see in the previous chapter, the quantum-mechanical measurement involves  the projection into eigenvectors of the observable, and take the weighted average of eigenvalues. Therefore, by changing the eigenvectors of the observable, we can calculate the same thing as the evolution of quantum state. In particular, we calculate the change of annihilation operator and creation operator to see what happens in the evolution of quantum state.
 
-\section{Unitary transformation of quantum states}
+Specifically, the expectation value of an observable $\hat A$ for a quantum state $\ket{\psi(r)} = \hat U(r)\ket{\psi(0)}$ is given by
+\begin{equation}
+\begin{aligned}
+  \braket{\psi(r)|\hat A|\psi(r)} &= \braket{\psi(0)|\hat U^\dagger(r)\hat A\hat U(r)|\psi(0)}\\
+  &\equiv \braket{\psi(0)|\hat A_H(r)|\psi(0)}.
+\end{aligned}
+\end{equation}
+where $\hat A_H(r) = \hat U^\dagger(r) \hat A \hat U(r)$. You can see that the eigenvector of the observable is changed by the unitary operator $\hat U(r)$.
 
-\subsection{Time evolution}
+The evolution of $\hat A_H(r)$ can be expressed by the Heisenberg equation of motion, which is derived as
+\begin{equation}
+  \begin{aligned}
+  	\frac{d}{dr}\hat A_H(r) &= \frac{d}{dr}\left(\hat U^\dagger(r)\hat A\hat U(r)\right)\\
+  	&= \left( \frac{d}{dr}\hat U^\dagger(r) \right)\hat A\hat U(r) + \hat U^\dagger(r)\hat A\frac{d}{dr}\hat U(r)\\
+  	&= -\frac{\hat H }{i\hbar}\hat U^\dagger(r) \hat A\hat U(r) + \hat U^\dagger(r) \hat A \hat U(r)\frac{\hat H }{i\hbar}\\
+  	&= \frac{i}{\hbar}(\hat H\hat A_H - \hat A_H \hat H) = \frac{i}{\hbar}[\hat H, \hat A_H]
+  	\label{eq:Heisenberg_eq_motion}
+  \end{aligned}
+\end{equation}
+
+\section{Time evolution}
+\subsubsection{Schr\"odinger picture}
+For calculating time evolution, we use the Hamiltonian of a harmonic oscillator $\hat H = \hbar\omega(\hat a^\dagger\hat a + 1/2) = \hbar\omega (\hat n + 1/2)$. The time evolution operator becomes
+\begin{equation}
+  \hat U(t) = e^{-i\omega (\hat n + 1/2)t},
+\end{equation}
+which indicates that $\hat U(t)$ applies different phase shift for different energy eigenstate $\ket n$, i.e.,
+\begin{equation}
+  \ket {\psi(t)} = \sum_{n = 0}^{\infty}e^{-i\omega(n+1/2)t}\ket n \braket{n|\psi(0)},
+\end{equation}
+which is the same as Eq. (\ref{eq:Schrodinger_eq_solution}).
+
+\subsubsection{Heisenberg picture}
+Here we calculate how annihilation operator and creation operator of a harmonic oscillator change along time in the Heisenberg picture. By substituting  and $\hat A_H(t) = \hat a(t)$ to Eq. (\ref{eq:Heisenberg_eq_motion}), we obtain
+\begin{equation}
+\begin{aligned}
+  \frac{d}{dt}\hat a(t) &= \frac{i}{\hbar}[\hbar\omega(\hat a^\dagger(t)\hat a(t) + 1/2), \hat a(t)]\\
+  &= i\omega \left(\hat a^\dagger(t)\hat a(t)\hat a(t)-\hat a(t)\hat a^\dagger(t)\hat a(t)\right)\\
+  &= i\omega \left(\hat a^\dagger(t)\hat a(t)\hat a(t)-(\hat a^\dagger(t)\hat a(t)+1)\hat a(t)\right)\\
+  &= -i\omega \hat a(t)
+\end{aligned}
+\end{equation}
+Therefore, 
+\begin{equation}
+  \hat a(t) = \hat a(0)e^{-i\omega t}.
+\end{equation}
+This is the quantum version of the time evolution of classical harmonic oscillator in Eq. (\ref{eq:normalized_complex_amplitude}). Similarly, we get
+\begin{equation}
+  \hat a^\dagger(t) = \hat a^\dagger(0)e^{i\omega t},
+\end{equation}
+\begin{equation}
+\begin{aligned}
+  \hat x(t) &= (\hat a(t) + \hat a^\dagger(t))/2
+  = (\hat a(0)e^{-i\omega t} + \hat a^\dagger(0)e^{i\omega t})/2\\
+  &= \hat x(0) \cos\omega t + \hat p(0) \sin \omega t,
+  \label{eq:evolution_of_x}
+\end{aligned}
+\end{equation}
+\begin{equation}
+\begin{aligned}
+  \hat p(t) &= (\hat a(t) - \hat a^\dagger(t))/2i
+  = (\hat a(0)e^{-i\omega t} - \hat a^\dagger(0)e^{i\omega t})/2i\\
+  &= -\hat x(0) \sin\omega t + \hat p(0) \cos \omega t.
+\end{aligned}
+\end{equation}
+The meaning of Eq. (\ref{eq:evolution_of_x}) is clear. The measurement of $\hat x$ at time $t$ is equivalent to the measurement of linear combination of $\hat x(0)$ and $\hat p(0)$. This is a natural consequence of time evolution of a harmonic oscillator.
+
+\subsubsection{Time evolution as Fourier transform}
+It is noteworthy that, in the $x$ representation of a quantum state of a quantum harmonic oscillator, time evolution for 1/4 period is equivalent to inverse Fourier transform. This is because the time evolution corresponds to the rotation in phase space ($x$-$p$ space), and the wavefunction in $p$ is the Fourier transform of the wavefunction in $x$. 
+
+Using
+\begin{equation}
+  \hat U(\pi/2\omega) = e^{-i(\pi/2)(\hat n + 1/2)} = e^{-i\pi/4}e^{-i\pi\hat n/2},
+\end{equation}
+we get
+
+\begin{equation}
+  \begin{aligned}
+  	\braket{x|\hat U(\pi/2\omega)|n} &= e^{-i(n+1/2)\omega t}\bra x \frac{(\hat a^\dagger)^n}{\sqrt{n!}}\ket{0}\\
+  	&= e^{-i\pi/2}\frac{(-i)^n}{\sqrt{n!}}\left(x - \frac 1 2 \frac{d}{dx} \right)^n\left(\frac 2 \pi \right)^{1/4}e^{-x^2}.\\
+  \end{aligned}
+\end{equation}
+From Eq. (\ref{eq:creation_in_p}),
+\begin{equation}
+  \begin{aligned}
+  	\braket{p|n} &= \bra p \frac{(\hat a^\dagger)^n}{\sqrt{n!}}\ket{0}\\
+  	&= \frac{(-i)^n}{\sqrt{n!}}\left(p - \frac 1 2 \frac{d}{dp} \right)^n\left(\frac 2 \pi \right)^{1/4}e^{-p^2}.\\
+  \end{aligned}
+\end{equation}
+Therefore,
+\begin{equation}
+  \begin{aligned}
+  	\braket{x|\hat U(\pi/2\omega)|\psi} = \sum_{n=0}^\infty e^{-i\pi/2}\frac{(-i)^n}{\sqrt{n!}}\left(x - \frac 1 2 \frac{d}{dx} \right)^n\left(\frac 2 \pi \right)^{1/4}e^{-x^2}\braket{n|\psi}\\
+  	\label{eq:time-evolved_wavefunction}
+  \end{aligned}
+\end{equation}
+\begin{equation}
+  \begin{aligned}
+  	\braket{p|\psi} &= \sum_{n=0}^\infty \bra p \frac{(\hat a^\dagger)^n}{\sqrt{n!}}\ket{0}\braket{n|\psi}\\
+  	&= \sum_{n=0}^\infty\frac{(-i)^n}{\sqrt{n!}}\left(p - \frac 1 2 \frac{d}{dp} \right)^n\left(\frac 2 \pi \right)^{1/4}e^{-p^2}\braket{n|\psi}.\\
+  	\label{eq:time-evolved_wavefunction_p}
+  \end{aligned}
+\end{equation}
+We can see that Eq. (\ref{eq:time-evolved_wavefunction}) and Eq. (\ref{eq:time-evolved_wavefunction_p}) are in the same form. Since $\tilde \psi(p) = \braket{p|\psi}$ is the Fourier transform of $\psi(x)=\braket{x|\psi}$, we can see that the time evolution over one fourth period is equivalent to Fourier transform and an additional phase shift of $e^{-i\pi/4}$. This is analogous to classical harmonic oscillator where the complex amplitude rotates in the phase space and exchange the position and momentum energies. In this way, time evolution of quantum harmonic oscillator conducts Fourier transform.
+
+\begin{comment}
+\begin{equation}
+  \begin{aligned}
+	\braket{p|n} = \int\braket{p|x}\braket{x|n}	dx
+  \end{aligned}
+\end{equation}
+\end{comment}
 
 \subsection{Displacement}
+Here we introduce the displacement operator given by
+\begin{equation}
+  \hat U_D(\alpha) = e^{\alpha \hat a^\dagger - \alpha^* \hat a}
+\end{equation}
+This can be regarded as 
+
+\subsubsection{Schr\"odinger picture}
+
+\subsubsection{Heisenberg picture}
+
 
 \subsection{Mode mixing}
 
@@ -77,7 +229,7 @@
 \subsection{Beamsplitter}
 \subsection{Waveplates}
 \subsection{Optical loss}
-\subsection{Fourier transform}
+\subsection{Time-frequency modes}
 \section{Parametric amplification}
 \subsection{Squeezing}
 \subsection{Spontaneous parametric down conversion}
