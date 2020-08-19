@@ -42,49 +42,49 @@
 \contentsline {subsubsection}{Schr\"odinger picture}{35}
 \contentsline {subsubsection}{Heisenberg picture}{35}
 \contentsline {subsubsection}{Time evolution as Fourier transform}{36}
-\contentsline {subsection}{\numberline {4.3.1}Displacement}{37}
-\contentsline {subsubsection}{Schr\"odinger picture}{37}
+\contentsline {section}{\numberline {4.4}Displacement}{37}
 \contentsline {subsubsection}{Heisenberg picture}{37}
-\contentsline {subsection}{\numberline {4.3.2}Mode mixing}{37}
-\contentsline {subsection}{\numberline {4.3.3}Single-mode squeezing}{37}
-\contentsline {subsection}{\numberline {4.3.4}Two-mode squeezing}{37}
-\contentsline {section}{\numberline {4.4}Summary}{37}
-\contentsline {chapter}{\numberline {5}Quantization of light}{39}
-\contentsline {section}{\numberline {5.1}Mode decomposition of electromagnetic waves}{39}
-\contentsline {subsection}{\numberline {5.1.1}Time-frequency mode}{39}
-\contentsline {subsection}{\numberline {5.1.2}Spatial mode}{39}
-\contentsline {subsection}{\numberline {5.1.3}Polarization}{39}
-\contentsline {section}{\numberline {5.2}Operator notation of electromagnetic waves}{39}
-\contentsline {section}{\numberline {5.3}Summary}{39}
-\contentsline {chapter}{\numberline {6}Representative quantum states}{41}
-\contentsline {section}{\numberline {6.1}Number states}{41}
-\contentsline {section}{\numberline {6.2}Superposition states}{41}
-\contentsline {section}{\numberline {6.3}Coherent states}{41}
-\contentsline {section}{\numberline {6.4}Squeezed states}{41}
-\contentsline {section}{\numberline {6.5}Two-mode squeezed states}{41}
-\contentsline {subsection}{\numberline {6.5.1}EPR state}{41}
-\contentsline {section}{\numberline {6.6}Summary}{41}
-\contentsline {chapter}{\numberline {7}Control of quantum states of light}{43}
-\contentsline {section}{\numberline {7.1}Mode mixing}{43}
-\contentsline {subsection}{\numberline {7.1.1}Beamsplitter}{43}
-\contentsline {subsection}{\numberline {7.1.2}Waveplates}{43}
-\contentsline {subsection}{\numberline {7.1.3}Optical loss}{43}
-\contentsline {subsection}{\numberline {7.1.4}Time-frequency modes}{43}
-\contentsline {section}{\numberline {7.2}Parametric amplification}{43}
-\contentsline {subsection}{\numberline {7.2.1}Squeezing}{43}
-\contentsline {subsection}{\numberline {7.2.2}Spontaneous parametric down conversion}{43}
-\contentsline {subsection}{\numberline {7.2.3}Optical amplification}{43}
-\contentsline {subsection}{\numberline {7.2.4}Raman scattering}{43}
-\contentsline {section}{\numberline {7.3}Summary}{43}
-\contentsline {chapter}{\numberline {8}Quantum-optical measurement}{45}
-\contentsline {section}{\numberline {8.1}Direct detection}{45}
-\contentsline {section}{\numberline {8.2}Homodyne detection}{45}
-\contentsline {section}{\numberline {8.3}Heterodyne detection}{45}
-\contentsline {section}{\numberline {8.4}Preamplification}{45}
-\contentsline {section}{\numberline {8.5}Quantum teleportation}{45}
-\contentsline {section}{\numberline {8.6}Summary}{45}
-\contentsline {chapter}{\numberline {A}Appendix}{47}
-\contentsline {section}{\numberline {A.1}Bra-ket notation}{47}
-\contentsline {section}{\numberline {A.2}Creation and annihilation operators}{47}
-\contentsline {section}{\numberline {A.3}Pure states and mixed states}{47}
-\contentsline {section}{\numberline {A.4}Wigner function}{47}
+\contentsline {subsubsection}{Schr\"odinger picture}{38}
+\contentsline {section}{\numberline {4.5}Mode mixing}{39}
+\contentsline {section}{\numberline {4.6}Single-mode squeezing}{39}
+\contentsline {section}{\numberline {4.7}Two-mode squeezing}{39}
+\contentsline {section}{\numberline {4.8}Summary}{39}
+\contentsline {chapter}{\numberline {5}Quantization of light}{41}
+\contentsline {section}{\numberline {5.1}Mode decomposition of electromagnetic waves}{41}
+\contentsline {subsection}{\numberline {5.1.1}Time-frequency mode}{41}
+\contentsline {subsection}{\numberline {5.1.2}Spatial mode}{41}
+\contentsline {subsection}{\numberline {5.1.3}Polarization}{41}
+\contentsline {section}{\numberline {5.2}Operator notation of electromagnetic waves}{41}
+\contentsline {section}{\numberline {5.3}Summary}{41}
+\contentsline {chapter}{\numberline {6}Representative quantum states}{43}
+\contentsline {section}{\numberline {6.1}Number states}{43}
+\contentsline {section}{\numberline {6.2}Superposition states}{43}
+\contentsline {section}{\numberline {6.3}Coherent states}{43}
+\contentsline {section}{\numberline {6.4}Squeezed states}{43}
+\contentsline {section}{\numberline {6.5}Two-mode squeezed states}{43}
+\contentsline {subsection}{\numberline {6.5.1}EPR state}{43}
+\contentsline {section}{\numberline {6.6}Summary}{43}
+\contentsline {chapter}{\numberline {7}Control of quantum states of light}{45}
+\contentsline {section}{\numberline {7.1}Mode mixing}{45}
+\contentsline {subsection}{\numberline {7.1.1}Beamsplitter}{45}
+\contentsline {subsection}{\numberline {7.1.2}Waveplates}{45}
+\contentsline {subsection}{\numberline {7.1.3}Optical loss}{45}
+\contentsline {subsection}{\numberline {7.1.4}Time-frequency modes}{45}
+\contentsline {section}{\numberline {7.2}Parametric amplification}{45}
+\contentsline {subsection}{\numberline {7.2.1}Squeezing}{45}
+\contentsline {subsection}{\numberline {7.2.2}Spontaneous parametric down conversion}{45}
+\contentsline {subsection}{\numberline {7.2.3}Optical amplification}{45}
+\contentsline {subsection}{\numberline {7.2.4}Raman scattering}{45}
+\contentsline {section}{\numberline {7.3}Summary}{45}
+\contentsline {chapter}{\numberline {8}Quantum-optical measurement}{47}
+\contentsline {section}{\numberline {8.1}Direct detection}{47}
+\contentsline {section}{\numberline {8.2}Homodyne detection}{47}
+\contentsline {section}{\numberline {8.3}Heterodyne detection}{47}
+\contentsline {section}{\numberline {8.4}Preamplification}{47}
+\contentsline {section}{\numberline {8.5}Quantum teleportation}{47}
+\contentsline {section}{\numberline {8.6}Summary}{47}
+\contentsline {chapter}{\numberline {A}Appendix}{49}
+\contentsline {section}{\numberline {A.1}Bra-ket notation}{49}
+\contentsline {section}{\numberline {A.2}Creation and annihilation operators}{49}
+\contentsline {section}{\numberline {A.3}Pure states and mixed states}{49}
+\contentsline {section}{\numberline {A.4}Wigner function}{49}

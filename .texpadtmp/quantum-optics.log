@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  18 AUG 2020 12:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.10)  19 AUG 2020 12:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -734,35 +734,35 @@ Overfull \hbox (5.83394pt too wide) in paragraph at lines 713--714
 
 ]
 Chapter 4.
-[33] [34] [35] [36] Excluding 'comment' comment. [37] [38
+[33] [34] [35] [36] Excluding 'comment' comment. [37] [38] [39] [40
 
 ]
 Chapter 5.
 
-Overfull \hbox (13.11293pt too wide) in paragraph at lines 211--211
+Overfull \hbox (13.11293pt too wide) in paragraph at lines 279--279
 []\OT1/cmr/bx/n/14.4 Mode de-com-po-si-tion of elec-tro-mag-netic waves 
  []
 
-[39] [40
-
-]
-Chapter 6.
 [41] [42
 
 ]
-Chapter 7.
+Chapter 6.
 [43] [44
 
 ]
-Chapter 8.
+Chapter 7.
 [45] [46
 
 ]
+Chapter 8.
+[47] [48
+
+]
 Appendix A.
-(/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.ind [47] [48
+(/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.ind [49] [50
 
 
-]) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.bbl) [49
+]) (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.bbl) [51
 
 
 ] (/Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.aux)
@@ -771,19 +771,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4271 strings out of 493054
- 57276 string characters out of 6134759
- 124263 words of memory out of 5000000
- 7674 multiletter control sequences out of 15000+600000
+ 4276 strings out of 493054
+ 57418 string characters out of 6134759
+ 125311 words of memory out of 5000000
+ 7679 multiletter control sequences out of 15000+600000
  14343 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,35p,1430b,262s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dis
 t/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.pdf (53 pages, 473690 bytes).
+Output written on /Users/ozeki/Documents/GitHub/quantum-optics/.texpadtmp/quantum-optics.pdf (55 pages, 480622 bytes).
 PDF statistics:
- 407 PDF objects out of 1000 (max. 8388607)
- 306 compressed objects within 4 object streams
+ 414 PDF objects out of 1000 (max. 8388607)
+ 311 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

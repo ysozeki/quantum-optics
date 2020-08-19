@@ -61,7 +61,7 @@ Here, we define $r = N\Delta r$ and take the limit of $N \to \infty$,
 \end{equation}
 Since $\hat U(r) = \exp(\hat Hr/i\hbar)$ changes the quantum state according to the Hamiltonian, it is called \textbf{time-evolution operator}\index{time-evolution operator}. When $\hat H$ is the Hamiltonian of a harmonic oscillator, the time-evolution operator can change the quantum state so that the quantum state can evolve over time. In quantum optics, we use other type of Hamiltonian to change the quantum state. 
 
-As we saw in Eq. (\ref{eq:diagonalization_of_exp_Hermitian}), since $\hat H$ is Hermitian, $\hat H$ can be diagonalized as $\hat H = \hat U_H\hat D\hat U_H^\dagger$. Here, $\hat U_H$ is the unitary operator composed of the eigenvectors of $\hat H$ and $\hat D$ is the diagonal matrix composed of the corresponding eigenvalues. Using them, we get
+As we saw in Eq. (\ref{eq:diagonalization_of_exp_Hermitian}), since $\hat H$ is Hermitian, $\hat H$ can be diagonalized as $\hat H = \hat U_H\hat D\hat U_H^\dagger$. Here, $\hat U_H$ is the unitary operator composed of the eigenvectors of $\hat H$, and $\hat D$ is the diagonal matrix composed of the corresponding eigenvalues. Using them, we get
 \begin{equation}
   \ket{\psi(r)} = \hat U_H\exp \left( \frac{\hat Dr}{i\hbar} \right)\hat U_H^\dagger \ket{\psi(0)}.
   \label{eq:diagonalized_evolution_operator}
@@ -69,7 +69,7 @@ As we saw in Eq. (\ref{eq:diagonalization_of_exp_Hermitian}), since $\hat H$ is 
 Eq. (\ref{eq:diagonalized_evolution_operator}) shows that the time-evolution operator applies the phase shift that is proportional to $d$, where $d$ is the eigenvalue of the Hamiltonian, depending on the eigenstate of the Hamiltonian. Since the eigenvalues of Hermitian operator is real, time-evolution operator does not change the norm of the quantum state, and therefore it is unitary.
 
 \section{Heisenberg picture}
-In the Heisenberg picture, instead of changing the quantum state, we change the operator of observable. This is possible because of the following reason: As we see in the previous chapter, the quantum-mechanical measurement involves  the projection into eigenvectors of the observable, and take the weighted average of eigenvalues. Therefore, by changing the eigenvectors of the observable, we can calculate the same thing as the evolution of quantum state. In particular, we calculate the change of annihilation operator and creation operator to see what happens in the evolution of quantum state.
+In the Heisenberg picture, instead of changing the quantum state, we change the operator of observable. This is possible because of the following reason: As we see in the previous chapter, the quantum-mechanical measurement involves the projection into eigenvectors of observable(s), and takes the weighted average of eigenvalues. Therefore, by changing the eigenvectors of the observable, we can calculate the same thing as the evolution of quantum state. In particular, we calculate the change of annihilation operator and creation operator to see what happens in the evolution of quantum state.
 
 Specifically, the expectation value of an observable $\hat A$ for a quantum state $\ket{\psi(r)} = \hat U(r)\ket{\psi(0)}$ is given by
 \begin{equation}
@@ -95,7 +95,7 @@ The evolution of $\hat A_H(r)$ can be expressed by the Heisenberg equation of mo
 \subsubsection{Schr\"odinger picture}
 For calculating time evolution, we use the Hamiltonian of a harmonic oscillator $\hat H = \hbar\omega(\hat a^\dagger\hat a + 1/2) = \hbar\omega (\hat n + 1/2)$. The time evolution operator becomes
 \begin{equation}
-  \hat U(t) = e^{-i\omega (\hat n + 1/2)t},
+  \hat U_T(t) = e^{-i\omega (\hat n + 1/2)t},
 \end{equation}
 which indicates that $\hat U(t)$ applies different phase shift for different energy eigenstate $\ket n$, i.e.,
 \begin{equation}
@@ -104,7 +104,7 @@ which indicates that $\hat U(t)$ applies different phase shift for different ene
 which is the same as Eq. (\ref{eq:Schrodinger_eq_solution}).
 
 \subsubsection{Heisenberg picture}
-Here we calculate how annihilation operator and creation operator of a harmonic oscillator change along time in the Heisenberg picture. By substituting  and $\hat A_H(t) = \hat a(t)$ to Eq. (\ref{eq:Heisenberg_eq_motion}), we obtain
+Here we calculate how annihilation operator and creation operator of a harmonic oscillator change along time in the Heisenberg picture. By substituting the Hamiltonian of the harmonic oscillator and $\hat A_H(t) = \hat a(t)$ to Eq. (\ref{eq:Heisenberg_eq_motion}), we obtain
 \begin{equation}
 \begin{aligned}
   \frac{d}{dt}\hat a(t) &= \frac{i}{\hbar}[\hbar\omega(\hat a^\dagger(t)\hat a(t) + 1/2), \hat a(t)]\\
@@ -116,10 +116,12 @@ Here we calculate how annihilation operator and creation operator of a harmonic 
 Therefore, 
 \begin{equation}
   \hat a(t) = \hat a(0)e^{-i\omega t}.
+  \label{eq:time_evolution_of_annihilation_operator}
 \end{equation}
 This is the quantum version of the time evolution of classical harmonic oscillator in Eq. (\ref{eq:normalized_complex_amplitude}). Similarly, we get
 \begin{equation}
   \hat a^\dagger(t) = \hat a^\dagger(0)e^{i\omega t},
+  \label{eq:time_evolution_of_creation_operator}
 \end{equation}
 \begin{equation}
 \begin{aligned}
@@ -143,7 +145,7 @@ It is noteworthy that, in the $x$ representation of a quantum state of a quantum
 
 Using
 \begin{equation}
-  \hat U(\pi/2\omega) = e^{-i(\pi/2)(\hat n + 1/2)} = e^{-i\pi/4}e^{-i\pi\hat n/2},
+  \hat U_T(\pi/2\omega) = e^{-i(\pi/2)(\hat n + 1/2)} = e^{-i\pi/4}e^{-i\pi\hat n/2},
 \end{equation}
 we get
 
@@ -174,7 +176,7 @@ Therefore,
   	\label{eq:time-evolved_wavefunction_p}
   \end{aligned}
 \end{equation}
-We can see that Eq. (\ref{eq:time-evolved_wavefunction}) and Eq. (\ref{eq:time-evolved_wavefunction_p}) are in the same form. Since $\tilde \psi(p) = \braket{p|\psi}$ is the Fourier transform of $\psi(x)=\braket{x|\psi}$, we can see that the time evolution over one fourth period is equivalent to Fourier transform and an additional phase shift of $e^{-i\pi/4}$. This is analogous to classical harmonic oscillator where the complex amplitude rotates in the phase space and exchange the position and momentum energies. In this way, time evolution of quantum harmonic oscillator conducts Fourier transform.
+We can see that Eq. (\ref{eq:time-evolved_wavefunction}) and Eq. (\ref{eq:time-evolved_wavefunction_p}) are in the same form. Since $\tilde \psi(p) = \braket{p|\psi}$ is the Fourier transform of $\psi(x)=\braket{x|\psi}$, we can see that the time evolution over one fourth period is equivalent to Fourier transform and an additional phase shift of $e^{-i\pi/4}$. This means that, $\psi(x)$ after 1/4 period is almost the same as $\tilde \psi(p)$. This is analogous to classical harmonic oscillator where the complex amplitude rotates in the phase space and exchange the position and momentum energies. In this way, time evolution of quantum harmonic oscillator conducts Fourier transform.
 
 \begin{comment}
 \begin{equation}
@@ -184,23 +186,90 @@ We can see that Eq. (\ref{eq:time-evolved_wavefunction}) and Eq. (\ref{eq:time-e
 \end{equation}
 \end{comment}
 
-\subsection{Displacement}
+\section{Displacement}
 Here we introduce the displacement operator given by
 \begin{equation}
-  \hat U_D(\alpha) = e^{\alpha \hat a^\dagger - \alpha^* \hat a}
+  \hat U_D(\alpha) = \exp(\alpha \hat a^\dagger - \alpha^* \hat a),
 \end{equation}
-This can be regarded as 
+where $\alpha$ is a complex number. Denoting the real part and the imaginary part of $\alpha$ as $x_0$ and $p_0$ such that $\alpha = x_0 + ip_0$, we will see that the displacement operator shifts the wavefunction $\phi(x)$ by $x_0$ and the momentum wavefunction $\tilde \phi(p)$ by $p_0$. 
 
-\subsubsection{Schr\"odinger picture}
+By applying $\hat U_D(\alpha)$ to $\ket 0$, we can displace the complex amplitude of vacuum by $\alpha$ to obtain $\ket \alpha = \hat U_D(\alpha)\ket 0$. This is called coherent state, whose time evolution is sinusoidal motion. The coherent state is a quantum-mechanical description of classical wave. The property of coherent state will be described later.
+
+Here we explain the function of displacement operator first in Heisenberg picture and Schro\"dinger picture. The former is simpler than the latter, while the latter is more intuitive.
 
 \subsubsection{Heisenberg picture}
+To see how the displacement operator works, we introduce the displacement Hamiltonian defined by
+\begin{equation}
+  \hat H_D = i\hbar (\alpha \hat a^\dagger - \alpha^* \hat a).
+\end{equation}
+Using this, the time-evolution operator is given by
+\begin{equation}
+\hat U(t) = \exp\left(\frac{t}{i\hbar}\hat H_D\right) = \exp\left\{t(\alpha\hat a^\dagger - \alpha^* \hat a)\right\},
+\end{equation}
+that is, $\hat U(1) = \hat U_D(\alpha)$. From the Heisenberg equation of motion, we get
+\begin{equation}
+ \frac{d}{dt}\hat a = \frac i \hbar[\hat H_D, \hat a] = -\alpha [\hat a^\dagger, \hat a] = \alpha,
+\end{equation}
+\begin{equation}
+  \frac{d}{dt}\hat a^\dagger = \frac i \hbar [\hat H_D, \hat a^\dagger] = \alpha^*[\hat a, \hat a^\dagger] = \alpha^*.
+\end{equation}
+Therefore,
+\begin{equation}
+  \hat a(1) = \hat a(0) + \alpha.
+  \label{eq:displaced_annihilation}
+\end{equation}
+\begin{equation}
+  \hat a^\dagger(1) = \hat a^\dagger(0) + \alpha ^*.
+  \label{eq:displaced_creation}
+\end{equation}
+Eq. (\ref{eq:displaced_annihilation}) shows that $\hat a = \hat x + i\hat p$ changes by $\alpha = x_0 + p_0$. This is the result of displacement operator in the Heisenberg picture.
+
+\subsubsection{Schr\"odinger picture}
+Here we explain why $\hat U_D(\alpha)$ can apply the displacement to the wavefunction. Since the displacement Hamiltonian $\hat H(D)$ is Hermitian, we can calculate its eigenvectors and eigenvalues. $U_D(\alpha)$ applies the phase shift according to the eigenvalues. We can calculate the eigenvectors but it's quite lengthy.
+
+Instead, let's see what happens when $p_0 = 0$, i.e., $\alpha = x_0$. In this case,
+ \begin{equation}
+  \hat H_D = i\hbar x_0(\hat a^\dagger - \hat a) = i\hbar x_0\left\{\hat x-i\hat p - (\hat x +i\hat p)\right\} = 2\hbar x_0 \hat p.
+\end{equation}
+and $\hat U(t) = \exp(-2ix_0t\hat p)$. Therefore,
+\begin{equation}
+  \hat U(t)\psi(x) = \exp(-2ix_0t\hat p)\psi(x) = \exp\left(x_0t\frac{\partial }{\partial x}\right) \psi(x),
+\end{equation}
+which leads to
+\begin{equation}
+  \frac{\partial}{\partial t}\hat U(t)\psi(x) = x_0\frac{\partial}{\partial x}\hat U(t)\psi(x).
+\end{equation}
+Since this is a wave equation, you can see that $\hat U(t)\psi(x)$ propagates at a speed of $x_0$, and hence $\hat U(1)$ shifts $\psi(x)$ by $x_0$.
+
+Another view is to use Fourier transform. $\hat U(1) = \exp(-2ix_0\hat p)$ applies phase shift to the eigenvector of $p$, and the amount of phase shift is proportional to $-2x_0p$. This is equivalent to applying phase shift to momentum wavefunction, i.e., $\tilde\psi(p) \to \tilde\psi(p)e^{-2ix_0p}$. The resultant wavefunction $\psi'(x)$ is given by the inverse Fourier transform:
+\begin{equation}
+  \psi'(x) = \int \tilde \psi(p)e^{-2ix_0p}e^{2ixp}dp = \psi(x-x_0).
+\end{equation}
+In this way, displacement in $x$ can be viewed as the shift theorem of Fourier transform. 
+
+The displacement operator is an expanded version of shift theorem so that not only $x$ but also $p$ can be displaced by $\alpha = x_0 + ip_0$. To see what happens, we divide this process into three: 1. Clockwise rotation by $\theta = \arg \alpha$ in $x$-$p$ plane. 2. Shift in $x$ position by $|\alpha|$. 3. Counterclockwise rotation by $\theta$ in $x$-$p$ plane. Since time evolution is clockwise rotation in $x$-$p$ plane, the whole process can be described as
+\begin{equation}
+\begin{aligned}
+  \hat U_T(-\theta/\omega)\exp(-2i|\alpha|\hat p)\hat U_T(\theta/\omega) &= \hat U_T^\dagger(\theta/\omega)\exp\left\{|\alpha|(\hat a^\dagger - \hat a)\right\}\hat U_T(\theta/\omega)\\
+  &= \exp\left\{ |\alpha|(\hat a^\dagger e^{i\omega t} - \hat ae^{-i\omega t})\right\}\\
+  &= \exp(\alpha \hat a^\dagger - \alpha^* \hat a).
+\end{aligned}
+\end{equation}
+From the 1st line to the 2nd line, we converted $\hat a$ and $\hat a^\dagger$ to $\hat ae^{-i\omega t}$ and $\hat a^\dagger e^{i\omega t}$ using Eq. (\ref{eq:time_evolution_of_annihilation_operator}) and Eq. (\ref{eq:time_evolution_of_creation_operator}). This is possible because the RHS in the 1st line is the same form of the operator modified by the Heisenberg equation of motion.
+
+\section{Mode mixing}
+There are various ways to see the linear combination of several modes. In optics, there are various situations where the linear combination of light is obtained such as: 
+\begin{itemize}
+	\item A beam splitter combines two beams to see the sum and difference of two light waves \textcolor{red}{(Fig. ??)}.
+	\item Waveplates can rotate and change the polarization to mix the horizontally polarized light and the vertically polarized light.
+	\item  
+\end{itemize}
 
 
-\subsection{Mode mixing}
 
-\subsection{Single-mode squeezing}
+\section{Single-mode squeezing}
 
-\subsection{Two-mode squeezing}
+\section{Two-mode squeezing}
 
 \section{Summary}
 
